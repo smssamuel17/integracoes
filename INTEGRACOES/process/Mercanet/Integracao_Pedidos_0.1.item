@@ -117,7 +117,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PED_NRO, &#13;&#10;&#9;&#9;DB_PED_OPERACAO,&#13;&#10;&#9;&#9;DB_PED_DATA_ENVIO,&#13;&#10;&#9;&#9;DB_PED_SITUACAO,&#13;&#10;&#9;&#9;DB_PED_EMPRESA,&#13;&#10;&#9;&#9;DB_PED_CLIENTE,&#13;&#10;&#9;&#9;DB_PED_COD_TRANSP,&#13;&#10;&#9;&#9;DB_PED_COND_PGTO,&#13;&#10;&#9;&#9;DB_PED_LISTA_PRECO,&#13;&#10;&#9;&#9;DB_PED_REPRES,&#13;&#10;&#9;&#9;DB_PED_DT_EMISSAO,&#13;&#10;&#9;&#9;DB_PED_TIPO,&#13;&#10;&#9;&#9;DB_PED_TEXTO,&#13;&#10;&#9;&#9;DB_PED_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PED_OBSERV,&#13;&#10;&#9;&#9;DB_PED_DT_PREVENT,&#13;&#10;&#9;&#9;DB_PED_TIPO_FRETE,&#13;&#10;&#9;&#9;DB_PED_ENT_ENDER,&#13;&#10;&#9;&#9;DB_PED_ENT_BAIRRO,&#13;&#10;&#9;&#9;DB_PED_ENT_CIDADE,&#13;&#10;&#9;&#9;DB_PED_ENT_CEP,&#13;&#10;&#9;&#9;DB_PED_ENT_UF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCMF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCTE,&#13;&#10;&#9;&#9;DB_PED_ENT_COMPL,&#13;&#10;&#9;&#9;DB_PED_ENT_PONTOREFER,&#13;&#10;&#9;&#9;DB_PED_ENT_RAZAO,&#13;&#10;&#9;&#9;DB_PED_ENT_TELEFONE,&#13;&#10;&#9;&#9;DB_PED_ENT_RAMAL&#13;&#10;  FROM DB_PEDIDO&#13;&#10;WHERE DB_PED_DT_EMISSAO &gt;= CAST(GETDATE() - 90 AS DATE)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PED_NRO, &#13;&#10;&#9;&#9;DB_PED_OPERACAO,&#13;&#10;&#9;&#9;DB_PED_DATA_ENVIO,&#13;&#10;&#9;&#9;DB_PED_SITUACAO,&#13;&#10;&#9;&#9;DB_PED_EMPRESA,&#13;&#10;&#9;&#9;DB_PED_CLIENTE,&#13;&#10;&#9;&#9;DB_PED_COD_TRANSP,&#13;&#10;&#9;&#9;DB_PED_COND_PGTO,&#13;&#10;&#9;&#9;DB_PED_LISTA_PRECO,&#13;&#10;&#9;&#9;DB_PED_REPRES,&#13;&#10;&#9;&#9;DB_PED_DT_EMISSAO,&#13;&#10;&#9;&#9;DB_PED_TIPO,&#13;&#10;&#9;&#9;DB_PED_TEXTO,&#13;&#10;&#9;&#9;DB_PED_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PED_OBSERV,&#13;&#10;&#9;&#9;DB_PED_DT_PREVENT,&#13;&#10;&#9;&#9;DB_PED_TIPO_FRETE,&#13;&#10;&#9;&#9;DB_PED_ENT_ENDER,&#13;&#10;&#9;&#9;DB_PED_ENT_BAIRRO,&#13;&#10;&#9;&#9;DB_PED_ENT_CIDADE,&#13;&#10;&#9;&#9;DB_PED_ENT_CEP,&#13;&#10;&#9;&#9;DB_PED_ENT_UF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCMF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCTE,&#13;&#10;&#9;&#9;DB_PED_ENT_COMPL,&#13;&#10;&#9;&#9;DB_PED_ENT_PONTOREFER,&#13;&#10;&#9;&#9;DB_PED_ENT_RAZAO,&#13;&#10;&#9;&#9;DB_PED_ENT_TELEFONE,&#13;&#10;&#9;&#9;DB_PED_ENT_RAMAL,&#13;&#10;&#9;    DB_PED_COD_REDESP&#13;&#10;  FROM DB_PEDIDO&#13;&#10;WHERE DB_PED_DT_EMISSAO &gt;= CAST(GETDATE() - 90 AS DATE)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -186,6 +186,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_RAMAL"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_COD_REDESP"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
@@ -203,24 +205,25 @@
       <column comment="" key="false" length="8" name="DB_PED_LISTA_PRECO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PED_REPRES" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="DB_PED_TIPO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_TEXTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PED_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_OBSERV" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DT_PREVENT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="DB_PED_TIPO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="DB_PED_TEXTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="DB_PED_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="DB_PED_OBSERV" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="23" name="DB_PED_DT_PREVENT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="DB_PED_TIPO_FRETE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_BAIRRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="DB_PED_ENT_CIDADE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="DB_PED_ENT_CEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="DB_PED_ENT_UF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_COMPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_PONTOREFER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="DB_PED_ENT_RAZAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_ENT_TELEFONE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="DB_PED_ENT_BAIRRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="DB_PED_ENT_CIDADE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="DB_PED_ENT_CEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="8" name="DB_PED_ENT_UF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="DB_PED_ENT_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="DB_PED_ENT_CGCTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="50" name="DB_PED_ENT_COMPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="DB_PED_ENT_PONTOREFER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="80" name="DB_PED_ENT_RAZAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PED_ENT_TELEFONE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PED_COD_REDESP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="240" posY="240">
@@ -277,6 +280,10 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -320,6 +327,10 @@
         <mapperTableEntries expression="row31.DB_PEDC_PREV_FAT " name="DB_PEDC_PREV_FAT" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row31.DB_PEDC_OBSTRANSP " name="DB_PEDC_OBSTRANSP" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row36.DB_FOPG_DESCR " name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row37.A3_SUPER " name="A3_SUPER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row37.A3_GEREN " name="A3_GEREN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row38.DB_TBTPE_INFADD " name="DB_TBTPE_INFADD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row39.DB_TBTRA_CGCMF " name="DB_TBTRA_CGCMF" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DB_PED_NRO" nullable="true" type="id_Integer"/>
@@ -351,6 +362,7 @@
         <mapperTableEntries name="DB_PED_ENT_RAZAO" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_TELEFONE" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_RAMAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PED_COD_REDESP" nullable="true" type="id_Double"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.DB_PED_NRO " name="DB_PEDC_NRO" nullable="true" operator="=" type="id_Integer"/>
@@ -379,9 +391,22 @@
         <mapperTableEntries expression="" name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row31.DB_PEDC_FORMA_PGTO " name="DB_FOPG_CODIGO" nullable="true" operator="=" type="id_Short"/>
       </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row37" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="A3_SUPER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="A3_GEREN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%06d&quot;, row1.DB_PED_REPRES) " name="A3_COD" nullable="true" type="id_String"/>
+      </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row38" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="DB_TBTPE_INFADD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.DB_PED_TIPO " name="DB_TBTPE_CODIGO" nullable="true" operator="=" type="id_String"/>
+      </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row39" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="DB_TBTRA_CGCMF" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.DB_PED_COD_REDESP " name="DB_TBTRA_COD" nullable="true" type="id_Double"/>
+      </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="280" sizeX="41" sizeY="40">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="360" sizeX="41" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -485,6 +510,10 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" defaultValue="" key="true" length="10" name="DB_PED_NRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -525,6 +554,10 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="true" length="10" name="DB_PED_NRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -565,6 +598,10 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -663,20 +700,14 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_11"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -712,7 +743,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="Mercanet_Producao"/>
+    <elementParameter field="TEXT" name="LABEL" value="Input Tipo Operacao"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_11">
       <column comment="" key="false" length="1" name="DB_TBOPS_FAT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -796,7 +827,7 @@
       <column comment="" defaultValue="" key="false" length="7" name="TotalParcial" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="TotalParcial" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row28.DB_PEDI_PEDIDO " name="DB_PEDI_PEDIDO" nullable="true" type="id_Integer"/>
@@ -857,16 +888,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_12"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -917,16 +938,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_13"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1071,18 +1082,8 @@
       <column comment="" defaultValue="" key="false" length="-1" name="VALOR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="360">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_14"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1123,6 +1124,171 @@
     <metadata connector="FLOW" name="tDBInput_14">
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="DB_FOPG_CODIGO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_15"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_FKz8IDoVEe-t8sXaePUN3Q"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;TOTVS&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xXi+i8hR0n0qM82f0o+PybTCV+u1u8fxdrIZX/9o200tdM7lZaTgPU1dfQk="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;SA3010&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT A3_SUPER,&#13;&#10;               A3_GEREN,&#13;&#10;&#9;&#9;&#9;  A3_COD&#13;&#10;          FROM SA3010&#13;&#10;         WHERE D_E_L_E_T_ = ' '&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="A3_SUPER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A3_GEREN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A3_COD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Input Gerente Supervisor"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_15">
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_COD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_16"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9iLXEDl1Ee-yzJkkLuQGYw"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:DxWC+I4yyzNWRQU7PvgdKM+tXvoVkzAoBTThYGUl2EtZCY8q3JaLaSoek7o="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;DB_TB_TPPEDIDO&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  DB_TBTPE_INFADD,&#13;&#10;&#9;&#9;&#9;&#9;DB_TBTPE_CODIGO&#13;&#10;&#9;    FROM DB_TB_TPPEDIDO&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBTPE_INFADD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBTPE_CODIGO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Input Tipo Pagamento"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_16">
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="DB_TBTPE_CODIGO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_17"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9iLXEDl1Ee-yzJkkLuQGYw"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SO4KLrTZNIE3syHHgF6hx+Sbw7Xs0MEwz3zbGGb+qTKraJeAB4Gumc3iMQ8="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_TBTRA_CGCMF,&#13;&#10;&#9;&#9;&#9;&#9;&#9;DB_TBTRA_COD&#13;&#10;      FROM DB_TB_TRANSP&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBTRA_CGCMF"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBTRA_COD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Mercanet_Producao"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_17">
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_TBTRA_COD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="-400">
@@ -1236,7 +1402,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="-720">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="-720">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_9"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1397,7 +1563,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="-560">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="-560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_10"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1520,7 +1686,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="-240">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="-240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1576,7 +1742,7 @@
       <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="-240">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="-240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_20"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -2376,7 +2542,7 @@
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="840">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="840">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -2436,91 +2602,95 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="PedidosParaIntegracao">
-      <column comment="" key="false" length="3" name="DB_PED_EMPRESA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="DB_PED_NRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="ZC5_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="10" name="ZC5_PEDMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_NUM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_CLIENTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Loja" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_COD_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_TBPGTO_ZTERM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="DB_PED_LISTA_PRECO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PED_REPRES" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_TEXTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_PED_TIPO_FRETE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_CLIENT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="ZC5_LOJACL" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_CONDPA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="ZC5_TABELA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_VEND1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_EMISSA" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_MENNOT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="ZC5_TPFRET" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_VTOT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="DB_TBOPS_FAT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ZC5_TIPVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_DTINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_HRINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PED_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_OBSERV" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_PEDC_FORMA_PGTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DT_PREVENT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DATA_ENVIO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="DB_PED_SITUACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_LIBERASEMSALDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PED_COND_PGTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="DB_PED_TIPO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PED_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_BAIRRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="DB_PED_ENT_CIDADE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="DB_PED_ENT_CEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="DB_PED_ENT_UF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_COMPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_PONTOREFER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="DB_PED_ENT_RAZAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_ENT_TELEFONE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="ZC5_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_OBS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="ZC5_UCODFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_UDESFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_PREFAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ZC5_VEND2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ZC5_VEND3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ZC5_GRPVEI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="ZC5_TPFRTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_TRARED" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_DTENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_OBSLOG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_CDOPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="ZC5_ENTEND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_ENTBAI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ZC5_ENTCID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="ZC5_ENTCEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="ZC5_ENTUF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_ENTCGC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_ENTIE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="ZC5_ENTCPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_ENTREF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ZC5_ENTRAZ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_ENTFON" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="ZC5_ENTRML" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="PedidosParaIntegracao" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row6.DB_PED_EMPRESA " name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(0, 4) + &quot;/&quot; + String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(4, 8) " name="DB_PED_NRO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_EMPRESA " name="ZC5_FILIAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(0, 4) + &quot;/&quot; + String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(4, 8) " name="ZC5_PEDMER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot; &quot;" name="ZC5_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(0, 9) " name="DB_PED_CLIENTE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(9, 12) " name="Loja" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(row6.DB_PED_COD_TRANSP == 0) ? &quot;      &quot; : String.format(&quot;%06.0f&quot;, row6.DB_PED_COD_TRANSP) " name="DB_PED_COD_TRANSP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_TBPGTO_ZTERM " name="DB_TBPGTO_ZTERM" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_LISTA_PRECO " name="DB_PED_LISTA_PRECO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%06d&quot;, row6.DB_PED_REPRES) " name="DB_PED_REPRES" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_EMISSAO) " name="DB_PED_DT_EMISSAO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_TEXTO.substring(0, Math.min(row6.DB_PED_TEXTO.length(), 254))) " name="DB_PED_TEXTO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_TIPO_FRETE " name="DB_PED_TIPO_FRETE" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(0, 9) " name="ZC5_CLIENT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(9, 12) " name="ZC5_LOJACL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(row6.DB_PED_COD_TRANSP == 0) ? &quot;      &quot; : String.format(&quot;%06.0f&quot;, row6.DB_PED_COD_TRANSP) " name="ZC5_TRANSP" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_TBPGTO_ZTERM " name="ZC5_CONDPA" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_LISTA_PRECO " name="ZC5_TABELA" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%06d&quot;, row6.DB_PED_REPRES) " name="ZC5_VEND1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_EMISSAO) " name="ZC5_EMISSA" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_TEXTO.substring(0, Math.min(row6.DB_PED_TEXTO.length(), 254))) " name="ZC5_MENNOT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_TIPO == 7 ? &quot;F&quot; : &quot;C&quot; " name="ZC5_TPFRET" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row30.TotalPedido " name="ZC5_VTOT" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row6.DB_TBOPS_FAT " name="DB_TBOPS_FAT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_TBOPS_FAT " name="ZC5_TIPVEN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;XXX&quot;" name="ZC5_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate()) " name="ZC5_DTINC" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.formatDate(&quot;HH:mm:ss&quot;, TalendDate.getCurrentDate()) " name="ZC5_HRINC" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ORD_COMPRA.substring(0, Math.min(row6.DB_PED_ORD_COMPRA.length(), 20)) " name="DB_PED_ORD_COMPRA" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_OBSERV.substring(0, Math.min(row6.DB_PED_OBSERV.length(), 254))) " name="DB_PED_OBSERV" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PEDC_FORMA_PGTO) ? 0 : row6.DB_PEDC_FORMA_PGTO " name="DB_PEDC_FORMA_PGTO" nullable="true" type="id_Short"/>
-        <mapperTableEntries expression="row6.DB_FOPG_DESCR.substring(0, Math.min(row6.DB_FOPG_DESCR.length(), 10)) " name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_PREVENT) " name="DB_PED_DT_PREVENT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_DATA_ENVIO " name="DB_PED_DATA_ENVIO" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row6.DB_PED_SITUACAO " name="DB_PED_SITUACAO" nullable="true" type="id_Short"/>
-        <mapperTableEntries expression="row6.DB_PEDC_LIBERASEMSALDO " name="DB_PEDC_LIBERASEMSALDO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row6.DB_PED_COND_PGTO " name="DB_PED_COND_PGTO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row6.DB_PED_TIPO " name="DB_PED_TIPO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_OPERACAO " name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_ENDER " name="DB_PED_ENT_ENDER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_BAIRRO " name="DB_PED_ENT_BAIRRO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_CIDADE " name="DB_PED_ENT_CIDADE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_CEP " name="DB_PED_ENT_CEP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_UF " name="DB_PED_ENT_UF" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_CGCMF " name="DB_PED_ENT_CGCMF" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_CGCTE " name="DB_PED_ENT_CGCTE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_COMPL " name="DB_PED_ENT_COMPL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_PONTOREFER " name="DB_PED_ENT_PONTOREFER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_RAZAO " name="DB_PED_ENT_RAZAO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_TELEFONE " name="DB_PED_ENT_TELEFONE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ENT_RAMAL " name="DB_PED_ENT_RAMAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_ORD_COMPRA.substring(0, Math.min(row6.DB_PED_ORD_COMPRA.length(), 20)) " name="ZC5_PEDCLI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_OBSERV.substring(0, Math.min(row6.DB_PED_OBSERV.length(), 254))) " name="ZC5_OBS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PEDC_FORMA_PGTO) ? 0 : row6.DB_PEDC_FORMA_PGTO " name="ZC5_UCODFO" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="row6.DB_FOPG_DESCR.substring(0, Math.min(row6.DB_FOPG_DESCR.length(), 10)) " name="ZC5_UDESFO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_PREVENT) " name="ZC5_PREFAT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.A3_SUPER.isEmpty() ? &quot; &quot; : row6.A3_SUPER " name="ZC5_VEND2" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.A3_GEREN.isEmpty() ? &quot; &quot; : row6.A3_GEREN " name="ZC5_VEND3" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_TBTPE_INFADD " name="ZC5_GRPVEI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_TIPO_FRETE " name="ZC5_TPFRTE" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="row6.DB_TBTRA_CGCMF " name="ZC5_TRARED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PEDC_PREV_FAT) " name="ZC5_DTENTR" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PEDC_OBSTRANSP " name="ZC5_OBSLOG" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.DB_PED_OPERACAO " name="ZC5_CDOPER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_ENDER) ? &quot; &quot; : row6.DB_PED_ENT_ENDER" name="ZC5_ENTEND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_BAIRRO) ? &quot; &quot; : row6.DB_PED_ENT_BAIRRO" name="ZC5_ENTBAI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_CIDADE) ? &quot; &quot; : row6.DB_PED_ENT_CIDADE" name="ZC5_ENTCID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_CEP) ? &quot; &quot; : row6.DB_PED_ENT_CEP" name="ZC5_ENTCEP" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_UF) ? &quot; &quot; : row6.DB_PED_ENT_UF" name="ZC5_ENTUF" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_CGCMF) ? &quot; &quot; : row6.DB_PED_ENT_CGCMF" name="ZC5_ENTCGC" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_CGCTE) ? &quot; &quot; : row6.DB_PED_ENT_CGCTE" name="ZC5_ENTIE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_COMPL) ? &quot; &quot; : row6.DB_PED_ENT_COMPL" name="ZC5_ENTCPL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_PONTOREFER) ? &quot; &quot; : row6.DB_PED_ENT_PONTOREFER" name="ZC5_ENTREF" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_RAZAO) ? &quot; &quot; : row6.DB_PED_ENT_RAZAO" name="ZC5_ENTRAZ" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_TELEFONE) ? &quot; &quot; : row6.DB_PED_ENT_TELEFONE" name="ZC5_ENTFON" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PED_ENT_RAMAL) ? &quot; &quot; : row6.DB_PED_ENT_RAMAL" name="ZC5_ENTRML" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="Pedidos_integracao" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DB_PED_NRO" nullable="true" type="id_Integer"/>
@@ -2537,7 +2707,7 @@
         <mapperTableEntries name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_DATA_ENVIO" nullable="true" type="id_Date"/>
         <mapperTableEntries name="DB_PED_SITUACAO" nullable="true" type="id_Short"/>
-        <mapperTableEntries name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_CLIENTE" nullable="true" type="id_Double"/>
         <mapperTableEntries name="DB_PEDC_LIBERASEMSALDO" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="DB_PED_COD_TRANSP" nullable="true" type="id_Double"/>
@@ -2571,6 +2741,10 @@
         <mapperTableEntries name="DB_PEDC_PREV_FAT" nullable="true" type="id_Date"/>
         <mapperTableEntries name="DB_PEDC_OBSTRANSP" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
+        <mapperTableEntries name="A3_SUPER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="A3_GEREN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="DB_TBTPE_INFADD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="DB_TBTRA_CGCMF" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row30" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" type="id_Integer"/>
@@ -2624,6 +2798,10 @@
       <column comment="" key="false" length="23" name="DB_PEDC_PREV_FAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="DB_PEDC_OBSTRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_SUPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="A3_GEREN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="DB_TBTPE_INFADD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="1040">
@@ -2640,33 +2818,33 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_EMPRESA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_FILIAL"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_NRO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_PEDMER"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_NUM"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_CLIENTE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_CLIENT"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Loja"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_LOJACL"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_COD_TRANSP"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TRANSP"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBPGTO_ZTERM"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_CONDPA"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_LISTA_PRECO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TABELA"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_REPRES"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND1"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_DT_EMISSAO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_EMISSA"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_TEXTO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_MENNOT"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_TIPO_FRETE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TPFRET"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VTOT"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBOPS_FAT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TIPVEN"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_STATUS"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -2674,97 +2852,103 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_HRINC"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ORD_COMPRA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_PEDCLI"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_OBSERV"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_OBS"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDC_FORMA_PGTO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_UCODFO"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_FOPG_DESCR"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_UDESFO"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_DT_PREVENT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_PREFAT"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_DATA_ENVIO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND2"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_SITUACAO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND3"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDC_LIBERASEMSALDO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_GRPVEI"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_COND_PGTO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TPFRTE"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_TIPO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TRARED"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_OPERACAO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_DTENTR"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_ENDER"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_OBSLOG"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_BAIRRO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_CDOPER"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_CIDADE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTEND"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_CEP"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTBAI"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_UF"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTCID"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_CGCMF"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTCEP"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_CGCTE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTUF"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_COMPL"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTCGC"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_PONTOREFER"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTIE"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_RAZAO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTCPL"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_TELEFONE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTREF"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_ENT_RAMAL"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTRAZ"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTFON"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_ENTRML"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="3" name="DB_PED_EMPRESA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="DB_PED_NRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="ZC5_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="10" name="ZC5_PEDMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_NUM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_CLIENTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Loja" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_COD_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_TBPGTO_ZTERM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="DB_PED_LISTA_PRECO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PED_REPRES" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_TEXTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_PED_TIPO_FRETE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_CLIENT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="ZC5_LOJACL" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_CONDPA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="ZC5_TABELA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_VEND1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_EMISSA" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_MENNOT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="ZC5_TPFRET" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_VTOT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="DB_TBOPS_FAT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ZC5_TIPVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_DTINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_HRINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PED_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="DB_PED_OBSERV" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_PEDC_FORMA_PGTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_FOPG_DESCR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DT_PREVENT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PED_DATA_ENVIO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="DB_PED_SITUACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_LIBERASEMSALDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PED_COND_PGTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="DB_PED_TIPO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PED_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_BAIRRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="DB_PED_ENT_CIDADE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="DB_PED_ENT_CEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="DB_PED_ENT_UF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="DB_PED_ENT_CGCTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="DB_PED_ENT_COMPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="DB_PED_ENT_PONTOREFER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="DB_PED_ENT_RAZAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_PED_ENT_TELEFONE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="ZC5_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_OBS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="ZC5_UCODFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_UDESFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_PREFAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ZC5_VEND2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ZC5_VEND3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ZC5_GRPVEI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="ZC5_TPFRTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_TRARED" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="ZC5_DTENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ZC5_OBSLOG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ZC5_CDOPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="ZC5_ENTEND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_ENTBAI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ZC5_ENTCID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="ZC5_ENTCEP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="ZC5_ENTUF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_ENTCGC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ZC5_ENTIE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="ZC5_ENTCPL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ZC5_ENTREF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ZC5_ENTRAZ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC5_ENTFON" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="ZC5_ENTRML" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="1120">
@@ -2878,6 +3062,18 @@
       <elementValue elementRef="TRACE_COLUMN" value="DB_FOPG_DESCR"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_SUPER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_GEREN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTPE_INFADD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTRA_CGCMF"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Pedido_complemento"/>
@@ -2941,6 +3137,18 @@
   <connection connectorName="FLOW" label="row36" lineStyle="8" metaname="tDBInput_14" offsetLabelX="0" offsetLabelY="0" source="tDBInput_14" target="tMap_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row36"/>
+  </connection>
+  <connection connectorName="FLOW" label="row37" lineStyle="8" metaname="tDBInput_15" offsetLabelX="0" offsetLabelY="0" source="tDBInput_15" target="tMap_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row37"/>
+  </connection>
+  <connection connectorName="FLOW" label="row38" lineStyle="8" metaname="tDBInput_16" offsetLabelX="0" offsetLabelY="0" source="tDBInput_16" target="tMap_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row38"/>
+  </connection>
+  <connection connectorName="FLOW" label="row39" lineStyle="8" metaname="tDBInput_17" offsetLabelX="0" offsetLabelY="0" source="tDBInput_17" target="tMap_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row39"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tDBInput_8" offsetLabelX="0" offsetLabelY="0" source="tDBInput_8" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -3137,6 +3345,135 @@
       <elementValue elementRef="TRACE_COLUMN" value="DB_FOPG_DESCR"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_SUPER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_GEREN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTPE_INFADD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_TIPO_FRETE_1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTRA_CGCMF"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDC_PREV_FAT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDC_OBSTRANSP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTREF"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TPFRET"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TRARED"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTRML"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TPFRTE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_UDESFO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TABELA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTBAI"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCEP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CLIENT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_OBS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_GRPVEI"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_OBSLOG"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CONDPA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TIPVEN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PEDCLI"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCGC"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTIE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_LOJACL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CDOPER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PEDMER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTRAZ"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_MENNOT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_EMISSA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_UCODFO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_DTENTR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TRANSP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PREFAT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_FILIAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTEND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTUF"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCPL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PedidosParaIntegracao"/>
@@ -3156,6 +3493,18 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="DB_FOPG_DESCR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_SUPER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="A3_GEREN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTPE_INFADD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTRA_CGCMF"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3207,13 +3556,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4734bb19-9f24-4208-9b1a-291cf47a633a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fB8DEwwXUOZscjrT8udbtnluWwjrfy2LP1LDjuiyyxFyl3GqFyCkWdpY3SDuM1cIM9d8k8/Z/lC+&#13;
-2L6Hm06Jng==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5322f128-4424-4048-a1c3-d16eb754c815"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z5dG2pYdvMgJS8cEHnhrPcMM5i7d6KuKpn/306jpCo98Ep09/crZxR0tfHX2V0nb85Sl35ssQCHb&#13;
-Yt5CMaWtcw==</DigestValue></Reference></SignedInfo><SignatureValue>SBZ+A/mnhTmlWD4rzpwfgp/yhYxCA/atiBki5eMDJ3DkdPuz7nBg2QWe/Px6HZTM8sRsnThOUSi+&#13;
-zai++Wu0BYaI4Vkbm3GagTE2qIL+Yrx69rsME59zrYgZWOyUTxnYUNgFtZBnNwMjSqQWelIUWNhB&#13;
-OEjqaZmK7DsgsdhW3NEGciwTp+pAg12rmCyA3aBr3kxRsSuRhLpyO3lT3/D1Qc3EjNkaiB+/uAnx&#13;
-FKMdzGkFY9oDxYIdNPDK4Tqyu92mem+BmaoaJB37FXDgurwzkI9Y01Uq8Km7IHKuHr+ZKHAwSkr8&#13;
-gVZA0TQssNGOuvnq6F5B0ix0b+Hpu7sAQGkrPA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4ba0460b-9aaa-4acc-9543-552a88f9b14a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dlzg9y1+WruTGy812QEUi3JaSi2Jtws76e4MEgwkyQoTjEpkH8ntZAdwiHl1E0chsZdv282ua2/c&#13;
+f5wcIej9Mw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d5b2dc39-b290-444d-8392-27a7598833d7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XdqVT4LLAoEiLHhJxrUPAAlu9+pg4I2pgGsDg0aKPPtjWj4lZHL9fM3llZd91DA8bUxsYP6Uaahx&#13;
+ow5wIjWnkQ==</DigestValue></Reference></SignedInfo><SignatureValue>Lc0+tp5mivm9/YvxhoxKhDVW98d4GwypVESfF77Kvw8hW2an+CfYhmJqFt84H2ZNmru/4xE6qiJV&#13;
+EI45Tk5z6ZYlrH/tf3YIdvlfwVvBFyw4ZsGMRcUAAPYXHEjZD/44q1xCxmTrmkdHyMn6Zye5ClwX&#13;
+9joBe2/kdmySzGuQiNliVwkYpavzaTaYmEKwEyRozZYXiApmBnI+pwc5wPaTSjzcN0nLKnsTWIUu&#13;
+peNGoK/uuSXGZrB7irbeB0VbsT0M3T6L3uKAmSiIsFyQr224QeYL8WJBgq/SaNlHmW2O6pQNSgYA&#13;
+hNQpRhRD9EhWYxR5IoLE5qSE+accv7SNFVtFfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3235,4 +3584,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5322f128-4424-4048-a1c3-d16eb754c815" Target="#_4734bb19-9f24-4208-9b1a-291cf47a633a"><Timestamp>2024-08-22 14:50:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d5b2dc39-b290-444d-8392-27a7598833d7" Target="#_4ba0460b-9aaa-4acc-9543-552a88f9b14a"><Timestamp>2024-08-26 17:55:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
