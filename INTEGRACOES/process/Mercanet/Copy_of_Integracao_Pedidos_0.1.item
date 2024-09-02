@@ -115,7 +115,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PED_NRO, &#13;&#10;&#9;&#9;DB_PED_OPERACAO,&#13;&#10;&#9;&#9;DB_PED_DATA_ENVIO,&#13;&#10;&#9;&#9;DB_PED_SITUACAO,&#13;&#10;&#9;&#9;DB_PED_EMPRESA,&#13;&#10;&#9;&#9;DB_PED_CLIENTE,&#13;&#10;&#9;&#9;DB_PED_COD_TRANSP,&#13;&#10;&#9;&#9;DB_PED_COND_PGTO,&#13;&#10;&#9;&#9;DB_PED_LISTA_PRECO,&#13;&#10;&#9;&#9;DB_PED_REPRES,&#13;&#10;&#9;&#9;DB_PED_DT_EMISSAO,&#13;&#10;&#9;&#9;DB_PED_TIPO,&#13;&#10;&#9;&#9;DB_PED_TEXTO,&#13;&#10;&#9;&#9;DB_PED_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PED_OBSERV,&#13;&#10;&#9;&#9;DB_PED_DT_PREVENT,&#13;&#10;&#9;&#9;DB_PED_TIPO_FRETE,&#13;&#10;&#9;&#9;DB_PED_ENT_ENDER,&#13;&#10;&#9;&#9;DB_PED_ENT_BAIRRO,&#13;&#10;&#9;&#9;DB_PED_ENT_CIDADE,&#13;&#10;&#9;&#9;DB_PED_ENT_CEP,&#13;&#10;&#9;&#9;DB_PED_ENT_UF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCMF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCTE,&#13;&#10;&#9;&#9;DB_PED_ENT_COMPL,&#13;&#10;&#9;&#9;DB_PED_ENT_PONTOREFER,&#13;&#10;&#9;&#9;DB_PED_ENT_RAZAO,&#13;&#10;&#9;&#9;DB_PED_ENT_TELEFONE,&#13;&#10;&#9;&#9;DB_PED_ENT_RAMAL,&#13;&#10;&#9;    DB_PED_COD_REDESP&#13;&#10;  FROM DB_PEDIDO&#13;&#10;WHERE DB_PED_DT_EMISSAO &gt;= CAST(GETDATE() - 90 AS DATE)&#13;&#10;&#9;AND DB_PED_NRO &lt;&gt; '80000032'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PED_NRO, &#13;&#10;&#9;&#9;DB_PED_OPERACAO,&#13;&#10;&#9;&#9;DB_PED_DATA_ENVIO,&#13;&#10;&#9;&#9;DB_PED_SITUACAO,&#13;&#10;&#9;&#9;DB_PED_EMPRESA,&#13;&#10;&#9;&#9;DB_PED_CLIENTE,&#13;&#10;&#9;&#9;DB_PED_COD_TRANSP,&#13;&#10;&#9;&#9;DB_PED_COND_PGTO,&#13;&#10;&#9;&#9;DB_PED_LISTA_PRECO,&#13;&#10;&#9;&#9;DB_PED_REPRES,&#13;&#10;&#9;&#9;DB_PED_DT_EMISSAO,&#13;&#10;&#9;&#9;DB_PED_TIPO,&#13;&#10;&#9;&#9;DB_PED_TEXTO,&#13;&#10;&#9;&#9;DB_PED_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PED_OBSERV,&#13;&#10;&#9;&#9;DB_PED_DT_PREVENT,&#13;&#10;&#9;&#9;DB_PED_TIPO_FRETE,&#13;&#10;&#9;&#9;DB_PED_ENT_ENDER,&#13;&#10;&#9;&#9;DB_PED_ENT_BAIRRO,&#13;&#10;&#9;&#9;DB_PED_ENT_CIDADE,&#13;&#10;&#9;&#9;DB_PED_ENT_CEP,&#13;&#10;&#9;&#9;DB_PED_ENT_UF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCMF,&#13;&#10;&#9;&#9;DB_PED_ENT_CGCTE,&#13;&#10;&#9;&#9;DB_PED_ENT_COMPL,&#13;&#10;&#9;&#9;DB_PED_ENT_PONTOREFER,&#13;&#10;&#9;&#9;DB_PED_ENT_RAZAO,&#13;&#10;&#9;&#9;DB_PED_ENT_TELEFONE,&#13;&#10;&#9;&#9;DB_PED_ENT_RAMAL,&#13;&#10;&#9;    DB_PED_COD_REDESP&#13;&#10;  FROM DB_PEDIDO&#13;&#10;WHERE DB_PED_DT_EMISSAO &gt;= CAST(GETDATE() - 90 AS DATE)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -229,7 +229,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_5-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -802,7 +802,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_8-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_8-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -814,14 +814,14 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="TotalParcial">
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="TotalParcial" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="TotalParcial" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="TotalParcial" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row28.DB_PEDI_PEDIDO " name="DB_PEDI_PEDIDO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="(row28.DB_PEDI_QTDE_SOLIC * (Math.round(row28.DB_PEDI_PRECO_LIQ * 100.0) / 100.0)) - (Relational.ISNULL(row35.VALOR) ? 0 : row35.VALOR) " name="TotalParcial" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="(row28.DB_PEDI_QTDE_SOLIC * Math.round(row28.DB_PEDI_PRECO_LIQ)) - (Relational.ISNULL(row35.VALOR) ? 0 : Math.round(row35.VALOR)) " name="TotalParcial" nullable="true" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row28" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DB_PEDI_QTDE_SOLIC" nullable="true" type="id_Float"/>
@@ -1290,7 +1290,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1475,7 +1475,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_6-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1770,7 +1770,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2026,7 +2026,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2183,7 +2183,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="1240">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
@@ -2196,12 +2196,12 @@
       <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1240">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_4-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2254,21 +2254,6 @@
         <mapperTableEntries expression="row24.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" operator="=" type="id_Integer"/>
         <mapperTableEntries expression="" name="DB_PEDI_PRODUTO" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PEDI_QTDE_SOLIC" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_PRECO_LIQ" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_OPERACAO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PEDI_PREV_ENTR" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="DB_PEDI_SEQUENCIA" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="DB_PEDI_BASEICMS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_ICMSORIG" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_ICMS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_IPI" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_ICMSDEST" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_PIS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_COFINS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_DESCTO_FISCAL" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_PERC_COMIS" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_ORD_COMPRA" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" type="id_Integer"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row14" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.DB_PEDI_PRODUTO " name="D14_PRODUT" nullable="true" operator="=" type="id_String"/>
@@ -2276,7 +2261,52 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="1400">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JWRZ2gin9Ml9Kd4kNF7xJllZIFyrFW74SRApn7MEpSJs9TQw6tbnh7k0MeY="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PEDI_PEDIDO,&#10;&#9;&#9;DB_PEDI_PRODUTO,&#10;&#9;&#9;DB_PEDI_QTDE_SOLIC&#10;FROM&#9;DB_PEDIDO_PROD&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PEDIDO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PRODUTO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_QTDE_SOLIC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Input Produtos"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="1360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
@@ -2289,7 +2319,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1120">
+  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1080">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_2"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -2345,7 +2375,7 @@
       <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="1240">
+  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSortRow_1"/>
     <elementParameter field="TABLE" name="CRITERIA">
       <elementValue elementRef="COLNAME" value="DB_PED_DT_EMISSAO"/>
@@ -2373,7 +2403,7 @@
       <column comment="" key="false" length="23" name="DB_PED_DT_EMISSAO" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1240">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;output_row.DB_PED_NRO = input_row.DB_PED_NRO;&#10;output_row.DB_PED_OPERACAO = input_row.DB_PED_OPERACAO;&#10;output_row.DB_PEDI_PRODUTO = input_row.DB_PEDI_PRODUTO;&#10;output_row.DB_PEDI_QTDE_SOLIC = input_row.DB_PEDI_QTDE_SOLIC;&#10;output_row.ESTOQUE = input_row.ESTOQUE;&#10;&#10;if (globalMap.get(&quot;prodAnt&quot;) != input_row.DB_PEDI_PRODUTO)&#10;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#10;&#10;if(Relational.ISNULL((Integer)globalMap.get(&quot;prevRowVal&quot;)))&#10;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#10;&#10;//System.out.println((Integer)globalMap.get(&quot;prevRowVal&quot;));&#10;&#10;output_row.EstoqueAtualizado = (Integer)globalMap.get(&quot;prevRowVal&quot;)-input_row.DB_PEDI_QTDE_SOLIC;&#10;&#10;globalMap.put(&quot;prevRowVal&quot;,output_row.EstoqueAtualizado);&#10;&#10;if(output_row.EstoqueAtualizado &lt; 0)&#10;output_row.FlagSemEstoque = 1;&#10;else&#10;output_row.FlagSemEstoque = 0;&#10;&#10;&#10;globalMap.put(&quot;prodAnt&quot;,input_row.DB_PEDI_PRODUTO);&#10;&#10;//System.out.println(output_row.EstoqueAtualizado);&#10;//System.out.println(output_row.DB_PEDI_PRODUTO);&#10;//System.out.println(output_row.DB_PEDI_QTDE_SOLIC);&#10;//System.out.println(output_row.ESTOQUE);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -2389,7 +2419,7 @@
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="720" posY="1240">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="720" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_PED_NRO"/>
@@ -2417,7 +2447,7 @@
       <column key="false" length="255" name="errorMessage" nullable="false" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="1240" sizeX="41" sizeY="40">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="1200" sizeX="41" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_12"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -2460,7 +2490,7 @@
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="880" posY="1400">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="880" posY="1360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -2505,12 +2535,12 @@
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="1240">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="1200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_9"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_7-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_LfvQUGYnEe-6j9TpHeiSAw-tMap_9-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2519,35 +2549,24 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="PedidosParaIntegracao">
+    <metadata connector="FLOW" name="copyOfPedidosParaIntegracao">
       <column comment="" key="false" length="3" name="ZC5_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="10" name="ZC5_PEDMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_NUM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="15" name="ZC5_CLIENT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="ZC5_LOJACL" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="ZC5_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ZC5_CONDPA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="ZC5_TABELA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ZC5_VEND1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="ZC5_EMISSA" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="ZC5_MENNOT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="ZC5_TPFRET" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_VTOT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="ZC5_TIPVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_DTINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_HRINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="ZC5_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ZC5_OBS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ZC5_UCODFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="ZC5_UDESFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC5_PREFAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="6" name="ZC5_VEND2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="6" name="ZC5_VEND3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ZC5_GRPVEI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="ZC5_TPFRTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="ZC5_TRARED" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC5_DTENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="ZC5_OBSLOG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ZC5_CDOPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -2563,43 +2582,36 @@
       <column comment="" key="false" length="15" name="DB_PED_ENT_TELEFONE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="PedidosIntegracaoItens">
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PED_NRO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    <metadata connector="FLOW" name="copyOfItensPedidos">
       <column comment="" key="false" length="3" name="DB_PED_EMPRESA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PED_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="ItensPedidos">
+      <column comment="" key="false" length="3" name="DB_PED_EMPRESA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="PedidosParaIntegracao">
+      <column comment="" key="false" length="3" name="ZC5_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="PedidosParaIntegracao" sizeState="INTERMEDIATE">
+      <outputTables name="copyOfPedidosParaIntegracao" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.DB_PED_EMPRESA " name="ZC5_FILIAL" nullable="true" type="id_String"/>
         <mapperTableEntries expression="String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(0, 4) + &quot;/&quot; + String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(4, 8) " name="ZC5_PEDMER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot; &quot;" name="ZC5_NUM" nullable="true" type="id_String"/>
         <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(0, 9) " name="ZC5_CLIENT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="String.format(&quot;%012.0f&quot;, row6.DB_PED_CLIENTE).substring(9, 12) " name="ZC5_LOJACL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(row6.DB_PED_COD_TRANSP == 0) ? &quot;      &quot; : String.format(&quot;%06.0f&quot;, row6.DB_PED_COD_TRANSP) " name="ZC5_TRANSP" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_TBPGTO_ZTERM " name="ZC5_CONDPA" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PED_LISTA_PRECO " name="ZC5_TABELA" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%06d&quot;, row6.DB_PED_REPRES) " name="ZC5_VEND1" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_EMISSAO) " name="ZC5_EMISSA" nullable="true" type="id_String"/>
         <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_TEXTO.substring(0, Math.min(row6.DB_PED_TEXTO.length(), 254))) " name="ZC5_MENNOT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_TIPO == &quot;7&quot; ? &quot;F&quot; : &quot;C&quot;" name="ZC5_TPFRET" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row30.TotalPedido " name="ZC5_VTOT" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row6.DB_TBOPS_FAT " name="ZC5_TIPVEN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;XXX&quot;" name="ZC5_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate()) " name="ZC5_DTINC" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.formatDate(&quot;HH:mm:ss&quot;, TalendDate.getCurrentDate()) " name="ZC5_HRINC" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_ORD_COMPRA.substring(0, Math.min(row6.DB_PED_ORD_COMPRA.length(), 20)) " name="ZC5_PEDCLI" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%-254s&quot;, row6.DB_PED_OBSERV.substring(0, Math.min(row6.DB_PED_OBSERV.length(), 254))) " name="ZC5_OBS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row6.DB_PEDC_FORMA_PGTO) ? 0 : row6.DB_PEDC_FORMA_PGTO " name="ZC5_UCODFO" nullable="true" type="id_Short"/>
-        <mapperTableEntries expression="row6.DB_FOPG_DESCR.substring(0, Math.min(row6.DB_FOPG_DESCR.length(), 10)) " name="ZC5_UDESFO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PED_DT_PREVENT) " name="ZC5_PREFAT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.A3_SUPER.isEmpty() ? &quot; &quot; : row6.A3_SUPER " name="ZC5_VEND2" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.A3_GEREN.isEmpty() ? &quot; &quot; : row6.A3_GEREN " name="ZC5_VEND3" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_TBTPE_INFADD " name="ZC5_GRPVEI" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PED_TIPO_FRETE " name="ZC5_TPFRTE" nullable="true" type="id_Short"/>
         <mapperTableEntries expression="row6.DB_TBTRA_CGCMF " name="ZC5_TRARED" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, row6.DB_PEDC_PREV_FAT) " name="ZC5_DTENTR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PEDC_OBSTRANSP " name="ZC5_OBSLOG" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PED_OPERACAO " name="ZC5_CDOPER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PED_ENT_ENDER " name="DB_PED_ENT_ENDER" nullable="true" type="id_String"/>
@@ -2615,10 +2627,14 @@
         <mapperTableEntries expression="row6.DB_PED_ENT_TELEFONE " name="DB_PED_ENT_TELEFONE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.DB_PED_ENT_RAMAL " name="DB_PED_ENT_RAMAL" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables name="PedidosIntegracaoItens" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="Pedidos_integracao.DB_PED_NRO " name="DB_PED_NRO" nullable="true" type="id_Integer"/>
+      <outputTables name="copyOfItensPedidos" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.DB_PED_EMPRESA " name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.DB_PED_OPERACAO " name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="ItensPedidos" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="PedidosParaIntegracao" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ZC5_FILIAL" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="Pedidos_integracao" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DB_PED_NRO" nullable="true" type="id_Integer"/>
@@ -2630,12 +2646,36 @@
         <mapperTableEntries name="FlagSemEstoque" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="errorMessage" type="id_String"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row30" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Pedidos_integracao.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" operator="=" type="id_Integer"/>
+        <mapperTableEntries name="TotalPedido" nullable="true" type="id_Float"/>
+      </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row41" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Pedidos_integracao.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" operator="=" type="id_Integer"/>
+        <mapperTableEntries name="DB_PEDI_PRODUTO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PEDI_QTDE_SOLIC" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="DB_PEDI_PRECO_LIQ" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="DB_PEDI_OPERACAO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PEDI_PREV_ENTR" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="DB_PEDI_SEQUENCIA" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="DB_PEDI_BASEICMS" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_ICMSORIG" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_VU_ICMS" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_IPI" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_ICMSDEST" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_VU_PIS" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_VU_COFINS" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_DESCTO_FISCAL" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="DB_PEDI_PERC_COMIS" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="DB_PEDI_ORD_COMPRA" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" type="id_Integer"/>
+      </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Pedidos_integracao.DB_PED_NRO " name="DB_PED_NRO" nullable="true" operator="=" type="id_Integer"/>
-        <mapperTableEntries expression="" name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_DATA_ENVIO" nullable="true" type="id_Date"/>
         <mapperTableEntries name="DB_PED_SITUACAO" nullable="true" type="id_Short"/>
-        <mapperTableEntries expression="" name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_CLIENTE" nullable="true" type="id_Double"/>
         <mapperTableEntries name="DB_PEDC_LIBERASEMSALDO" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="DB_PED_COD_TRANSP" nullable="true" type="id_Double"/>
@@ -2653,7 +2693,7 @@
         <mapperTableEntries name="DB_PED_ENT_BAIRRO" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_CIDADE" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_CEP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_PED_ENT_UF" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PED_ENT_UF" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_CGCMF" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_CGCTE" nullable="true" type="id_String"/>
         <mapperTableEntries name="DB_PED_ENT_COMPL" nullable="true" type="id_String"/>
@@ -2664,21 +2704,119 @@
         <mapperTableEntries name="DB_PEDI_QTDE_SOLIC" nullable="true" type="id_Float"/>
         <mapperTableEntries name="DB_PEDI_PRECO_LIQ" nullable="true" type="id_Float"/>
         <mapperTableEntries name="DB_TBPGTO_ZTERM" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_TBOPS_FAT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_PEDC_FORMA_PGTO" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="DB_TBOPS_FAT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_PEDC_FORMA_PGTO" nullable="true" type="id_Short"/>
         <mapperTableEntries name="DB_PEDC_PREV_FAT" nullable="true" type="id_Date"/>
         <mapperTableEntries name="DB_PEDC_OBSTRANSP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_FOPG_DESCR" nullable="true" type="id_String"/>
         <mapperTableEntries name="A3_SUPER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="A3_GEREN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_TBTPE_INFADD" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="DB_TBTRA_CGCMF" nullable="true" type="id_String"/>
-      </inputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row30" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row6.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="TotalPedido" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="A3_GEREN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_TBTPE_INFADD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DB_TBTRA_CGCMF" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="1440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_5"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_5">
+      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="TotalPedido" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="1480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_18"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SczGgWn8dsAQDbI1ZfVxzZ2flTnmZq3/JdZNnKbDQDGVXUnzM+06fyOo4yg="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PEDI_PEDIDO,&#10;&#9;&#9;DB_PEDI_PRODUTO,&#10;&#9;&#9;DB_PEDI_QTDE_SOLIC,&#13;&#10;&#9;&#9;DB_PEDI_PRECO_LIQ,&#13;&#10;&#9;&#9;DB_PEDI_OPERACAO,&#13;&#10;&#9;&#9;DB_PEDI_PREV_ENTR,&#13;&#10;&#9;&#9;DB_PEDI_SEQUENCIA,&#13;&#10;&#9;&#9;DB_PEDI_BASEICMS,&#13;&#10;&#9;&#9;DB_PEDI_ICMSORIG,&#13;&#10;&#9;&#9;DB_PEDI_VU_ICMS,&#13;&#10;&#9;&#9;DB_PEDI_IPI,&#13;&#10;&#9;&#9;DB_PEDI_ICMSDEST,&#13;&#10;&#9;&#9;DB_PEDI_VU_PIS,&#13;&#10;&#9;&#9;DB_PEDI_VU_COFINS,&#13;&#10;&#9;&#9;DB_PEDI_DESCTO_FISCAL,&#13;&#10;&#9;&#9;DB_PEDI_PERC_COMIS,&#13;&#10;&#9;&#9;DB_PEDI_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PEDI_SEQ_ORDEM_COMPRA&#10;FROM&#9;DB_PEDIDO_PROD&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PEDIDO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PRODUTO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_QTDE_SOLIC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PRECO_LIQ"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_OPERACAO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PREV_ENTR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_SEQUENCIA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_BASEICMS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ICMSORIG"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_ICMS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_IPI"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ICMSDEST"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_PIS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_COFINS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_DESCTO_FISCAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PERC_COMIS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ORD_COMPRA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_SEQ_ORDEM_COMPRA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Input Produtos"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_18">
+      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PRECO_LIQ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="DB_PEDI_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="DB_PEDI_PREV_ENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_SEQUENCIA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_BASEICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSORIG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_ICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSDEST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_PIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_COFINS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_DESCTO_FISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PERC_COMIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="DB_PEDI_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1320" posY="1440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
@@ -2732,19 +2870,19 @@
       <column comment="" key="false" length="19" name="DB_TBTRA_CGCMF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1320">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="true"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="true"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_FILIAL"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -2756,19 +2894,13 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_LOJACL"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TRANSP"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_CONDPA"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TABELA"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND1"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_EMISSA"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_MENNOT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TPFRET"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VTOT"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -2780,27 +2912,11 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_HRINC"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_PEDCLI"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_OBS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_UCODFO"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_UDESFO"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_PREFAT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND2"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_VEND3"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_GRPVEI"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TPFRTE"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_TRARED"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_DTENTR"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ZC5_OBSLOG"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -2840,29 +2956,18 @@
       <column comment="" key="false" length="-1" name="ZC5_NUM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="15" name="ZC5_CLIENT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="ZC5_LOJACL" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="ZC5_TRANSP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ZC5_CONDPA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="ZC5_TABELA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ZC5_VEND1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="ZC5_EMISSA" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="ZC5_MENNOT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="ZC5_TPFRET" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_VTOT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="ZC5_TIPVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_DTINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZC5_HRINC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="ZC5_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ZC5_OBS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ZC5_UCODFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="ZC5_UDESFO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC5_PREFAT" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="6" name="ZC5_VEND2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="6" name="ZC5_VEND3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ZC5_GRPVEI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="ZC5_TPFRTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="ZC5_TRARED" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC5_DTENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="ZC5_OBSLOG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ZC5_CDOPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="DB_PED_ENT_ENDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -2879,473 +2984,28 @@
       <column comment="" key="false" length="5" name="DB_PED_ENT_RAMAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="1440">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_5"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_5">
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="TotalPedido" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1400">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tReplicate_2"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tReplicate_2">
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PRECO_LIQ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PEDI_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PEDI_PREV_ENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_SEQUENCIA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_BASEICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSORIG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_ICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSDEST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_PIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_COFINS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_DESCTO_FISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PERC_COMIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PEDI_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1560">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JWRZ2gin9Ml9Kd4kNF7xJllZIFyrFW74SRApn7MEpSJs9TQw6tbnh7k0MeY="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_PEDI_PEDIDO,&#13;&#10;&#9;&#9;DB_PEDI_PRODUTO,&#13;&#10;&#9;&#9;DB_PEDI_QTDE_SOLIC,&#13;&#10;&#9;&#9;DB_PEDI_PRECO_LIQ,&#13;&#10;&#9;&#9;DB_PEDI_OPERACAO,&#13;&#10;&#9;&#9;DB_PEDI_PREV_ENTR,&#13;&#10;&#9;&#9;DB_PEDI_SEQUENCIA,&#13;&#10;&#9;&#9;DB_PEDI_BASEICMS,&#13;&#10;&#9;&#9;DB_PEDI_ICMSORIG,&#13;&#10;&#9;&#9;DB_PEDI_VU_ICMS,&#13;&#10;&#9;&#9;DB_PEDI_IPI,&#13;&#10;&#9;&#9;DB_PEDI_ICMSDEST,&#13;&#10;&#9;&#9;DB_PEDI_VU_PIS,&#13;&#10;&#9;&#9;DB_PEDI_VU_COFINS,&#13;&#10;&#9;&#9;DB_PEDI_DESCTO_FISCAL,&#13;&#10;&#9;&#9;DB_PEDI_PERC_COMIS,&#13;&#10;&#9;&#9;DB_PEDI_ORD_COMPRA,&#13;&#10;&#9;&#9;DB_PEDI_SEQ_ORDEM_COMPRA&#13;&#10;FROM&#9;DB_PEDIDO_PROD&#13;&#10;WHERE DB_PEDI_DATA1_ORIGINAL &gt;= GETDATE() - 180&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PEDIDO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PRODUTO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_QTDE_SOLIC"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PRECO_LIQ"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_OPERACAO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PREV_ENTR"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_SEQUENCIA"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_BASEICMS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ICMSORIG"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_ICMS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_IPI"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ICMSDEST"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_PIS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_VU_COFINS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_DESCTO_FISCAL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_PERC_COMIS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_ORD_COMPRA"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PEDI_SEQ_ORDEM_COMPRA"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="Input Produtos"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_3">
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PRECO_LIQ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PEDI_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PEDI_PREV_ENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_SEQUENCIA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_BASEICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSORIG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_ICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSDEST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_PIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_COFINS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_DESCTO_FISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PERC_COMIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PEDI_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="1400">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_4"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
-    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
-    <elementParameter field="CHECK" name="APPEND" value="true"/>
-    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Itens Pedidos"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashOutput_4">
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PRECO_LIQ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PEDI_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PEDI_PREV_ENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_SEQUENCIA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_BASEICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSORIG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_ICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSDEST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_PIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_COFINS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_DESCTO_FISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PERC_COMIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PEDI_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_9"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_i5bikEg2Ee-c4sBnjyqvig-tMap_9-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ItensPedidos">
-      <column comment="" key="false" length="3" name="ZC6_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="ZC6_PRODUT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_QTDVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_VLRBRU" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="ZC6_VLRLIQ" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_VALOR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ZC6_TES" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_LOCAL" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC6_ENTREG" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="D_E_L_E_T_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="R_E_C_N_O_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_PEDMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_PEDPAI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="R_E_C_D_E_L_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_ITPMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_BASEIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_PICM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALICM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_BASEIP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_VALIPI" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_DIFAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALIM6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALIM5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_DESCZF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_COMIS1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="ZC6_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="ZC6_SQPCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ItensPedidos" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="PedidosIntegracaoItens.DB_PED_EMPRESA " name="ZC6_FILIAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row41.DB_PEDI_PRODUTO " name="ZC6_PRODUT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_QTDE_SOLIC) ? 0 : row41.DB_PEDI_QTDE_SOLIC" name="ZC6_QTDVEN" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_PRECO_LIQ) ? 0 : Math.round(row41.DB_PEDI_PRECO_LIQ * 100.0) / 100.0 " name="ZC6_VLRBRU" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_PRECO_LIQ) ? 0 : Math.round(row41.DB_PEDI_PRECO_LIQ * 100.0) / 100.0 " name="ZC6_VLRLIQ" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Math.round((Relational.ISNULL(row41.DB_PEDI_QTDE_SOLIC) ? 0 : row41.DB_PEDI_QTDE_SOLIC ) * (Relational.ISNULL(row41.DB_PEDI_PRECO_LIQ) ? 0 : Math.round(row41.DB_PEDI_PRECO_LIQ * 100.0) / 100.0 ) * 100.0) / 100.0 " name="ZC6_VALOR" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="String.format(&quot;%-3s&quot;, Relational.ISNULL(row41.DB_PEDI_OPERACAO) ? PedidosIntegracaoItens.DB_PED_OPERACAO : row41.DB_PEDI_OPERACAO) " name="ZC6_TES" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;&quot; " name="ZC6_LOCAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_PREV_ENTR) ? &quot;19001231&quot; : TalendDate.formatDate(&quot;yyyyMMdd&quot;, row41.DB_PEDI_PREV_ENTR) " name="ZC6_ENTREG" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;&quot;" name="D_E_L_E_T_" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;&quot;" name="R_E_C_N_O_" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(0, 4) + &quot;/&quot; + String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(4, 8) " name="ZC6_PEDMER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(0, 4) + &quot;/&quot; + String.format(&quot;%08d&quot;, row6.DB_PED_NRO).substring(4, 8) " name="ZC6_PEDPAI" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="0" name="R_E_C_D_E_L_" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="String.format(&quot;%03d&quot;, row41.DB_PEDI_SEQUENCIA) " name="ZC6_ITPMER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_BASEICMS) ? 0 : Math.round(row41.DB_PEDI_BASEICMS * 100.0) / 100.0 " name="ZC6_BASEIC" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_ICMSORIG) ? 0 : row41.DB_PEDI_ICMSORIG" name="ZC6_PICM" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_VU_ICMS) ? 0 : Math.round(row41.DB_PEDI_VU_ICMS * 100.0) / 100.0 " name="ZC6_VALICM" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row41.DB_PEDI_IPI " name="ZC6_BASEIP" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row41.DB_PEDI_IPI " name="ZC6_IPI" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row41.DB_PEDI_QTDE_SOLIC *  (Math.round(row41.DB_PEDI_PRECO_LIQ * 100.0) / 100.0) * ((Relational.ISNULL(row41.DB_PEDI_IPI) ? 0 : row41.DB_PEDI_IPI) / 100) " name="ZC6_VALIPI" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_ICMSDEST) ? 0 : Math.round(row41.DB_PEDI_ICMSDEST * 100.0) / 100.0 " name="ZC6_DIFAL" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Math.round((Relational.ISNULL(row41.DB_PEDI_QTDE_SOLIC) ? 0 : row41.DB_PEDI_QTDE_SOLIC ) * (Relational.ISNULL(row41.DB_PEDI_VU_PIS) ? 0 : Math.round(row41.DB_PEDI_VU_PIS * 100.0) / 100.0) * 100.0) / 100.0 " name="ZC6_VALIM6" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="Math.round((Relational.ISNULL(row41.DB_PEDI_QTDE_SOLIC) ? 0 : row41.DB_PEDI_QTDE_SOLIC ) * (Relational.ISNULL(row41.DB_PEDI_VU_COFINS) ? 0 : Math.round(row41.DB_PEDI_VU_COFINS * 100.0) / 100.0) * 100.0) / 100.0 " name="ZC6_VALIM5" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row41.DB_PEDI_DESCTO_FISCAL " name="ZC6_DESCZF" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row41.DB_PEDI_PERC_COMIS " name="ZC6_COMIS1" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="Relational.ISNULL(row41.DB_PEDI_ORD_COMPRA) ? &quot;&quot; : row41.DB_PEDI_ORD_COMPRA.substring(0, Math.min(row41.DB_PEDI_ORD_COMPRA.length(), 20)) " name="ZC6_PEDCLI" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row41.DB_PEDI_SEQ_ORDEM_COMPRA " name="ZC6_SQPCLI" nullable="true" type="id_Integer"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="PedidosIntegracaoItens" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="DB_PED_NRO" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="DB_PED_EMPRESA" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PED_OPERACAO" nullable="true" type="id_String"/>
-      </inputTables>
-      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row41" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="PedidosIntegracaoItens.DB_PED_NRO " name="DB_PEDI_PEDIDO" nullable="true" operator="=" type="id_Integer"/>
-        <mapperTableEntries name="DB_PEDI_PRODUTO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PEDI_QTDE_SOLIC" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_PRECO_LIQ" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_OPERACAO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PEDI_PREV_ENTR" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="DB_PEDI_SEQUENCIA" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="DB_PEDI_BASEICMS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_ICMSORIG" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_ICMS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_IPI" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_ICMSDEST" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_PIS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_VU_COFINS" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_DESCTO_FISCAL" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="DB_PEDI_PERC_COMIS" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="DB_PEDI_ORD_COMPRA" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" type="id_Integer"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="1080">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_6"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_6">
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_PEDIDO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="DB_PEDI_PRODUTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_QTDE_SOLIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PRECO_LIQ" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_PEDI_OPERACAO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="DB_PEDI_PREV_ENTR" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="DB_PEDI_SEQUENCIA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_BASEICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSORIG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_ICMS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_ICMSDEST" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_PIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_VU_COFINS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_PEDI_DESCTO_FISCAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="DB_PEDI_PERC_COMIS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DB_PEDI_ORD_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="DB_PEDI_SEQ_ORDEM_COMPRA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="1160">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_FILIAL"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PRODUT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_QTDVEN"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VLRBRU"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VLRLIQ"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VALOR"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_TES"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_LOCAL"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_ENTREG"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="R_E_C_N_O_"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PEDMER"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PEDPAI"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="R_E_C_D_E_L_"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_ITPMER"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_BASEIC"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PICM"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VALICM"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_BASEIP"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_IPI"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VALIPI"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_DIFAL"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VALIM6"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_VALIM5"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_DESCZF"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_COMIS1"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PEDCLI"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_SQPCLI"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_EMPRESA"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_3">
-      <column comment="" key="false" length="3" name="ZC6_FILIAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="16" name="ZC6_PRODUT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_QTDVEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_VLRBRU" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="ZC6_VLRLIQ" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_VALOR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ZC6_TES" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_LOCAL" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="ZC6_ENTREG" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="D_E_L_E_T_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="R_E_C_N_O_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_PEDMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_PEDPAI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="R_E_C_D_E_L_" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="true" length="10" name="ZC6_ITPMER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_BASEIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_PICM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALICM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_BASEIP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_IPI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZC6_VALIPI" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_DIFAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALIM6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_VALIM5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="ZC6_DESCZF" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="ZC6_COMIS1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="ZC6_PEDCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="ZC6_SQPCLI" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_18"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;analytics&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VT91Tf0Xnqb/e/FfNFYDhSurlFV8RMeSUeNwLQzMaOy5hXz7stLU5GGKOKw="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DB_TBOPSP_PERC,&#13;&#10;&#9;&#9;&#9;&#9;&#9;DB_TBOPSP_COD,&#13;&#10;&#9;&#9;&#9;&#9;&#9;DB_TBOPSP_IMPOSTO&#13;&#10; FROM DB_TB_OPERS_PERC&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBOPSP_PERC"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBOPSP_COD"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_TBOPSP_IMPOSTO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="Mercanet_Producao"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_18">
-      <column comment="" defaultValue="" key="false" length="15" name="DB_TBOPSP_PERC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_TBOPSP_COD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_TBOPSP_IMPOSTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_5"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
-    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
-    <elementParameter field="CHECK" name="APPEND" value="true"/>
-    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Tipo Imposto"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashOutput_5">
-      <column comment="" defaultValue="" key="false" length="15" name="DB_TBOPSP_PERC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="DB_TBOPSP_COD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="DB_TBOPSP_IMPOSTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="DB_PED_EMPRESA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_5">
@@ -3657,27 +3317,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
   <connection connectorName="FLOW" label="row14" lineStyle="8" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="D14_PRODUT"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="ESTOQUE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_EMPRESA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_QTDE_VDA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_PRODUTO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_ALMOXAR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_QTDE_EST"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3704,7 +3353,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
-  <connection connectorName="FILTER" label="Pedidos_integracao" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_12" target="tMap_7">
+  <connection connectorName="FILTER" label="Pedidos_integracao" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_12" target="tMap_9">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Pedidos_integracao"/>
   </connection>
@@ -3712,217 +3361,34 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
-  <connection connectorName="FLOW" label="PedidosParaIntegracao" lineStyle="0" metaname="PedidosParaIntegracao" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_7" target="tLogRow_1">
+  <connection connectorName="FLOW" label="copyOfPedidosParaIntegracao" lineStyle="0" metaname="copyOfPedidosParaIntegracao" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_9" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfPedidosParaIntegracao"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfItensPedidos" lineStyle="0" metaname="copyOfItensPedidos" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_9" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfItensPedidos"/>
+  </connection>
+  <connection connectorName="FLOW" label="row30" lineStyle="8" metaname="tHashInput_5" offsetLabelX="0" offsetLabelY="0" source="tHashInput_5" target="tMap_9">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="Loja"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TotalParcial"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_NUM"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PEDIDO"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VTOT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_TBOPS_FAT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_HRINC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_DTINC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_STATUS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDC_FORMA_PGTO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_FOPG_DESCR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="A3_SUPER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="A3_GEREN"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTPE_INFADD"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_TIPO_FRETE_1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_TBTRA_CGCMF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDC_PREV_FAT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDC_OBSTRANSP"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTREF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TPFRET"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TRARED"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTRML"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TPFRTE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_UDESFO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TABELA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTBAI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCEP"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CLIENT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_OBS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_GRPVEI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_OBSLOG"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CONDPA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TIPVEN"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PEDCLI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCGC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTIE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_LOJACL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_CDOPER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PEDMER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTRAZ"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_MENNOT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_EMISSA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_UCODFO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_DTENTR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_TRANSP"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_PREFAT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_FILIAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND2"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTEND"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_VEND3"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTUF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC5_ENTCPL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_CGCTE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_COMPL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_BAIRRO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_CEP"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_UF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_TELEFONE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_CGCMF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_ENDER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_CIDADE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_PONTOREFER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_RAMAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_ENT_RAZAO"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TotalPedido"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PedidosParaIntegracao"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row30"/>
   </connection>
-  <connection connectorName="FLOW" label="PedidosIntegracaoItens" lineStyle="0" metaname="PedidosIntegracaoItens" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_7" target="tMap_9">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_EMPRESA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_OPERACAO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
+  <connection connectorName="FLOW" label="row41" lineStyle="8" metaname="tDBInput_18" offsetLabelX="0" offsetLabelY="0" source="tDBInput_18" target="tMap_9">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PedidosIntegracaoItens"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row41"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_7">
+  <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_9">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="DB_TBOPS_FAT"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -3955,288 +3421,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="row30" lineStyle="8" metaname="tHashInput_5" offsetLabelX="0" offsetLabelY="0" source="tHashInput_5" target="tMap_7">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="TotalParcial"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PEDIDO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="TotalPedido"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row30"/>
-  </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tReplicate_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_2" target="tMap_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ORD_COMPRA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_IPI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PERC_COMIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_DESCTO_FISCAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_BASEICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_ICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_PIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSDEST"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PREV_ENTR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_OPERACAO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PRECO_LIQ"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_SEQ_ORDEM_COMPRA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_SEQUENCIA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_COFINS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSORIG"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
-  </connection>
-  <connection connectorName="FLOW" label="row42" lineStyle="0" metaname="tReplicate_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_2" target="tHashOutput_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row42"/>
-  </connection>
-  <connection connectorName="FLOW" label="row40" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tReplicate_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row40"/>
-  </connection>
-  <connection connectorName="FLOW" label="ItensPedidos" lineStyle="0" metaname="ItensPedidos" offsetLabelX="0" offsetLabelY="0" source="tMap_9" target="tLogRow_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ORD_COMPRA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="R_E_C_N_O_"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_IPI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PERC_COMIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PED_EMPRESA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Local"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_IPI_1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_DESCTO_FISCAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_BASEICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_ICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VALIPI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_PIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSDEST"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PREV_ENTR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_OPERACAO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Total"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PRECO_LIQ"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PEDIDO_1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_SQPCLI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PRECO_LIQ_1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_COFINS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSORIG"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_ENTREG"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_PEDPAI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_LOCAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_PEDMER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VLRLIQ"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_QTDVEN"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="R_E_C_D_E_L_"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VALOR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_FILIAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="D_E_L_E_T_"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_TES"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VLRBRU"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_PRODUT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VALIM5"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_DIFAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VALIM6"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_PICM"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_COMIS1"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_VALICM"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_BASEIC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_DESCZF"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_PEDCLI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_IPI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ZC6_BASEIP"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ItensPedidos"/>
-  </connection>
-  <connection connectorName="FLOW" label="row41" lineStyle="8" metaname="tHashInput_6" offsetLabelX="0" offsetLabelY="0" source="tHashInput_6" target="tMap_9">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ORD_COMPRA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_IPI"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PERC_COMIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_QTDE_SOLIC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PEDIDO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_DESCTO_FISCAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_BASEICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_ICMS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_PIS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSDEST"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PREV_ENTR"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_OPERACAO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PRODUTO"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_PRECO_LIQ"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_SEQ_ORDEM_COMPRA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_SEQUENCIA"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_VU_COFINS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DB_PEDI_ICMSORIG"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row41"/>
-  </connection>
-  <connection connectorName="FLOW" label="row43" lineStyle="0" metaname="tDBInput_18" offsetLabelX="0" offsetLabelY="0" source="tDBInput_18" target="tHashOutput_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row43"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
@@ -4267,18 +3451,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_18"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_38afeac5-f009-442a-a919-2023a97b1113"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Av1WEbNoqyVOJHHP6GrHO50Csk9vrr7ZuLV2LBn5rDBDrKFWUWkJdVN4jcO1CZZIvhWvmhQkN040&#13;
-byZES2H8lw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c3d09771-cd3c-4f84-9109-508de7030e17"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>geS+tEGq3vUrKY3PNqet2fXGvIQuwVTYZSgX0wNEC9tjuZJFiPS60r1+ec9eQ3UFDtOYS529yir3&#13;
-swNfqRaItg==</DigestValue></Reference></SignedInfo><SignatureValue>WjvX80DUPoOfwQMAKMm6A5/KdBA/WsfM8TURGxeo9ETxevvN+m7gVZUY8Z0+cuwU8Kqc4F0Fd8jq&#13;
-UEGERfks2Dq3lkL3qj+Ygkv/DHdx9lLZjGy6tCMoSpaMvg5SR23YROGc11pEF2AXw86l6EorVNTM&#13;
-tJa5F6uv0fpSwUug/4gqWGmoFcu2ZfoFSj3Fy2xmsIwiYx34NHk+SQjIEL1qDNLX4c9IlsJ8mLxm&#13;
-Ed6AdNSH1S+tc0GLddh+k0+lypCKvdSxJvoxa4vlF7SuFXUZMJu3/WYxHykUT7I4sTYKagvF5eca&#13;
-j4xAHUslwK7YKUlzMJg46Kdg6IInelF6vrWZkQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b245dc8c-fb67-401d-a721-49bd5ab1ec69"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6XhZKxKq2hGzm31C+Iu2jU6FnKTxedgSF92UPOwYJ0/lC7YcJ+NuSkimyzhj6KOf+UaJDdVOhm9q&#13;
+1Oe/uqixNQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2e889f7b-79a5-4bd2-8934-0387be32b8d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7uobvv56oyb4rjLqiSfX25LwWJwKAc2DikHmLnKn943KTC+ZA0104tEKzlnn9L1+LnsSxv+UJog0&#13;
+t0X5aU77MQ==</DigestValue></Reference></SignedInfo><SignatureValue>Lgyp5YXzbRZNXdPNotWOlaO2J9DsPLbJ7kASFLlAVN6y+3xz8c7cyT3/5fFXYR2MVLirju/WlWXD&#13;
+3KxRmdJw1XKNmel1FOB33LcAoVtTPV9aBx0XDNpjYrvVYvyi6XbivHRj6xjTSrdI6DN6Ud8Sb2eF&#13;
+RvI6c5I+mqGRfc1hh0vA2VzBRyF7B2T+qXEVqDpoR7Ff4i2NJ11FZeSD3gC6hhs7AYiNznMNVr0m&#13;
+xbehTHEMkF01ZQSyh9MXcwQV/3L0U7EiNYlue/OR/yLOMriMd1Qv7TPBSL4gcahMwX+8PO0P6o1D&#13;
+A9fDU1XhSKVKIFyJC9N9hpbN56Z0aVcJf5NzJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4300,4 +3479,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c3d09771-cd3c-4f84-9109-508de7030e17" Target="#_38afeac5-f009-442a-a919-2023a97b1113"><Timestamp>2024-08-29 21:09:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2e889f7b-79a5-4bd2-8934-0387be32b8d9" Target="#_b245dc8c-fb67-401d-a721-49bd5ab1ec69"><Timestamp>2024-08-29 20:57:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
