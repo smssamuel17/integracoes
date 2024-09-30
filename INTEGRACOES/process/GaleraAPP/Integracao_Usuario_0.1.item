@@ -446,6 +446,10 @@
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="registration"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="Usuario"/>
@@ -456,6 +460,8 @@
       <elementValue elementRef="QUERY" value="&quot;cpf&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="active"/>
       <elementValue elementRef="QUERY" value="&quot;active&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="registration"/>
+      <elementValue elementRef="QUERY" value="&quot;registration&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -471,12 +477,14 @@
       <column comment="" key="false" length="-1" name="Nome" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CPF" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="active" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="registration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="Usuario" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Nome" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CPF" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="active" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="registration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -499,6 +507,7 @@
       <column comment="" key="false" length="-1" name="Nome" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CPF" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="active" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="registration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="840">
@@ -520,7 +529,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT TOP 10 numcpf as CPF,&#13;&#10;&#9;   max(datadm) as DataAdmissao&#13;&#10;  FROM r034fun&#13;&#10;WHERE numcad &gt;= '20106'&#13;&#10;AND nomfun LIKE '%Diego Lemes de Lima%'&#13;&#10;GROUP BY numcpf&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcpf as CPF,&#13;&#10;&#9;   max(datadm) as DataAdmissao&#13;&#10;  FROM r034fun&#13;&#10;WHERE numcad &gt;= '20106'&#13;&#10;  AND nomfun != 'AMADO GOIS'&#13;&#10;GROUP BY numcpf&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -591,9 +600,12 @@
       <column comment="" defaultValue="" key="false" length="5" name="grains" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="department" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Juncao" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.Nome " name="name" nullable="true" type="id_String"/>
@@ -623,13 +635,16 @@
         <mapperTableEntries expression="row7.grains == 1 ? 2 :&#13;&#10;java.util.Arrays.asList(2, 3, 4).contains(row7.grains) ? 3 :&#13;&#10;row7.grains == 5 ? 4 :&#13;&#10;row7.grains == 6 ? 5 :&#13;&#10;row7.grains == 7 ? 6 :&#13;&#10;row7.grains == 8 ? 9 :&#13;&#10;row7.grains == 9 ? 10 :&#13;&#10;row7.grains == 10 ? 12 :&#13;&#10;row7.grains == 11 ? 16 :&#13;&#10;row7.grains == 12 ? 18 :&#13;&#10;row7.grains == 14 ? 7 :&#13;&#10;row7.grains == 15 ? 8 :&#13;&#10;row7.grains == 16 ? 15 :&#13;&#10;row7.grains == 17 ? 17 :&#13;&#10;row7.grains == 18 ? 11 : 1 " name="grains" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row7.codccu.trim().matches(&quot;.*10102000.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10221002.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10221001.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10222001.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10221003.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10221005.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10223001.*&quot;) ? &quot;COMERCIAL&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10302004.*&quot;) ? &quot;ETE&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301002.*&quot;) ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301012.*&quot;) ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301001.*&quot;) ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301003.*&quot;)  ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301004.*&quot;) ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301005.*&quot;) ? &quot;FÁBRICA&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10401002.*&quot;) ? &quot;FINANCEIRO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10401001.*&quot;) ? &quot;FINANCEIRO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10102000.*&quot;) ? &quot;INTELIGENCIA DE MERCADO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10302003.*&quot;) ? &quot;LABORATÓRIO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10208000.*&quot;) ? &quot;LOG&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301010.*&quot;) ? &quot;MANUTENÇÃO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10407000.*&quot;) ? &quot;MARKETING&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10210001.*&quot;) ? &quot;MARKETING&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301009.*&quot;) ? &quot;OPERAÇÕES&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10301008.*&quot;) ? &quot;PCP&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10204001.*&quot;) ? &quot;PLANEJAMENTO&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10210003.*&quot;) ? &quot;PRODUTOS&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10405000.*&quot;) ? &quot;QUALIDADE&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10205000.*&quot;) ? &quot;SAT&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10206000.*&quot;) ? &quot;SAT&quot; :&#13;&#10;row7.codccu.trim().matches(&quot;.*10302001.*&quot;) ? &quot;SEGURANÇA DO TRABALHO&quot; : row32.nomccu " name="department" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row7.codccu" name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.caudem " name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.postra " name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row13.Usuario " name="UsuarioGalera" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row50" sizeState="INTERMEDIATE">
         <mapperTableEntries name="CPF" nullable="true" type="id_String"/>
         <mapperTableEntries name="DataAdmissao" nullable="true" type="id_Date"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row7" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="Codigo" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="" name="Codigo" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Nome" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row50.CPF " name="CPF" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries name="Sexo" nullable="true" type="id_String"/>
@@ -642,6 +657,8 @@
         <mapperTableEntries name="estciv" nullable="true" type="id_Short"/>
         <mapperTableEntries name="grains" nullable="true" type="id_Short"/>
         <mapperTableEntries name="codccu" nullable="true" type="id_String"/>
+        <mapperTableEntries name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries name="postra" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row8" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.Codigo " name="numcad" nullable="true" operator="=" type="id_Integer"/>
@@ -674,11 +691,12 @@
         <mapperTableEntries name="titred" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="titcar" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="org.apache.commons.lang3.StringUtils.leftPad(row7.CPF, 11, '0')" name="Usuario" nullable="true" operator="=" type="id_String"/>
+      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Usuario" nullable="true" type="id_String"/>
         <mapperTableEntries name="Nome" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="CPF" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="org.apache.commons.lang3.StringUtils.leftPad(row7.CPF, 11, '0')" name="CPF" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="active" nullable="true" type="id_Boolean"/>
+        <mapperTableEntries expression="row7.Codigo " name="registration" nullable="true" operator="=" type="id_Integer"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row32" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.codccu " name="codccu" nullable="true" operator="=" type="id_String"/>
@@ -932,6 +950,7 @@
       <column comment="" key="false" length="-1" name="Nome" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CPF" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="active" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="registration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1400">
@@ -1030,9 +1049,12 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Funcao_Setor" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Juncao.name " name="name" nullable="true" type="id_String"/>
@@ -1068,6 +1090,9 @@
         <mapperTableEntries expression="row51.idposition " name="idposition" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row51.position " name="position" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Juncao.CODIGO " name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Juncao.caudem " name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Juncao.postra " name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Juncao.UsuarioGalera " name="UsuarioGalera" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="Juncao" sizeState="INTERMEDIATE">
         <mapperTableEntries name="name" nullable="true" type="id_String"/>
@@ -1097,6 +1122,9 @@
         <mapperTableEntries name="grains" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="department" nullable="true" type="id_String"/>
         <mapperTableEntries name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UsuarioGalera" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row45" sizeState="INTERMEDIATE">
         <mapperTableEntries name="iddepartment" nullable="true" type="id_String"/>
@@ -1192,6 +1220,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UsuarioGalera"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -1230,6 +1264,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="-3" offsetLabelY="0" posX="80" posY="760">
@@ -1251,7 +1288,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcad as Codigo,&#13;&#10;&#9;   nomfun as Nome,&#13;&#10;&#9;   numcpf as CPF,&#13;&#10;&#9;   tipsex as Sexo,&#13;&#10;&#9;   datnas as DataNascimento,&#13;&#10;&#9;   datadm as DataAdmissao,&#13;&#10;&#9;   datafa as DataDemissao,&#13;&#10;&#9;   valsal as Salario,&#13;&#10;&#9;  codpes,&#13;&#10;&#9;&#9;codcar,&#13;&#10;&#9;&#9;estciv,&#13;&#10;&#9;&#9;grains,&#13;&#10;&#9;&#9;codccu&#13;&#10;  FROM r034fun&#13;&#10;WHERE numcad &gt;= '20106'&#13;&#10;and nomfun like '%Diego Lemes de Lima%'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcad as Codigo,&#13;&#10;&#9;   nomfun as Nome,&#13;&#10;&#9;   numcpf as CPF,&#13;&#10;&#9;   tipsex as Sexo,&#13;&#10;&#9;   datnas as DataNascimento,&#13;&#10;&#9;   datadm as DataAdmissao,&#13;&#10;&#9;   datafa as DataDemissao,&#13;&#10;&#9;   valsal as Salario,&#13;&#10;&#9;  codpes,&#13;&#10;&#9;&#9;codcar,&#13;&#10;&#9;&#9;estciv,&#13;&#10;&#9;&#9;grains,&#13;&#10;&#9;&#9;codccu,&#13;&#10;&#9;&#9;caudem,&#13;&#10;&#9;&#9;postra&#13;&#10;  FROM r034fun&#13;&#10;WHERE numcad &gt;= '20106'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1291,6 +1328,10 @@
       <elementValue elementRef="TRIM" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="codccu"/>
       <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="TRIM" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
@@ -1310,12 +1351,22 @@
       <column comment="" defaultValue="" key="false" length="5" name="estciv" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="grains" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="18" name="codccu" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1080">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_31"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="caudem"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="postra"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;1&quot;"/>
       <elementValue elementRef="INPUT_COLUMN" value="admissiondate"/>
       <elementValue elementRef="FUNCTION" value=""/>
       <elementValue elementRef="OPERATOR" value="&gt;"/>
@@ -1359,6 +1410,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" key="false" length="40" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1394,6 +1448,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="40" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1429,6 +1486,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1512,6 +1572,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UsuarioGalera"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -1550,6 +1616,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="1080">
@@ -1599,6 +1668,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" key="false" length="40" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1634,6 +1706,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="40" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1669,6 +1744,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1752,6 +1830,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UsuarioGalera"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
@@ -1792,6 +1876,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1823,7 +1910,7 @@
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="JsonPatch" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="body" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;{\n    \&quot;login\&quot;: \&quot;&quot; + row23.login + &quot;\&quot;,\n    \&quot;name\&quot;: \&quot;&quot; + row23.name + &quot;\&quot;,\n    \&quot;registration\&quot;: \&quot;&quot; + row23.registration + &quot;\&quot;,\n    \&quot;cpf\&quot;: \&quot;&quot; + row23.cpf + &quot;\&quot;,\n    \&quot;gender\&quot;: \&quot;&quot; + row23.gender + &quot;\&quot;,\n    \&quot;birthdate\&quot;: \&quot;&quot; + row23.birthdate + &quot;\&quot;,\n    \&quot;admissiondate\&quot;: \&quot;&quot; + row23.admissiondate + &quot;\&quot;,\n    \&quot;resignationdate\&quot;: null,\n    \&quot;lastsalary\&quot;: \&quot;&quot; + row23.lastsalary + &quot;\&quot;,\n    \&quot;street\&quot;: \&quot;&quot; + row23.street + &quot;\&quot;,\n    \&quot;street_number\&quot;: \&quot;&quot; + row23.street_number + &quot;\&quot;,\n    \&quot;address_addon\&quot;: \&quot;&quot; + row23.address_addon + &quot;\&quot;,\n    \&quot;district\&quot;: \&quot;&quot; + row23.district + &quot;\&quot;,\n    \&quot;city\&quot;: \&quot;&quot; + row23.city + &quot;\&quot;,\n    \&quot;state\&quot;: \&quot;&quot; + row23.state + &quot;\&quot;,\n    \&quot;zip_code\&quot;: \&quot;&quot; + row23.zip_code + &quot;\&quot;,\n    \&quot;ddd_celphone\&quot;: \&quot;&quot; + row23.ddd_celphone + &quot;\&quot;,\n    \&quot;celphone\&quot;: \&quot;&quot; + row23.celphone + &quot;\&quot;,\n    \&quot;idmaritalstatus\&quot;: \&quot;&quot; + row23.estciv + &quot;\&quot;,\n    \&quot;ideducationlevel\&quot;: \&quot;&quot; + row23.grains + &quot;\&quot;,\n    \&quot;active\&quot;: &quot; + row23.active + &quot;,\n&#9;\&quot;idoccupation\&quot;: \&quot;&quot; + row23.idoccupation + &quot;\&quot;,\n    \&quot;iddepartment\&quot;: \&quot;&quot; + row23.iddepartment + &quot;\&quot;,\n    \&quot;idposition\&quot;: \&quot;&quot; + row23.idposition + &quot;\&quot;\n}&quot; " name="string" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;{\n    \&quot;login\&quot;: \&quot;&quot; + row23.UsuarioGalera + &quot;\&quot;,\n    \&quot;name\&quot;: \&quot;&quot; + row23.name + &quot;\&quot;,\n    \&quot;registration\&quot;: \&quot;&quot; + row23.registration + &quot;\&quot;,\n    \&quot;cpf\&quot;: \&quot;&quot; + row23.cpf + &quot;\&quot;,\n    \&quot;gender\&quot;: \&quot;&quot; + row23.gender + &quot;\&quot;,\n    \&quot;birthdate\&quot;: \&quot;&quot; + row23.birthdate + &quot;\&quot;,\n    \&quot;admissiondate\&quot;: \&quot;&quot; + row23.admissiondate + &quot;\&quot;,\n    \&quot;resignationdate\&quot;: null,\n    \&quot;lastsalary\&quot;: \&quot;&quot; + row23.lastsalary + &quot;\&quot;,\n    \&quot;street\&quot;: \&quot;&quot; + row23.street + &quot;\&quot;,\n    \&quot;street_number\&quot;: \&quot;&quot; + row23.street_number + &quot;\&quot;,\n    \&quot;address_addon\&quot;: \&quot;&quot; + row23.address_addon + &quot;\&quot;,\n    \&quot;district\&quot;: \&quot;&quot; + row23.district + &quot;\&quot;,\n    \&quot;city\&quot;: \&quot;&quot; + row23.city + &quot;\&quot;,\n    \&quot;state\&quot;: \&quot;&quot; + row23.state + &quot;\&quot;,\n    \&quot;zip_code\&quot;: \&quot;&quot; + row23.zip_code + &quot;\&quot;,\n    \&quot;ddd_celphone\&quot;: \&quot;&quot; + row23.ddd_celphone + &quot;\&quot;,\n    \&quot;celphone\&quot;: \&quot;&quot; + row23.celphone + &quot;\&quot;,\n    \&quot;idmaritalstatus\&quot;: \&quot;&quot; + row23.estciv + &quot;\&quot;,\n    \&quot;ideducationlevel\&quot;: \&quot;&quot; + row23.grains + &quot;\&quot;,\n    \&quot;active\&quot;: &quot; + row23.active + &quot;,\n&#9;\&quot;idoccupation\&quot;: \&quot;&quot; + row23.idoccupation + &quot;\&quot;,\n    \&quot;iddepartment\&quot;: \&quot;&quot; + row23.iddepartment + &quot;\&quot;,\n    \&quot;idposition\&quot;: \&quot;&quot; + row23.idposition + &quot;\&quot;\n}&quot; " name="string" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row23.login " name="login" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables name="Ativos" sizeState="INTERMEDIATE">
@@ -1863,6 +1950,9 @@
         <mapperTableEntries name="idposition" nullable="true" type="id_String"/>
         <mapperTableEntries name="position" nullable="true" type="id_String"/>
         <mapperTableEntries name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UsuarioGalera" nullable="true" type="id_String"/>
         <mapperTableEntries name="errorMessage" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
@@ -1971,6 +2061,9 @@
         <mapperTableEntries name="idposition" nullable="true" type="id_String"/>
         <mapperTableEntries name="position" nullable="true" type="id_String"/>
         <mapperTableEntries name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UsuarioGalera" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -2084,6 +2177,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UsuarioGalera"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
@@ -2124,7 +2223,49 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Setor Galera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_3">
+      <column comment="" key="false" length="-1" name="iddepartment" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="department" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Cargo Galera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_4">
+      <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="720" posY="1280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_2"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Função Galera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_2">
+      <column comment="" key="false" length="-1" name="idoccupation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="occupation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="1400">
@@ -2139,6 +2280,10 @@
       <elementValue elementRef="FUNCTION" value=""/>
       <elementValue elementRef="OPERATOR" value="=="/>
       <elementValue elementRef="RVALUE" value="true"/>
+      <elementValue elementRef="INPUT_COLUMN" value="caudem"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
@@ -2177,6 +2322,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
@@ -2213,6 +2361,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -2249,6 +2400,9 @@
       <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UsuarioGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -2305,6 +2459,9 @@
       <column comment="" key="false" length="-1" name="occupationGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="iddepartment" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="departmentGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -2312,7 +2469,7 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Desativacao" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="body" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;{\n    \&quot;login\&quot;: \&quot;&quot; + row17.login + &quot;\&quot;,\n    \&quot;resignationdate\&quot;: \&quot;&quot; + row17.resignationdate + &quot;\&quot;,\n&#9;\&quot;avaliableavd\&quot;: false\n}&quot; " name="string" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;{\n    \&quot;login\&quot;: \&quot;&quot; + row17.login + &quot;\&quot;,\n    \&quot;registration\&quot;: \&quot;&quot; + row17.registration + &quot;\&quot;,\n    \&quot;resignationdate\&quot;: \&quot;&quot; + row17.resignationdate + &quot;\&quot;,\n&#9;\&quot;avaliableavd\&quot;: false\n}&quot; " name="string" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.login " name="login" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables name="printar" sizeState="INTERMEDIATE">
@@ -2348,6 +2505,9 @@
         <mapperTableEntries expression="row17.occupationGalera " name="occupationGalera" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.iddepartment " name="iddepartment" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.departmentGalera " name="departmentGalera" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row17.CODIGO " name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row17.caudem " name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row17.postra " name="postra" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.errorMessage " name="errorMessage" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row17" sizeState="INTERMEDIATE">
@@ -2384,6 +2544,9 @@
         <mapperTableEntries name="idposition" nullable="true" type="id_String"/>
         <mapperTableEntries name="position" nullable="true" type="id_String"/>
         <mapperTableEntries name="CODIGO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="caudem" nullable="true" type="id_String"/>
+        <mapperTableEntries name="postra" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UsuarioGalera" nullable="true" type="id_String"/>
         <mapperTableEntries name="errorMessage" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
@@ -2466,6 +2629,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="departmentGalera"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="caudem"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postra"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
@@ -2505,46 +2674,10 @@
       <column comment="" key="false" length="-1" name="occupationGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="iddepartment" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="departmentGalera" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="caudem" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postra" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Setor Galera"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_3">
-      <column comment="" key="false" length="-1" name="iddepartment" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="department" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Cargo Galera"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_4">
-      <column comment="" key="false" length="-1" name="idposition" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="720" posY="1280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_2"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Função Galera"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_2">
-      <column comment="" key="false" length="-1" name="idoccupation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="occupation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1560" posY="1400">
@@ -2560,7 +2693,7 @@
   </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="1400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_4"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://labapi1.galera.app&quot;"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://hydronorth.galera.app&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;/api/v1/users/user/&quot; + context.LoginDesativacao +&quot;/&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="PATCH"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/json"/>
@@ -2594,8 +2727,6 @@
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token"/>
-      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;application/json&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
@@ -3170,7 +3301,7 @@
       <column key="false" length="0" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Cargo" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;{ \&quot;data\&quot;: [&quot; + row48.string + &quot;]}&quot;" name="string" nullable="true" type="id_String"/>
@@ -3327,7 +3458,7 @@
       <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Funcao" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;{ \&quot;data\&quot;: [&quot; + row53.string + &quot;]}&quot;" name="string" nullable="true" type="id_String"/>
@@ -3468,7 +3599,7 @@
   </connection>
   <connection connectorName="FLOW" label="row39" lineStyle="0" metaname="tExtractJSONFields_4" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_4" target="tHashOutput_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN" value="registration"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3553,7 +3684,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="active"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Usuario"/>
+      <elementValue elementRef="TRACE_COLUMN" value="UsuarioGalera"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="active_1"/>
@@ -3575,6 +3706,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="CODIGO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="caudem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postra"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3602,6 +3739,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="active"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="registration"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
@@ -3615,6 +3755,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="CODIGO"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="caudem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postra"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="UsuarioGalera"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Funcao_Setor"/>
@@ -3624,6 +3773,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row27"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="caudem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postra"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
@@ -3693,6 +3850,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
   </connection>
+  <connection connectorName="FLOW" label="row45" lineStyle="8" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tMap_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row45"/>
+  </connection>
+  <connection connectorName="FLOW" label="row51" lineStyle="8" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row51"/>
+  </connection>
+  <connection connectorName="FLOW" label="row46" lineStyle="8" metaname="tHashInput_2" offsetLabelX="0" offsetLabelY="0" source="tHashInput_2" target="tMap_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row46"/>
+  </connection>
   <connection connectorName="FILTER" label="row17" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_43" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row17"/>
@@ -3710,20 +3879,19 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Desativacao"/>
   </connection>
   <connection connectorName="FLOW" label="printar" lineStyle="0" metaname="printar" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_4" target="tLogRow_18">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CODIGO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="caudem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postra"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="printar"/>
-  </connection>
-  <connection connectorName="FLOW" label="row45" lineStyle="8" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tMap_9">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row45"/>
-  </connection>
-  <connection connectorName="FLOW" label="row51" lineStyle="8" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_9">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row51"/>
-  </connection>
-  <connection connectorName="FLOW" label="row46" lineStyle="8" metaname="tHashInput_2" offsetLabelX="0" offsetLabelY="0" source="tHashInput_2" target="tMap_9">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row46"/>
   </connection>
   <connection connectorName="FLOW" label="row29" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tRESTClient_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -3852,13 +4020,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_40607fba-8e12-4afa-bccf-20d96428932e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SRdjlqU09+CBvVSROjNI76fpWIABehEdIIjdhPPQu7wu0OupzJzp39U/xcX8jJaKVDCkqBMRAU4S&#13;
-8tVoSguvIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_07059e11-003f-451e-8166-02e01e697a82"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MDJd5JEyoemK/pgLlD/OgHPWrvc6UqL6xn0fSqjJ39FwRgBYM82/fzP9qX1ZjbKmxT2LCV/svnKk&#13;
-2AYaMt6baQ==</DigestValue></Reference></SignedInfo><SignatureValue>ZWmD0lvA1wfl7xjKNqy0rjFV0mnX9Js1eweVer7AIXI9rPQ9gQZtv2Yah3nvrUohPaw3ryUsT2rG&#13;
-zABL+0C6/64wQLc/ZFzJm+JUtajjL9H38U8twSXZ2tlq+vPudqdl3eQEZrivkWfm4npzYsX2PNHb&#13;
-aThsNusDfVtR8Ob84pieHE+DqdlUbtZo7e7VhGmsnugn9oSb/10ZMTiXHBGDQMP4aTA1xUkqHWhA&#13;
-DYZwxmq2+ZsOgu7nA0xhDejIXOsRihtoArA64O2/Wmv58Cz/wxAqob7Hmpn74Ex/y3Ly9UMCxsoE&#13;
-riAtl01pWJix38RdkJ4lK4cYQaGf8sApktIC9Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_27b237f9-030c-46af-befd-c5f9755c157a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L/3isKdi3OpPdy7hTGHiGB+0aALz76PUlkUcZ0x5g3+n9gc30ejZFWlpIaKcTL3ih8H2Ec87pa5/&#13;
+A9zuzz5FBA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c1dfbd29-891c-4b68-9c69-798c9cf725d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NJ9eWxXo1XgX31rXn8WnBAcBHJYltgsgx0s14Vil4RJwaqTu2sS0tpF0O21u02aiEvG/7oFkwXQk&#13;
+oCIwgNoCZQ==</DigestValue></Reference></SignedInfo><SignatureValue>mA0/K3QBow6I6NZKVeTuij58zbdOofUyhL0jVAGH/k2ImxmsJsFsnz7JCl86x/ZUOgwfz5lnYH8V&#13;
+nBYniiaklk/ccnl6hP5nl9XDrYtZUkkfJlpfKsCe2G0zXS0JDg669WdanXeidAFjQMXqfEYAkPg/&#13;
+7dB1C+pg/gdB2tVtu0ZqpwiSU4rBqpEYd8srvzHY3jy3RmLAHQHsenshqFAJ4JTaxxAFesOi0OLe&#13;
+GO50MvbnIoPUDKBrDA5Q1JVP/E0gwlrJWBurqG3vhvBb1fvKlW3doAvyyknfyG7qrbGHSjmPqGzF&#13;
+z7cIlmymQ3pIgwD+FgAdb2o0zTh9SbUMJs+6KA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3880,4 +4048,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_07059e11-003f-451e-8166-02e01e697a82" Target="#_40607fba-8e12-4afa-bccf-20d96428932e"><Timestamp>2024-09-19 19:56:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c1dfbd29-891c-4b68-9c69-798c9cf725d5" Target="#_27b237f9-030c-46af-befd-c5f9755c157a"><Timestamp>2024-09-30 17:05:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
