@@ -721,7 +721,6 @@
       <column comment="" defaultValue="" key="false" length="3" name="DB_PED_SITUACAO" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Short" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="out1">
       <column comment="" defaultValue="" key="true" length="10" name="DB_PED_NRO" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
@@ -746,7 +745,6 @@
         <mapperTableEntries name="DB_PED_SITUACAO" expression="row24.DB_PED_SITUACAO " type="id_Short" nullable="true"/>
         <mapperTableEntries name="DB_PEDC_PEDORIGEMREJ" expression="row24.DB_PEDC_PEDORIGEMREJ " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="DB_PED_SITCORP" expression="row24.DB_PED_SITCORP " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PRODUTO_RS" expression="Relational.ISNULL(row60.PRODUTO_RS) ? 'N' : row60.PRODUTO_RS " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="DB_PED_NRO" expression="row24.DB_PED_NRO " type="id_Integer" nullable="true"/>
@@ -910,8 +908,6 @@
       <elementValue elementRef="LENGTH" value="10" id="15"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_SITCORP" id="16"/>
       <elementValue elementRef="LENGTH" value="10" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUTO_RS" id="18"/>
-      <elementValue elementRef="LENGTH" value="10" id="19"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -926,7 +922,6 @@
       <column comment="" defaultValue="" key="false" length="3" name="DB_PED_SITUACAO" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Short" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1360">
@@ -958,12 +953,11 @@
       <column comment="" defaultValue="" key="false" length="3" name="DB_PED_SITUACAO" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Short" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="720" posY="1360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;output_row.DB_PED_NRO = input_row.DB_PED_NRO;&#xA;output_row.DB_PED_OPERACAO = input_row.DB_PED_OPERACAO;&#xA;output_row.DB_PEDI_PRODUTO = input_row.DB_PEDI_PRODUTO;&#xA;output_row.DB_PEDI_QTDE_SOLIC = input_row.DB_PEDI_QTDE_SOLIC;&#xA;output_row.ESTOQUE = input_row.ESTOQUE;&#xA;output_row.DB_PEDC_PEDORIGEMREJ = input_row.DB_PEDC_PEDORIGEMREJ;&#xA;output_row.DB_PED_SITCORP = input_row.DB_PED_SITCORP;&#xA;output_row.PRODUTO_RS = input_row.PRODUTO_RS;&#xA;&#xA;if (globalMap.get(&quot;prodAnt&quot;) != input_row.DB_PEDI_PRODUTO)&#xA;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#xA;&#xA;if(Relational.ISNULL((Integer)globalMap.get(&quot;prevRowVal&quot;)))&#xA;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#xA;&#xA;//System.out.println((Integer)globalMap.get(&quot;prevRowVal&quot;));&#xA;&#xA;output_row.EstoqueAtualizado = (Integer)globalMap.get(&quot;prevRowVal&quot;)-input_row.DB_PEDI_QTDE_SOLIC;&#xA;&#xA;globalMap.put(&quot;prevRowVal&quot;,output_row.EstoqueAtualizado);&#xA;&#xA;if(output_row.EstoqueAtualizado &lt; 0)&#xA;output_row.FlagSemEstoque = 1;&#xA;else&#xA;output_row.FlagSemEstoque = 0;&#xA;&#xA;&#xA;globalMap.put(&quot;prodAnt&quot;,input_row.DB_PEDI_PRODUTO);&#xA;&#xA;//System.out.println(output_row.EstoqueAtualizado);&#xA;//System.out.println(output_row.DB_PEDI_PRODUTO);&#xA;//System.out.println(output_row.DB_PEDI_QTDE_SOLIC);&#xA;//System.out.println(output_row.ESTOQUE);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;output_row.DB_PED_NRO = input_row.DB_PED_NRO;&#xA;output_row.DB_PED_OPERACAO = input_row.DB_PED_OPERACAO;&#xA;output_row.DB_PEDI_PRODUTO = input_row.DB_PEDI_PRODUTO;&#xA;output_row.DB_PEDI_QTDE_SOLIC = input_row.DB_PEDI_QTDE_SOLIC;&#xA;output_row.ESTOQUE = input_row.ESTOQUE;&#xA;output_row.DB_PEDC_PEDORIGEMREJ = input_row.DB_PEDC_PEDORIGEMREJ;&#xA;output_row.DB_PED_SITCORP = input_row.DB_PED_SITCORP;&#xA;&#xA;if (globalMap.get(&quot;prodAnt&quot;) != input_row.DB_PEDI_PRODUTO)&#xA;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#xA;&#xA;if(Relational.ISNULL((Integer)globalMap.get(&quot;prevRowVal&quot;)))&#xA;globalMap.put(&quot;prevRowVal&quot;,input_row.ESTOQUE);&#xA;&#xA;//System.out.println((Integer)globalMap.get(&quot;prevRowVal&quot;));&#xA;&#xA;output_row.EstoqueAtualizado = (Integer)globalMap.get(&quot;prevRowVal&quot;)-input_row.DB_PEDI_QTDE_SOLIC;&#xA;&#xA;globalMap.put(&quot;prevRowVal&quot;,output_row.EstoqueAtualizado);&#xA;&#xA;if(output_row.EstoqueAtualizado &lt; 0)&#xA;output_row.FlagSemEstoque = 1;&#xA;else&#xA;output_row.FlagSemEstoque = 0;&#xA;&#xA;&#xA;globalMap.put(&quot;prodAnt&quot;,input_row.DB_PEDI_PRODUTO);&#xA;&#xA;//System.out.println(output_row.EstoqueAtualizado);&#xA;//System.out.println(output_row.DB_PEDI_PRODUTO);&#xA;//System.out.println(output_row.DB_PEDI_QTDE_SOLIC);&#xA;//System.out.println(output_row.ESTOQUE);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="Verificação de estoque"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -975,7 +969,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -991,7 +984,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -1012,10 +1004,6 @@
       <elementValue elementRef="FUNCTION" value="" id="9"/>
       <elementValue elementRef="OPERATOR" value="==" id="10"/>
       <elementValue elementRef="RVALUE" value="0" id="11"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PRODUTO_RS" id="12"/>
-      <elementValue elementRef="FUNCTION" value="" id="13"/>
-      <elementValue elementRef="OPERATOR" value="==" id="14"/>
-      <elementValue elementRef="RVALUE" value="'N'" id="15"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
@@ -1029,7 +1017,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -1041,7 +1028,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -1053,7 +1039,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1079,7 +1064,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -1112,12 +1096,10 @@
       <elementValue elementRef="LENGTH" value="10" id="11"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_SITCORP" id="12"/>
       <elementValue elementRef="LENGTH" value="10" id="13"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUTO_RS" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EstoqueAtualizado" id="14"/>
       <elementValue elementRef="LENGTH" value="10" id="15"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EstoqueAtualizado" id="16"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FlagSemEstoque" id="16"/>
       <elementValue elementRef="LENGTH" value="10" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FlagSemEstoque" id="18"/>
-      <elementValue elementRef="LENGTH" value="10" id="19"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -1130,7 +1112,6 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -3050,12 +3031,10 @@
       <elementValue elementRef="LENGTH" value="10" id="11"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DB_PED_SITCORP" id="12"/>
       <elementValue elementRef="LENGTH" value="10" id="13"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUTO_RS" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EstoqueAtualizado" id="14"/>
       <elementValue elementRef="LENGTH" value="10" id="15"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EstoqueAtualizado" id="16"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FlagSemEstoque" id="16"/>
       <elementValue elementRef="LENGTH" value="10" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FlagSemEstoque" id="18"/>
-      <elementValue elementRef="LENGTH" value="10" id="19"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -3068,23 +3047,12 @@
       <column comment="" defaultValue="" key="false" length="15" name="ESTOQUE" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="DB_PEDC_PEDORIGEMREJ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="DB_PED_SITCORP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="PRODUTO_RS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="EstoqueAtualizado" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="FlagSemEstoque" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_20" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlInput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
-    <elementParameter field="CHECK" name="START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlInput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
