@@ -101,16 +101,6 @@
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlInput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
-    <elementParameter field="CHECK" name="START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlInput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -128,7 +118,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT B2_COD,&#xD;&#xA;&#x9;&#x9;B2_LOCAL,&#xD;&#xA;&#x9;   &#x9;B2_QATU,&#xD;&#xA;&#x9;&#x9;B2_QACLASS, &#xD;&#xA;&#x9;&#x9;B2_RESERVA,&#xD;&#xA;&#x9;&#x9;B2_FILIAL,&#xD;&#xA;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;  FROM SB2010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT B2_COD,&#xD;&#xA;&#x9;&#x9;B2_LOCAL,&#xD;&#xA;&#x9;   &#x9;B2_QATU,&#xD;&#xA;&#x9;&#x9;B2_QACLASS, &#xD;&#xA;&#x9;&#x9;B2_RESERVA,&#xD;&#xA;&#x9;&#x9;B2_FILIAL,&#xD;&#xA;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;  FROM SB2010&#xD;&#xA; WHERE B2_LOCAL = '93'&#xD;&#xA;&#x9;&#x9;AND B2_FILIAL = '09'&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -281,7 +271,7 @@
       <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="EstoqueTotal">
         <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row6.B2_FILIAL " type="id_String" nullable="true"/>
@@ -400,16 +390,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlInput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
-    <elementParameter field="CHECK" name="START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlInput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -427,7 +407,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;                SELECT ZC5_PEDMER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_STATUS,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;                FROM  ZC5010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ZC5_PEDMER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_STATUS,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;     FROM  ZC5010&#xD;&#xA; WHERE  D_E_L_E_T_ &lt;> '*'&#xD;&#xA;&#x9;&#x9;AND (ZC5_STATUS = 'ERR' OR ZC5_STATUS = 'INS')&#xD;&#xA;&#x9;&#x9;AND ZC5_FILIAL = '09'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -500,16 +480,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlInput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
-    <elementParameter field="CHECK" name="START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlInput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -527,7 +497,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;                SELECT  ZC6_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PEDMER,&#xD;&#xA;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PRODUT,&#xD;&#xA;                       &#x9;ZC6_QTDVEN,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; D_E_L_E_T_&#xD;&#xA;                FROM  ZC6010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  ZC6_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PEDMER,&#xD;&#xA;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PRODUT,&#xD;&#xA;                       &#x9;ZC6_QTDVEN,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; D_E_L_E_T_&#xD;&#xA;&#x9; FROM  ZC6010&#xD;&#xA; WHERE D_E_L_E_T_ &lt;> '*'&#xD;&#xA;&#x9;&#x9;AND ZC6_FILIAL = '09'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -667,7 +637,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="OUT">
         <mapperTableEntries name="ZC6_PRODUT" expression="row22.ZC6_PRODUT " type="id_String" nullable="true"/>
@@ -692,15 +662,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlOutput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlOutput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1LjswIyrEe-fbNpDU1iEJQ" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>

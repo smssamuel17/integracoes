@@ -99,7 +99,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="800">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -118,7 +118,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT B2_FILIAL,&#xD;&#xA;&#x9;B2_LOCAL,&#xD;&#xA;&#x9;B2_COD,&#xD;&#xA;&#x9;B2_QATU,&#xD;&#xA;&#x9;D_E_L_E_T_&#xD;&#xA;FROM SB2010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT B2_FILIAL,&#xD;&#xA;&#x9;B2_LOCAL,&#xD;&#xA;&#x9;B2_COD,&#xD;&#xA;&#x9;B2_QATU,&#xD;&#xA;&#x9;D_E_L_E_T_&#xD;&#xA;FROM SB2010&#xD;&#xA;WHERE B2_FILIAL = '02'&#xD;&#xA;&#x9;&#x9;AND B2_LOCAL = '23'&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -132,13 +132,13 @@
     <elementParameter field="PASSWORD" name="KEYSTORE_SECRET" value="" show="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="B2_FILIAL" id="0"/>
       <elementValue elementRef="TRIM" value="true" id="1"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="B2_LOCAL" id="2"/>
       <elementValue elementRef="TRIM" value="true" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="B2_COD" id="4"/>
       <elementValue elementRef="TRIM" value="true" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="B2_QATU" id="6"/>
       <elementValue elementRef="TRIM" value="true" id="7"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_" id="8"/>
       <elementValue elementRef="TRIM" value="true" id="9"/>
@@ -148,14 +148,14 @@
     <elementParameter field="TEXT" name="LABEL" value="Protheus_Producao"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" originalDbColumnName="B2_FILIAL" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" originalDbColumnName="B2_COD" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalDbColumnName="B2_QATU" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="B2_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="B2_QATU" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="800">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -163,7 +163,7 @@
       <elementValue elementRef="FUNCTION" value="" id="1"/>
       <elementValue elementRef="OPERATOR" value="==" id="2"/>
       <elementValue elementRef="RVALUE" value="&quot;23&quot;" id="3"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_EMPRESA" id="4"/>
+      <elementValue elementRef="INPUT_COLUMN" value="B2_FILIAL" id="4"/>
       <elementValue elementRef="FUNCTION" value="" id="5"/>
       <elementValue elementRef="OPERATOR" value="==" id="6"/>
       <elementValue elementRef="RVALUE" value="&quot;02&quot;" id="7"/>
@@ -176,40 +176,40 @@
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_1">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" originalDbColumnName="B2_FILIAL" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" originalDbColumnName="B2_COD" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalDbColumnName="B2_QATU" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="B2_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="B2_QATU" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" originalDbColumnName="B2_FILIAL" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" originalDbColumnName="B2_COD" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalDbColumnName="B2_QATU" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="B2_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="B2_QATU" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" originalDbColumnName="B2_FILIAL" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" originalDbColumnName="B2_COD" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalDbColumnName="B2_QATU" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="B2_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="B2_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="B2_QATU" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="800">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_7" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="1"/>
+      <elementValue elementRef="INPUT_COLUMN" value="B2_COD" id="1"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_EMPRESA" id="2"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_EMPRESA" id="3"/>
+      <elementValue elementRef="INPUT_COLUMN" value="B2_FILIAL" id="3"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_QTDE_EST" id="0"/>
       <elementValue elementRef="FUNCTION" value="sum" id="1"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_QTDE_EST" id="2"/>
+      <elementValue elementRef="INPUT_COLUMN" value="B2_QATU" id="2"/>
       <elementValue elementRef="IGNORE_NULL" value="false" id="3"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
@@ -223,7 +223,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" originalDbColumnName="B2_QATU" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="1120">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -238,17 +238,27 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="Rename2">
+      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
       <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_ORD" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_RESER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_DATA_ALTER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Rename2">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
         <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row27.DB_ESTAL_EMPRESA " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="(Relational.ISNULL(row27.DB_ESTAL_QTDE_EST) ? 0 : row27.DB_ESTAL_QTDE_EST) - ((Relational.ISNULL(row19.DB_ESTAL_QTDE_EST) ? 0 : row19.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row20.DB_ESTAL_QTDE_EST) ? 0 : row20.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row21.DB_ESTAL_QTDE_EST) ? 0 : row21.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row22.DB_ESTAL_QTDE_EST) ? 0 : row22.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row24.DB_ESTAL_QTDE_EST) ? 0 : row24.DB_ESTAL_QTDE_EST)) " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_ALMOXAR" expression="&quot;1&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="(Relational.ISNULL(row27.DB_ESTAL_QTDE_EST) ? 0 : row27.DB_ESTAL_QTDE_EST) - ((Relational.ISNULL(row19.DB_ESTAL_QTDE_EST) ? 0 : row19.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row20.DB_ESTAL_QTDE_EST) ? 0 : row20.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row21.DB_ESTAL_QTDE_EST) ? 0 : row21.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row22.DB_ESTAL_QTDE_EST) ? 0 : row22.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row24.DB_ESTAL_QTDE_EST) ? 0 : row24.DB_ESTAL_QTDE_EST)) &lt; 0 ? &#xD;&#xA;0 : &#xD;&#xA;(Relational.ISNULL(row27.DB_ESTAL_QTDE_EST) ? 0 : row27.DB_ESTAL_QTDE_EST) - ((Relational.ISNULL(row19.DB_ESTAL_QTDE_EST) ? 0 : row19.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row20.DB_ESTAL_QTDE_EST) ? 0 : row20.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row21.DB_ESTAL_QTDE_EST) ? 0 : row21.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row22.DB_ESTAL_QTDE_EST) ? 0 : row22.DB_ESTAL_QTDE_EST) + (Relational.ISNULL(row24.DB_ESTAL_QTDE_EST) ? 0 : row24.DB_ESTAL_QTDE_EST)) " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_VDA" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_ORD" expression="null" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_RESER" expression="null" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_DATA_ALTER" expression="null" type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row27" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="DB_ESTAL_PRODUTO" type="id_String" nullable="true"/>
@@ -261,28 +271,28 @@
         <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row20" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row19.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row21" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row20.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
         <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row22" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row21.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
         <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row24" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row22.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
+      <inputTables sizeState="INTERMEDIATE" name="row24" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row27.DB_ESTAL_PRODUTO " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="1360">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="1360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_5" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
@@ -296,7 +306,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="1240">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="1240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_4" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
@@ -310,7 +320,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="1120">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_3" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
@@ -324,7 +334,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="1000">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="1000">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_2" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
@@ -338,13 +348,13 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="880">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="880">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_1" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/workspace/in.hash&quot;" show="false"/>
     <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Qtd_emopenhada"/>
+    <elementParameter field="TEXT" name="LABEL" value="Qtd_empenhada"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tHashInput_1">
       <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -352,56 +362,71 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="0"/>
       <elementValue elementRef="LENGTH" value="10" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_ALMOXAR" id="2"/>
       <elementValue elementRef="LENGTH" value="10" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="4"/>
       <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_VDA" id="8"/>
+      <elementValue elementRef="LENGTH" value="10" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_ORD" id="10"/>
+      <elementValue elementRef="LENGTH" value="10" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_RESER" id="12"/>
+      <elementValue elementRef="LENGTH" value="10" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_DATA_ALTER" id="14"/>
+      <elementValue elementRef="LENGTH" value="10" id="15"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_2">
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
       <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_ORD" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_RESER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_DATA_ALTER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="1120">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_P27UsEBkEe-YS8RQVZZjcw" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1LjswIyrEe-fbNpDU1iEJQ" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.128&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;BRONZE&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;mercanet&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dkFTV7SleP9QWNrZh4sJldSGMivXsV2j6IE5ytRijw0Ax96kP+LycVTjZA=="/>
+    <elementParameter field="TEXT" name="USER" value="&quot;integra&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:pGoZWl9qf3DIT5VuWqXukXCkuPK1xRapCwrhMimKZMfbvlzvILFc4XcFg7eg"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;DB_ESTOQUE_ALMOX&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
     <elementParameter field="LABEL" name="NOTE" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" value="DB_ESTAL_PRODUTO" show="false"/>
     <elementParameter field="TEXT" name="START_VALUE" value="1" show="false"/>
     <elementParameter field="TEXT" name="STEP" value="1" show="false"/>
@@ -410,7 +435,7 @@
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instanceName=mercanet;&quot;"/>
     <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_ALWAYS_ENCRYPTED" value="false"/>
     <elementParameter field="TEXT" name="KEYSTORE_PRINCIPAL_ID" value="" show="false"/>
@@ -423,21 +448,46 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="0"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="1"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="2"/>
       <elementValue elementRef="UPDATABLE" value="true" id="3"/>
       <elementValue elementRef="INSERTABLE" value="true" id="4"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_ALMOXAR" id="5"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="6"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="7"/>
       <elementValue elementRef="UPDATABLE" value="true" id="8"/>
       <elementValue elementRef="INSERTABLE" value="true" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="10"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="11"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="12"/>
       <elementValue elementRef="UPDATABLE" value="true" id="13"/>
       <elementValue elementRef="INSERTABLE" value="true" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="15"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="16"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="17"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="18"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_VDA" id="20"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="21"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="22"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="23"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="24"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_ORD" id="25"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="26"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="27"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="28"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_RESER" id="30"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="31"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="32"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="33"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="34"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_DATA_ALTER" id="35"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="36"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="37"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="38"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="39"/>
     </elementParameter>
     <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
@@ -449,19 +499,29 @@
     <elementParameter field="TEXT" name="LABEL" value="DataStore"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
       <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_ORD" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_RESER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_DATA_ALTER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
       <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_ORD" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_RESER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_DATA_ALTER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="40">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -480,7 +540,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;                SELECT C9_LOCAL ,&#xD;&#xA;                       C9_QTDLIB,&#xD;&#xA;                       C9_FILIAL,&#xD;&#xA;&#x9;&#x9;               C9_NFISCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   C9_PRODUTO,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   D_E_L_E_T_&#xD;&#xA;                FROM SC9010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT C9_LOCAL ,&#xD;&#xA;                       C9_QTDLIB,&#xD;&#xA;                       C9_FILIAL,&#xD;&#xA;&#x9;&#x9;               C9_NFISCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   C9_PRODUTO,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   D_E_L_E_T_&#xD;&#xA;                FROM SC9010&#xD;&#xA; WHERE C9_LOCAL = '23'&#xD;&#xA;&#x9;&#x9;AND C9_FILIAL = '02'&#xD;&#xA;&#x9;&#x9;AND C9_NFISCAL = ''&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -496,13 +556,13 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="C9_LOCAL" id="0"/>
       <elementValue elementRef="TRIM" value="true" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="C9_QTDLIB" id="2"/>
       <elementValue elementRef="TRIM" value="true" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="C9_FILIAL" id="4"/>
       <elementValue elementRef="TRIM" value="true" id="5"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="C9_NFISCAL" id="6"/>
       <elementValue elementRef="TRIM" value="true" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="C9_PRODUTO" id="8"/>
       <elementValue elementRef="TRIM" value="true" id="9"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_" id="10"/>
       <elementValue elementRef="TRIM" value="true" id="11"/>
@@ -512,15 +572,15 @@
     <elementParameter field="TEXT" name="LABEL" value="Protheus_Producao"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_2">
-      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="C9_PRODUTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="40">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_4" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -528,7 +588,7 @@
       <elementValue elementRef="FUNCTION" value="" id="1"/>
       <elementValue elementRef="OPERATOR" value="==" id="2"/>
       <elementValue elementRef="RVALUE" value="&quot;23&quot;" id="3"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_EMPRESA" id="4"/>
+      <elementValue elementRef="INPUT_COLUMN" value="C9_FILIAL" id="4"/>
       <elementValue elementRef="FUNCTION" value="" id="5"/>
       <elementValue elementRef="OPERATOR" value="==" id="6"/>
       <elementValue elementRef="RVALUE" value="&quot;02&quot;" id="7"/>
@@ -541,32 +601,32 @@
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;row3.C9_NFISCAL.trim().isEmpty()&#xA;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_4">
-      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="C9_PRODUTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="C9_PRODUTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="C9_QTDLIB" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="C9_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="C9_NFISCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="C9_PRODUTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="40">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -589,21 +649,21 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Rename">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row4.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row4.DB_ESTAL_EMPRESA " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="row4.DB_ESTAL_QTDE_EST " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row4.C9_PRODUTO " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row4.C9_FILIAL " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="row4.C9_QTDLIB " type="id_Double" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="C9_LOCAL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="C9_NFISCAL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="D_E_L_E_T_" type="id_String" nullable="true"/>
+        <mapperTableEntries name="C9_LOCAL" type="id_String"/>
+        <mapperTableEntries name="C9_QTDLIB" type="id_Double"/>
+        <mapperTableEntries name="C9_FILIAL" type="id_String"/>
+        <mapperTableEntries name="C9_NFISCAL" type="id_String"/>
+        <mapperTableEntries name="C9_PRODUTO" type="id_String"/>
+        <mapperTableEntries name="D_E_L_E_T_" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="40" sizeX="41" sizeY="40">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="40" sizeX="41" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_6" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
@@ -628,7 +688,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="40">
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_2" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -646,7 +706,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -665,7 +725,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;                SELECT ZC5_PEDMER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_STATUS,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;                FROM  ZC5010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ZC5_PEDMER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ZC5_STATUS,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;     FROM  ZC5010&#xD;&#xA; WHERE ZC5_FILIAL = '02'&#xD;&#xA;&#x9;&#x9;AND (ZC5_STATUS = 'INS' OR ZC5_STATUS = 'ERR')&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -699,7 +759,7 @@
       <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="160">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_12" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="||"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -735,7 +795,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="160">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_7" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -767,7 +827,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="920" posY="240">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -790,9 +850,9 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="OUT">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row10.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row10.DB_ESTAL_EMPRESA " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="row10.DB_ESTAL_QTDE_EST " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row10.ZC6_PRODUT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row10.ZC6_FILIAL " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="row10.ZC6_QTDVEN " type="id_Double" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="ZC5_PEDMER" type="id_String" nullable="true"/>
@@ -801,75 +861,16 @@
         <mapperTableEntries name="D_E_L_E_T_" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row10" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ZC6_PEDMER" expression="row8.ZC5_PEDMER " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="ZC6_LOCAL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="D_E_L_E_T_" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ZC6_FILIAL" type="id_String"/>
+        <mapperTableEntries name="ZC6_PEDMER" expression="row8.ZC5_PEDMER " type="id_String" operator="="/>
+        <mapperTableEntries name="ZC6_PRODUT" type="id_String"/>
+        <mapperTableEntries name="ZC6_QTDVEN" type="id_Double"/>
+        <mapperTableEntries name="ZC6_LOCAL" type="id_String"/>
+        <mapperTableEntries name="D_E_L_E_T_" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;TOTVS&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;integra&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nqOHFRWLYfOzb8f5FxxzE2nv/Zm3D0XbTpXTt+BAFTGZ59Z3xA=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ZC6010&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;                SELECT  ZC6_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PEDMER,&#xD;&#xA;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PRODUT,&#xD;&#xA;                       &#x9;ZC6_QTDVEN,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; D_E_L_E_T_&#xD;&#xA;                FROM  ZC6010&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_ALWAYS_ENCRYPTED" value="false"/>
-    <elementParameter field="TEXT" name="KEYSTORE_PRINCIPAL_ID" value="" show="false"/>
-    <elementParameter field="PASSWORD" name="KEYSTORE_SECRET" value="" show="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="0"/>
-      <elementValue elementRef="TRIM" value="true" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PEDMER" id="2"/>
-      <elementValue elementRef="TRIM" value="true" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="4"/>
-      <elementValue elementRef="TRIM" value="true" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="6"/>
-      <elementValue elementRef="TRIM" value="true" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_LOCAL" id="8"/>
-      <elementValue elementRef="TRIM" value="true" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_" id="10"/>
-      <elementValue elementRef="TRIM" value="true" id="11"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" value="30" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Protheus_Producao"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_4">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="15" offsetLabelY="0" posX="760" posY="320">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="15" offsetLabelY="0" posX="440" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_19" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -877,7 +878,7 @@
       <elementValue elementRef="FUNCTION" value="" id="1"/>
       <elementValue elementRef="OPERATOR" value="!=" id="2"/>
       <elementValue elementRef="RVALUE" value="&quot;*&quot;" id="3"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_EMPRESA" id="4"/>
+      <elementValue elementRef="INPUT_COLUMN" value="ZC6_FILIAL" id="4"/>
       <elementValue elementRef="FUNCTION" value="" id="5"/>
       <elementValue elementRef="OPERATOR" value="==" id="6"/>
       <elementValue elementRef="RVALUE" value="&quot;02&quot;" id="7"/>
@@ -886,32 +887,32 @@
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_19">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC6_PRODUT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC6_PRODUT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC6_PRODUT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="240">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_5" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
@@ -936,7 +937,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="240">
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="920" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_1" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -954,7 +955,66 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="440">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;TOTVS&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;integra&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nqOHFRWLYfOzb8f5FxxzE2nv/Zm3D0XbTpXTt+BAFTGZ59Z3xA=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ZC6010&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  ZC6_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PEDMER,&#xD;&#xA;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;ZC6_PRODUT,&#xD;&#xA;                       &#x9;ZC6_QTDVEN,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ZC6_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; D_E_L_E_T_&#xD;&#xA;&#x9;FROM  ZC6010&#xD;&#xA; WHERE ZC6_FILIAL = '02'&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&#xD;&#xA;&#x9;&#x9;AND ZC6_ENTREG >= GETDATE() - 180&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_ALWAYS_ENCRYPTED" value="false"/>
+    <elementParameter field="TEXT" name="KEYSTORE_PRINCIPAL_ID" value="" show="false"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_SECRET" value="" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_FILIAL" id="0"/>
+      <elementValue elementRef="TRIM" value="true" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PEDMER" id="2"/>
+      <elementValue elementRef="TRIM" value="true" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_PRODUT" id="4"/>
+      <elementValue elementRef="TRIM" value="true" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_QTDVEN" id="6"/>
+      <elementValue elementRef="TRIM" value="true" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZC6_LOCAL" id="8"/>
+      <elementValue elementRef="TRIM" value="true" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_" id="10"/>
+      <elementValue elementRef="TRIM" value="true" id="11"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" value="30" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Protheus_Producao"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column comment="" key="false" length="2" name="ZC6_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="ZC6_PEDMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="ZC6_PRODUT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="ZC6_LOCAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -973,7 +1033,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT D14_PRODUT,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_QTDBLQ,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_ENDER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_DTVALD,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_QTDEST,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;FROM D14010&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT D14_PRODUT,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_QTDBLQ,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_ENDER,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_FILIAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_LOCAL,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_DTVALD,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D14_QTDEST,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;D_E_L_E_T_&#xD;&#xA;FROM D14010&#xD;&#xA; WHERE D14_LOCAL = '23'&#xD;&#xA;&#x9;&#x9;AND D14_FILIAL = '02'&#xD;&#xA;&#x9;&#x9;AND D_E_L_E_T_ &lt;> '*'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1019,7 +1079,7 @@
       <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="440">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_21" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -1071,7 +1131,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="560">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1144,7 +1204,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="680">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_26" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
@@ -1174,7 +1234,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="560">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -1221,7 +1281,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="B1_USHELFL" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="440">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_34" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -1256,7 +1316,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="680">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_2" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
@@ -1281,7 +1341,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="560">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_39" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -1313,7 +1373,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="560">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_3" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
@@ -1324,7 +1384,7 @@
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_QTDE_EST" id="0"/>
       <elementValue elementRef="FUNCTION" value="sum" id="1"/>
-      <elementValue elementRef="INPUT_COLUMN" value="D14_ENDER" id="2"/>
+      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_QTDE_EST" id="2"/>
       <elementValue elementRef="IGNORE_NULL" value="false" id="3"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
@@ -1338,7 +1398,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="440">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
@@ -1363,7 +1423,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1320" posY="440">
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_3" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -1381,7 +1441,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1320" posY="560">
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_4" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -1399,7 +1459,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1320" posY="680">
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_5" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -1412,97 +1472,6 @@
     <elementParameter field="TEXT" name="LABEL" value="Qtd_shelf"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tHashOutput_5">
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1480" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_uI04AD4WEe-sAdoao7jYaw-tMap_3-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
-    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out2">
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out2">
-        <mapperTableEntries name="DB_ESTAL_PRODUTO" expression="row20.B_D14_PRODUT " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row20.B_D14_FILIAL " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DB_ESTAL_QTDE_EST" expression="(Relational.ISNULL(row20.B_D14_QTDBLQ) ? 0 : row20.B_D14_QTDBLQ) + (Relational.ISNULL(row21.D14_QTDEST) ? 0 : row21.D14_QTDEST) + (Relational.ISNULL(row22.D14_QTDEST) ? 0 : row22.D14_QTDEST) " type="id_Double" nullable="true"/>
-      </outputTables>
-    </nodeData>
-  </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_74" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS">
-      <elementValue elementRef="INPUT_COLUMN" value="DB_ESTAL_QTDE_EST" id="0"/>
-      <elementValue elementRef="FUNCTION" value="" id="1"/>
-      <elementValue elementRef="OPERATOR" value=">" id="2"/>
-      <elementValue elementRef="RVALUE" value="0" id="3"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFilterRow_74">
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1720" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_4" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_PRODUTO" id="0"/>
-      <elementValue elementRef="LENGTH" value="10" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_EMPRESA" id="2"/>
-      <elementValue elementRef="LENGTH" value="10" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DB_ESTAL_QTDE_EST" id="4"/>
-      <elementValue elementRef="LENGTH" value="10" id="5"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_4">
       <column comment="" key="false" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
@@ -1531,7 +1500,24 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row27" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="Rename2" lineStyle="0" metaname="Rename2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
+  <connection connectorName="FLOW" label="Rename2" lineStyle="0" metaname="Rename2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_ALMOXAR" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_QTDE_VDA" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_DATA_ALTER" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_QTDE_RESER" id="9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DB_ESTAL_QTDE_ORD" id="12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="13"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="14"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Rename2" show="false"/>
   </connection>
@@ -1610,9 +1596,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row24" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row28" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="row23" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row28" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row23" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFilterRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1652,10 +1638,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUT" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tFilterRow_19">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
-  </connection>
   <connection connectorName="FILTER" label="row10" lineStyle="8" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_19" target="tMap_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
@@ -1663,6 +1645,10 @@
   <connection connectorName="FLOW" label="row25" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tHashOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row25" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tFilterRow_19">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tFilterRow_21">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1751,16 +1737,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tFilterRow_74">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out2" show="false"/>
-  </connection>
-  <connection connectorName="FILTER" label="row23" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_74" target="tLogRow_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row23" show="false"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255" show="false"/>
@@ -1778,11 +1754,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
   </subjob>
