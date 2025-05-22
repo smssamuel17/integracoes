@@ -9,11 +9,4 @@
 	<natures>
 		<nature>org.talend.core.talendnature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>temp/Test_Script_0.1.jobscript</name>
-			<type>1</type>
-			<locationURI>WORKSPACE_LOC/integracoes-1164869859/INTEGRACOES/code/jobscripts/Test_Script_0.1.item</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
