@@ -382,6 +382,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_bkLdgERrEe-YS8RQVZZjcw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_P27UsEBkEe-YS8RQVZZjcw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_P27UsEBkEe-YS8RQVZZjcw - Abrafati_RAW",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_co7W8AwMEfCnza3VA7IJBQ",
     "version" : "0.1",
     "type" : "job"

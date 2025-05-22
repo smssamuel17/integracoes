@@ -6,7 +6,7 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="40" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="480" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -454,10 +454,10 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Json_Format">
         <mapperTableEntries name="body" type="id_String" nullable="true"/>
-        <mapperTableEntries name="string" expression="&quot;{&#x9;\&quot;Branch__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_EMPRESA + &quot;\&quot;,&#x9;\&quot;Product__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_PRODUTO + &quot;\&quot;,&#x9;\&quot;StockQuantity__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_QTDE_EST + &quot;\&quot; }&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="string" expression="&quot;{&#x9;\&quot;StockQuantity__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_QTDE_EST + &quot;\&quot;,&#x9;\&quot;Product__r\&quot;:{&#x9;\&quot;IdProtheus__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_PRODUTO + &quot;\&quot;},&#x9;\&quot;Branch__r\&quot;:{ &#x9;\&quot;BranchCode__c\&quot;: \&quot;&quot; + row39.DB_ESTAL_EMPRESA + &quot;\&quot; }&#x9;}&quot; " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="ExternalID">
-        <mapperTableEntries name="ExternalId__c" expression="row39.DB_ESTAL_EMPRESA  + row39.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExternalId__c" expression="row39.DB_ESTAL_EMPRESA  + &quot;_&quot; + row39.DB_ESTAL_PRODUTO " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row39" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="DB_ESTAL_EMPRESA" type="id_String" nullable="true"/>
@@ -494,6 +494,13 @@
       <column comment="" key="false" length="-1" name="body" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="1480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ExternalId__c = input_row.ExternalId__c;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1320" sizeX="40" sizeY="41">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
@@ -617,13 +624,6 @@
       <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="1480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ExternalId__c = input_row.ExternalId__c;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
@@ -1643,7 +1643,7 @@
       <column comment="" key="false" length="1" name="D_E_L_E_T_" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="-400">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="-400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_7" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -1965,7 +1965,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_LKF_MGYhEe-6j9TpHeiSAw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_fqeTQDKWEfCj7PFwtfwRpw-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -2064,7 +2064,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_LKF_MGYhEe-6j9TpHeiSAw-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_fqeTQDKWEfCj7PFwtfwRpw-tMap_6-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
