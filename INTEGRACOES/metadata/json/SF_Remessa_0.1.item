@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_NePaoDpdEfCMVvV8MgnhOg" name="SF_Remessa" dataPackage="_NeParzpdEfCMVvV8MgnhOg" JSONFilePath="C:/Users/joao.santos/Downloads/SF_Remessa.json" Encoding="UTF-8" inputModel="false">
+    <root xmi:id="_NePaoTpdEfCMVvV8MgnhOg" JSONPath="/root" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_NePaojpdEfCMVvV8MgnhOg" JSONPath="/root/method" RelatedColumn="method" Attribute="branch" Order="2" Type="id_String"/>
+    <root xmi:id="_NePaozpdEfCMVvV8MgnhOg" JSONPath="/root/url" RelatedColumn="url" Attribute="branch" Order="3" Type="id_String"/>
+    <root xmi:id="_NePapDpdEfCMVvV8MgnhOg" JSONPath="/root/body" RelatedColumn="" Attribute="branch" Order="5" Type="id_String"/>
+    <root xmi:id="_NePapTpdEfCMVvV8MgnhOg" JSONPath="/root/body/ShipmentNumber__c" RelatedColumn="ShipmentNumber__c" Attribute="branch" Order="6" Type="id_String"/>
+    <root xmi:id="_NePapjpdEfCMVvV8MgnhOg" JSONPath="/root/body/Branch__r" RelatedColumn="" Attribute="branch" Order="7" Type="id_String"/>
+    <root xmi:id="_NePapzpdEfCMVvV8MgnhOg" JSONPath="/root/body/Branch__r/BranchCode__c" RelatedColumn="BranchCode__c" Attribute="branch" Order="8" Type="id_String"/>
+    <root xmi:id="_NePaqDpdEfCMVvV8MgnhOg" JSONPath="/root/body/Order__r" RelatedColumn="" Attribute="branch" Order="9" Type="id_String"/>
+    <root xmi:id="_NePaqTpdEfCMVvV8MgnhOg" JSONPath="/root/body/Order__r/ExternalId__c" RelatedColumn="ExternalId__c" Attribute="branch" Order="10" Type="id_Integer"/>
+    <root xmi:id="_NePaqjpdEfCMVvV8MgnhOg" JSONPath="/root/body/Opportunity__r" RelatedColumn="" Attribute="branch" Order="11" Type="id_String"/>
+    <root xmi:id="_NePaqzpdEfCMVvV8MgnhOg" JSONPath="/root/body/Opportunity__r/OpportunityNumber__c" RelatedColumn="OpportunityNumber__c" Attribute="branch" Order="12" Type="id_Integer"/>
+    <root xmi:id="_NeParDpdEfCMVvV8MgnhOg" JSONPath="/root/body/InvoiceNumber__c" RelatedColumn="InvoiceNumber__c" Attribute="branch" Order="13" Type="id_String"/>
+    <root xmi:id="_NeParTpdEfCMVvV8MgnhOg" JSONPath="/root/body/DateOfIssue__c" RelatedColumn="DateOfIssue__c" Attribute="branch" Order="14" Type="id_Date"/>
+    <loop xmi:id="_NeParjpdEfCMVvV8MgnhOg" JSONPath="/root/referenceId" RelatedColumn="referenceId" Attribute="main" Order="4" Type="id_String"/>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_NeParzpdEfCMVvV8MgnhOg" name="default" dataManager="_NePaoDpdEfCMVvV8MgnhOg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_NePasDpdEfCMVvV8MgnhOg" id="_ETvhUDpaEfCMVvV8MgnhOg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePasTpdEfCMVvV8MgnhOg" name="method" label="method" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePasjpdEfCMVvV8MgnhOg" name="url" label="url" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePaszpdEfCMVvV8MgnhOg" name="referenceId" label="referenceId" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePatDpdEfCMVvV8MgnhOg" name="ShipmentNumber__c" label="ShipmentNumber__c" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePatTpdEfCMVvV8MgnhOg" name="BranchCode__c" label="BranchCode__c" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePatjpdEfCMVvV8MgnhOg" name="ExternalId__c" label="ExternalId__c" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePatzpdEfCMVvV8MgnhOg" name="OpportunityNumber__c" label="OpportunityNumber__c" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePauDpdEfCMVvV8MgnhOg" name="InvoiceNumber__c" label="InvoiceNumber__c" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_NePauTpdEfCMVvV8MgnhOg" name="DateOfIssue__c" label="DateOfIssue__c" talendType="id_Date"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

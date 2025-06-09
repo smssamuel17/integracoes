@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <TalendMetadata:DatabaseConnection xmi:id="_5K_WwIyrEe-fbNpDU1iEJQ" name="MercanetProducao" id="_1LjswIyrEe-fbNpDU1iEJQ" label="MercanetProducao" dataPackage="_-IPYsNzgEe-0u9ZZWlXASA" DatabaseType="Microsoft SQL Server" DriverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" URL="jdbc:sqlserver://192.168.4.66;DatabaseName=mercanet;instanceName=mercanet;" dbVersionString="MSSQL_PROP" Port="" Username="integra" Password="enc:system.encryption.key.v1:EABv/jwcixAWikg5KeeRIHJBpww9ipE1oVIWV7tt/ZagCHti++Q59uW/UQ==" ServerName="192.168.4.66" SID="mercanet" SqlSynthax="" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="instanceName=mercanet;" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
     <taggedValue xmi:id="_5K_WwYyrEe-fbNpDU1iEJQ" tag="Is Conn Need Reload" value="false"/>
     <taggedValue xmi:id="_5LiJUIyrEe-fbNpDU1iEJQ" tag="package filter" value=""/>
@@ -25,7 +25,35 @@
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYt9zgEe-0u9ZZWlXASA" name="db_denydatawriter"/>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYuNzgEe-0u9ZZWlXASA" name="db_owner"/>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYudzgEe-0u9ZZWlXASA" name="db_securityadmin"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYutzgEe-0u9ZZWlXASA" name="dbo"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYutzgEe-0u9ZZWlXASA" name="dbo">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_gth_ID_xEfCMVvV8MgnhOg" name="DB_ESTOQUE_INTEGRACAO" id="_gtdtsD_xEfCMVvV8MgnhOg" label="DB_ESTOQUE_INTEGRACAO" tableType="TABLE">
+        <feature xsi:type="relational:TdColumn" xmi:id="_gth_IT_xEfCMVvV8MgnhOg" name="LinkProduto" label="LinkProduto" length="17" sourceType="VARCHAR" talendType="id_String" key="true" nullable="false">
+          <taggedValue xmi:id="_gth_Ij_xEfCMVvV8MgnhOg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_gth_Iz_xEfCMVvV8MgnhOg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_gth_JD_xEfCMVvV8MgnhOg" name="VARCHAR" javaDataType="12"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_gth_JT_xEfCMVvV8MgnhOg" name="PRODUTO" label="PRODUTO" length="15" sourceType="VARCHAR" talendType="id_String" key="true" nullable="false">
+          <taggedValue xmi:id="_gth_Jj_xEfCMVvV8MgnhOg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_gth_Jz_xEfCMVvV8MgnhOg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_gth_KD_xEfCMVvV8MgnhOg" name="VARCHAR" javaDataType="12"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_gth_KT_xEfCMVvV8MgnhOg" name="EMPRESA" label="EMPRESA" length="2" sourceType="VARCHAR" talendType="id_String" key="true" nullable="false">
+          <taggedValue xmi:id="_gth_Kj_xEfCMVvV8MgnhOg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_gth_Kz_xEfCMVvV8MgnhOg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_gth_LD_xEfCMVvV8MgnhOg" name="VARCHAR" javaDataType="12"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_gth_LT_xEfCMVvV8MgnhOg" name="LOCAL" label="LOCAL" length="2" sourceType="VARCHAR" talendType="id_String" key="true" nullable="false">
+          <taggedValue xmi:id="_gth_Lj_xEfCMVvV8MgnhOg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_gth_Lz_xEfCMVvV8MgnhOg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_gth_MD_xEfCMVvV8MgnhOg" name="VARCHAR" javaDataType="12"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_gth_MT_xEfCMVvV8MgnhOg" name="ESTOQUE" label="ESTOQUE" length="24" sourceType="REAL" talendType="id_Float">
+          <taggedValue xmi:id="_gth_Mj_xEfCMVvV8MgnhOg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_gth_Mz_xEfCMVvV8MgnhOg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_gth_ND_xEfCMVvV8MgnhOg" name="REAL" numericPrecisionRadix="2" javaDataType="7" nullable="columnNullable"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYu9zgEe-0u9ZZWlXASA" name="guest"/>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYvNzgEe-0u9ZZWlXASA" name="INFORMATION_SCHEMA"/>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYvdzgEe-0u9ZZWlXASA" name="sys"/>

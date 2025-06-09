@@ -6,7 +6,7 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="40" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -297,6 +297,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="Ajuste">
       <column comment="" key="true" length="15" name="IdProtheus__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsActive" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsApproved__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsSpecialProduct__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
@@ -330,6 +331,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Ajuste">
         <mapperTableEntries name="IdProtheus__c" expression="row2.B1_COD" type="id_String"/>
+        <mapperTableEntries name="ProductCode" expression="row2.B1_COD " type="id_String" nullable="true"/>
         <mapperTableEntries name="IsActive" expression="row2.B1_UAFV.equals(&quot;S&quot;) ? &quot;true&quot; : &quot;false&quot; " type="id_String"/>
         <mapperTableEntries name="IsApproved__c" expression="row2.B1_UAPROV.equals(&quot;S&quot;) ? &quot;true&quot; : &quot;false&quot; " type="id_String"/>
         <mapperTableEntries name="IsSpecialProduct__c" expression="row2.B1_UESPEC.equals(&quot;S&quot;) ? &quot;true&quot; : &quot;false&quot; " type="id_String"/>
@@ -507,60 +509,63 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="IdProtheus__c" id="0"/>
       <elementValue elementRef="LENGTH" value="10" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IsActive" id="2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProductCode" id="2"/>
       <elementValue elementRef="LENGTH" value="10" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IsApproved__c" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsActive" id="4"/>
       <elementValue elementRef="LENGTH" value="10" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IsSpecialProduct__c" id="6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsApproved__c" id="6"/>
       <elementValue elementRef="LENGTH" value="10" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ClassMKT__c" id="8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsSpecialProduct__c" id="8"/>
       <elementValue elementRef="LENGTH" value="10" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Type__c" id="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassMKT__c" id="10"/>
       <elementValue elementRef="LENGTH" value="10" id="11"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="12"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type__c" id="12"/>
       <elementValue elementRef="LENGTH" value="10" id="13"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Unit__c" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="14"/>
       <elementValue elementRef="LENGTH" value="10" id="15"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NetWeight__c" id="16"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Unit__c" id="16"/>
       <elementValue elementRef="LENGTH" value="10" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GrossWeight__c" id="18"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NetWeight__c" id="18"/>
       <elementValue elementRef="LENGTH" value="10" id="19"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Density__c" id="20"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GrossWeight__c" id="20"/>
       <elementValue elementRef="LENGTH" value="10" id="21"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PalletQuantity__c" id="22"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Density__c" id="22"/>
       <elementValue elementRef="LENGTH" value="10" id="23"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShelfLife__c" id="24"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PalletQuantity__c" id="24"/>
       <elementValue elementRef="LENGTH" value="10" id="25"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShelfBlockDays__c" id="26"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ShelfLife__c" id="26"/>
       <elementValue elementRef="LENGTH" value="10" id="27"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BarCodeEAN13__c" id="28"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ShelfBlockDays__c" id="28"/>
       <elementValue elementRef="LENGTH" value="10" id="29"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LineCode__c" id="30"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BarCodeEAN13__c" id="30"/>
       <elementValue elementRef="LENGTH" value="10" id="31"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LineDescription__c" id="32"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LineCode__c" id="32"/>
       <elementValue elementRef="LENGTH" value="10" id="33"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ColorCode__c" id="34"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LineDescription__c" id="34"/>
       <elementValue elementRef="LENGTH" value="10" id="35"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ColorDescription__c" id="36"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ColorCode__c" id="36"/>
       <elementValue elementRef="LENGTH" value="10" id="37"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PackageCode__c" id="38"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ColorDescription__c" id="38"/>
       <elementValue elementRef="LENGTH" value="10" id="39"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PackageDescription__c" id="40"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PackageCode__c" id="40"/>
       <elementValue elementRef="LENGTH" value="10" id="41"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Category__c" id="42"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PackageDescription__c" id="42"/>
       <elementValue elementRef="LENGTH" value="10" id="43"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Division__c" id="44"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Category__c" id="44"/>
       <elementValue elementRef="LENGTH" value="10" id="45"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Family" id="46"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Division__c" id="46"/>
       <elementValue elementRef="LENGTH" value="10" id="47"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Group__c" id="48"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Family" id="48"/>
       <elementValue elementRef="LENGTH" value="10" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Group__c" id="50"/>
+      <elementValue elementRef="LENGTH" value="10" id="51"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
       <column comment="" key="true" length="15" name="IdProtheus__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsActive" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsApproved__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="IsSpecialProduct__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="5" usefulColumn="true"/>
@@ -596,59 +601,163 @@
       <column comment="" key="true" length="15" name="B1_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TABLE" name="ROOT" show="false">
+      <elementValue elementRef="PATH" value="/rootTag" id="0"/>
+      <elementValue elementRef="COLUMN" value="" id="1"/>
+      <elementValue elementRef="VALUE" value="" id="2"/>
+      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
+      <elementValue elementRef="ORDER" value="1" id="4"/>
+      <elementValue elementRef="PATH" value="/rootTag/ProductCode" id="5"/>
+      <elementValue elementRef="COLUMN" value="ProductCode" id="6"/>
+      <elementValue elementRef="VALUE" value="" id="7"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="8"/>
+      <elementValue elementRef="ORDER" value="3" id="9"/>
+      <elementValue elementRef="PATH" value="/rootTag/IsActive" id="10"/>
+      <elementValue elementRef="COLUMN" value="IsActive" id="11"/>
+      <elementValue elementRef="VALUE" value="" id="12"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="13"/>
+      <elementValue elementRef="ORDER" value="4" id="14"/>
+      <elementValue elementRef="PATH" value="/rootTag/IsApproved__c" id="15"/>
+      <elementValue elementRef="COLUMN" value="IsApproved__c" id="16"/>
+      <elementValue elementRef="VALUE" value="" id="17"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="18"/>
+      <elementValue elementRef="ORDER" value="5" id="19"/>
+      <elementValue elementRef="PATH" value="/rootTag/IsSpecialProduct__c" id="20"/>
+      <elementValue elementRef="COLUMN" value="IsSpecialProduct__c" id="21"/>
+      <elementValue elementRef="VALUE" value="" id="22"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="23"/>
+      <elementValue elementRef="ORDER" value="6" id="24"/>
+      <elementValue elementRef="PATH" value="/rootTag/ClassMKT__c" id="25"/>
+      <elementValue elementRef="COLUMN" value="ClassMKT__c" id="26"/>
+      <elementValue elementRef="VALUE" value="" id="27"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="28"/>
+      <elementValue elementRef="ORDER" value="7" id="29"/>
+      <elementValue elementRef="PATH" value="/rootTag/Type__c" id="30"/>
+      <elementValue elementRef="COLUMN" value="Type__c" id="31"/>
+      <elementValue elementRef="VALUE" value="" id="32"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="33"/>
+      <elementValue elementRef="ORDER" value="8" id="34"/>
+      <elementValue elementRef="PATH" value="/rootTag/Name" id="35"/>
+      <elementValue elementRef="COLUMN" value="Name" id="36"/>
+      <elementValue elementRef="VALUE" value="" id="37"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="38"/>
+      <elementValue elementRef="ORDER" value="9" id="39"/>
+      <elementValue elementRef="PATH" value="/rootTag/Unit__c" id="40"/>
+      <elementValue elementRef="COLUMN" value="Unit__c" id="41"/>
+      <elementValue elementRef="VALUE" value="" id="42"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="43"/>
+      <elementValue elementRef="ORDER" value="10" id="44"/>
+      <elementValue elementRef="PATH" value="/rootTag/NetWeight__c" id="45"/>
+      <elementValue elementRef="COLUMN" value="NetWeight__c" id="46"/>
+      <elementValue elementRef="VALUE" value="" id="47"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="48"/>
+      <elementValue elementRef="ORDER" value="11" id="49"/>
+      <elementValue elementRef="PATH" value="/rootTag/GrossWeight__c" id="50"/>
+      <elementValue elementRef="COLUMN" value="GrossWeight__c" id="51"/>
+      <elementValue elementRef="VALUE" value="" id="52"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="53"/>
+      <elementValue elementRef="ORDER" value="12" id="54"/>
+      <elementValue elementRef="PATH" value="/rootTag/Density__c" id="55"/>
+      <elementValue elementRef="COLUMN" value="Density__c" id="56"/>
+      <elementValue elementRef="VALUE" value="" id="57"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="58"/>
+      <elementValue elementRef="ORDER" value="13" id="59"/>
+      <elementValue elementRef="PATH" value="/rootTag/PalletQuantity__c" id="60"/>
+      <elementValue elementRef="COLUMN" value="PalletQuantity__c" id="61"/>
+      <elementValue elementRef="VALUE" value="" id="62"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="63"/>
+      <elementValue elementRef="ORDER" value="14" id="64"/>
+      <elementValue elementRef="PATH" value="/rootTag/ShelfLife__c" id="65"/>
+      <elementValue elementRef="COLUMN" value="ShelfLife__c" id="66"/>
+      <elementValue elementRef="VALUE" value="" id="67"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="68"/>
+      <elementValue elementRef="ORDER" value="15" id="69"/>
+      <elementValue elementRef="PATH" value="/rootTag/ShelfBlockDays__c" id="70"/>
+      <elementValue elementRef="COLUMN" value="ShelfBlockDays__c" id="71"/>
+      <elementValue elementRef="VALUE" value="" id="72"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="73"/>
+      <elementValue elementRef="ORDER" value="16" id="74"/>
+      <elementValue elementRef="PATH" value="/rootTag/BarCodeEAN13__c" id="75"/>
+      <elementValue elementRef="COLUMN" value="BarCodeEAN13__c" id="76"/>
+      <elementValue elementRef="VALUE" value="" id="77"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="78"/>
+      <elementValue elementRef="ORDER" value="17" id="79"/>
+      <elementValue elementRef="PATH" value="/rootTag/LineCode__c" id="80"/>
+      <elementValue elementRef="COLUMN" value="LineCode__c" id="81"/>
+      <elementValue elementRef="VALUE" value="" id="82"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="83"/>
+      <elementValue elementRef="ORDER" value="18" id="84"/>
+      <elementValue elementRef="PATH" value="/rootTag/LineDescription__c" id="85"/>
+      <elementValue elementRef="COLUMN" value="LineDescription__c" id="86"/>
+      <elementValue elementRef="VALUE" value="" id="87"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="88"/>
+      <elementValue elementRef="ORDER" value="19" id="89"/>
+      <elementValue elementRef="PATH" value="/rootTag/ColorCode__c" id="90"/>
+      <elementValue elementRef="COLUMN" value="ColorCode__c" id="91"/>
+      <elementValue elementRef="VALUE" value="" id="92"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="93"/>
+      <elementValue elementRef="ORDER" value="20" id="94"/>
+      <elementValue elementRef="PATH" value="/rootTag/ColorDescription__c" id="95"/>
+      <elementValue elementRef="COLUMN" value="ColorDescription__c" id="96"/>
+      <elementValue elementRef="VALUE" value="" id="97"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="98"/>
+      <elementValue elementRef="ORDER" value="21" id="99"/>
+      <elementValue elementRef="PATH" value="/rootTag/PackageCode__c" id="100"/>
+      <elementValue elementRef="COLUMN" value="PackageCode__c" id="101"/>
+      <elementValue elementRef="VALUE" value="" id="102"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="103"/>
+      <elementValue elementRef="ORDER" value="22" id="104"/>
+      <elementValue elementRef="PATH" value="/rootTag/PackageDescription__c" id="105"/>
+      <elementValue elementRef="COLUMN" value="PackageDescription__c" id="106"/>
+      <elementValue elementRef="VALUE" value="" id="107"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="108"/>
+      <elementValue elementRef="ORDER" value="23" id="109"/>
+      <elementValue elementRef="PATH" value="/rootTag/Category__c" id="110"/>
+      <elementValue elementRef="COLUMN" value="Category__c" id="111"/>
+      <elementValue elementRef="VALUE" value="" id="112"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="113"/>
+      <elementValue elementRef="ORDER" value="24" id="114"/>
+      <elementValue elementRef="PATH" value="/rootTag/Division__c" id="115"/>
+      <elementValue elementRef="COLUMN" value="Division__c" id="116"/>
+      <elementValue elementRef="VALUE" value="" id="117"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="118"/>
+      <elementValue elementRef="ORDER" value="25" id="119"/>
+      <elementValue elementRef="PATH" value="/rootTag/Family" id="120"/>
+      <elementValue elementRef="COLUMN" value="Family" id="121"/>
+      <elementValue elementRef="VALUE" value="" id="122"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="123"/>
+      <elementValue elementRef="ORDER" value="26" id="124"/>
+      <elementValue elementRef="PATH" value="/rootTag/Group__c" id="125"/>
+      <elementValue elementRef="COLUMN" value="Group__c" id="126"/>
+      <elementValue elementRef="VALUE" value="" id="127"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="128"/>
+      <elementValue elementRef="ORDER" value="27" id="129"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/rootTag/IdProtheus__c" id="0"/>
+      <elementValue elementRef="COLUMN" value="IdProtheus__c" id="1"/>
+      <elementValue elementRef="VALUE" value="" id="2"/>
+      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
+      <elementValue elementRef="ORDER" value="2" id="4"/>
+    </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_zXOnIBYNEfCMooalCGIgkA-tMap_2-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
-    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TABLE" name="GROUPBYS"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
+    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
+    <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="false"/>
+    <elementParameter field="CHECK" name="QUOTE_NULL_VALUES" value="true" show="false"/>
+    <elementParameter field="CHECK" name="ALLOW_EMPTY_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SCIENTIFIC_NOTATION" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="Json">
+    <metadata connector="FLOW" name="tWriteJSONField_1">
       <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="Json">
-        <mapperTableEntries name="string" expression="&quot;{ \&quot;IsActive\&quot;: \&quot;&quot; + row6.IsActive + &quot;\&quot;, \&quot;IsApproved__c\&quot;: \&quot;&quot; + row6.IsApproved__c + &quot;\&quot;,  \&quot;IsSpecialProduct__c\&quot;: \&quot;&quot; + row6.IsSpecialProduct__c + &quot;\&quot;, \&quot;ClassMKT__c\&quot;: \&quot;&quot; + row6.ClassMKT__c + &quot;\&quot;, \&quot;Type__c\&quot;: \&quot;&quot; + row6.Type__c + &quot;\&quot;,&#x9;\&quot;Name\&quot;: \&quot;&quot; + row6.Name + &quot;\&quot;,&#x9;\&quot;Unit__c\&quot;: \&quot;&quot; + row6.Unit__c + &quot;\&quot;,&#x9;\&quot;NetWeight__c\&quot;: \&quot;&quot; + row6.NetWeight__c + &quot;\&quot;,&#x9;\&quot;GrossWeight__c\&quot;: \&quot;&quot; + row6.GrossWeight__c + &quot;\&quot;,&#x9;\&quot;Density__c\&quot;: \&quot;&quot; + row6.Density__c + &quot;\&quot;,&#x9;\&quot;PalletQuantity__c\&quot;: \&quot;&quot; + row6.PalletQuantity__c + &quot;\&quot;,&#x9;\&quot;ShelfLife__c\&quot;: \&quot;&quot; + row6.ShelfLife__c + &quot;\&quot;,&#x9;\&quot;ShelfBlockDays__c\&quot;: \&quot;&quot; + row6.ShelfBlockDays__c + &quot;\&quot;,&#x9;\&quot;BarCodeEAN13__c\&quot;: \&quot;&quot; + row6.BarCodeEAN13__c + &quot;\&quot;,&#x9;\&quot;LineCode__c\&quot;: \&quot;&quot; + row6.LineCode__c + &quot;\&quot;,&#x9;\&quot;LineDescription__c\&quot;: \&quot;&quot; + row6.LineDescription__c + &quot;\&quot;,&#x9;\&quot;ColorCode__c\&quot;: \&quot;&quot; + row6.ColorCode__c + &quot;\&quot;,&#x9;\&quot;ColorDescription__c\&quot;: \&quot;&quot; + row6.ColorDescription__c + &quot;\&quot;,&#x9;\&quot;PackageCode__c\&quot;: \&quot;&quot; + row6.PackageCode__c + &quot;\&quot;,&#x9;\&quot;PackageDescription__c\&quot;: \&quot;&quot; + row6.PackageDescription__c + &quot;\&quot;,&#x9;\&quot;Category__c\&quot;: \&quot;&quot; + row6.Category__c + &quot;\&quot;,&#x9;\&quot;Division__c\&quot;: \&quot;&quot; + row6.Division__c + &quot;\&quot;,&#x9;\&quot;Family\&quot;: \&quot;&quot; + row6.Family + &quot;\&quot;,&#x9;\&quot;Group__c\&quot;: \&quot;&quot; + row6.Group__c + &quot;\&quot; }&quot; " type="id_String" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="IdProtheus__c" type="id_String"/>
-        <mapperTableEntries name="IsActive" type="id_String"/>
-        <mapperTableEntries name="IsApproved__c" type="id_String"/>
-        <mapperTableEntries name="IsSpecialProduct__c" type="id_String"/>
-        <mapperTableEntries name="ClassMKT__c" type="id_String" nullable="true"/>
-        <mapperTableEntries name="Type__c" type="id_String"/>
-        <mapperTableEntries name="Name" type="id_String"/>
-        <mapperTableEntries name="Unit__c" type="id_String"/>
-        <mapperTableEntries name="NetWeight__c" type="id_Double"/>
-        <mapperTableEntries name="GrossWeight__c" type="id_Double"/>
-        <mapperTableEntries name="Density__c" type="id_Double"/>
-        <mapperTableEntries name="PalletQuantity__c" type="id_Double"/>
-        <mapperTableEntries name="ShelfLife__c" type="id_Double"/>
-        <mapperTableEntries name="ShelfBlockDays__c" type="id_Double"/>
-        <mapperTableEntries name="BarCodeEAN13__c" type="id_String"/>
-        <mapperTableEntries name="LineCode__c" type="id_String"/>
-        <mapperTableEntries name="LineDescription__c" type="id_String"/>
-        <mapperTableEntries name="ColorCode__c" type="id_String"/>
-        <mapperTableEntries name="ColorDescription__c" type="id_String"/>
-        <mapperTableEntries name="PackageCode__c" type="id_String"/>
-        <mapperTableEntries name="PackageDescription__c" type="id_String"/>
-        <mapperTableEntries name="Category__c" type="id_String"/>
-        <mapperTableEntries name="Division__c" type="id_String"/>
-        <mapperTableEntries name="Family" type="id_String"/>
-        <mapperTableEntries name="Group__c" type="id_String"/>
-      </inputTables>
-    </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="280">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -672,31 +781,7 @@
       <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="400">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_5" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="B1_COD" id="0"/>
-      <elementValue elementRef="LENGTH" value="10" id="1"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_5">
-      <column comment="" key="true" length="15" name="B1_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="920" posY="280" sizeX="40" sizeY="41">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="280" sizeX="40" sizeY="41">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://hydronorth--dev.sandbox.my.salesforce.com/services/data/v62.0/sobjects/Product2/IdProtheus__c/&quot; + context.IdProtheus__c +&quot;/&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -761,7 +846,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="280">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -791,19 +876,19 @@
       <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="400">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_4" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="errorCode" id="0"/>
       <elementValue elementRef="LENGTH" value="10" id="1"/>
@@ -834,6 +919,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="Ajuste" lineStyle="0" metaname="Ajuste" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ProductCode" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Ajuste" show="false"/>
   </connection>
@@ -849,26 +939,17 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_2">
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tWriteJSONField_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tLogRow_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="B1_COD" id="0"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="Json" lineStyle="0" metaname="Json" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Json" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tRESTClient_1">
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tWriteJSONField_1" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tRESTClient_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
   </connection>
   <connection connectorName="RESPONSE" label="row8" lineStyle="0" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tLogRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
