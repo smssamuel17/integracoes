@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -99,4 +99,2190 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
+  <node componentName="QlikOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tQlikOutput_2" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="Output" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="cWxpayNRbGlrI091dHB1dA" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_METADATA_TYPE_ID" value="cWxpayNRbGlrI2RhdGFzdG9yZSNRbGlrRGF0YXN0b3Jl" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="1" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Qlik" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="QlikHydro"/>
+    <elementParameter field="TEXT" name="configuration.datastore.host" value="&quot;https://hydronorth.us.qlikcloud.com&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.datastore.apiKey" value="enc:system.encryption.key.v1:SoaL4mNdXTKqUSsc4S7sKJtGaVxnzLacivW4oNFBPlCi0tvJe3VYqXRwVbrX/nZmJJMDbHPhdknBhMId11/KeyRynJDlIC0mTmtT4X8FCKbenqsVhxKokX5YSHuuUWopsEzMF+xhWDO/W9W48qmQydqG7W5B1MWFXzf/dXrjPhtOPGx4+dGqeBVwSR+2Csyn7y9C8TtB5YenEF8HT+IAOl+1dY/zihgqsB/4n3+H+VwN5U7qYSlhLJru9vPxMV4/wOPOP/D29w9secw9Ouctl14DXYHUc5WcmzNoXn4ZRrM3WIAizX7kXEW87TpJaImp6DpXX8wnc2HDln/1U15fB5D0gWfqV1B6pburW4chBPLW4sQ/lFEoElcowEuoJvYK2DCYVMlLr1lcnQ/EwzHEcsLuwz6F/qVCrop6gdMQ4NfqXTN4Y+TgGP68xkB+OIHOK/b4l4iYUYN1TnCY1tZVkyrXi+e11TFaosvB5jXU51gzESTYBnbeS4RRavn693XAr7MRrhq0Qd1YexzIGLTebMW+mQkj4Mvkvfzlx5JJ8DsAdv/pU4+3CB0BAX3lF9/ugAD3WiVYTMdWM+2FCejzIhOJiWnyBE/O5hFCmAO+vZiOKADUyJg44rnn7QWmFyV1+5LRmszPfqnul77F/Z1MuJPzCztVBKk="/>
+    <elementParameter field="CLOSED_LIST" name="configuration.outputAction" value="OVERWRITE"/>
+    <elementParameter field="FILE" name="configuration.localFile" value="&quot;C:/QVD_Directory/Teste_Cliente_Talend.qvd&quot;"/>
+    <elementParameter field="CHECK" name="configuration.specifyId" value="false"/>
+    <elementParameter field="TEXT" name="configuration.fileName" value="Teste_Cliente_Talend.qvd"/>
+    <elementParameter field="TECHNICAL" name="configuration.datastore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tQlikOutput_2"/>
+    <metadata connector="FLOW" name="tQlikOutput_2"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMSSqlInput" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/MS_SQL_Server" show="false"/>
+    <elementParameter field="CHECK" name="START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tMSSqlInput" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;TOTVS&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;integra&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:enNGw5SqTYSrlZe7SUJNrFkOfClqNCP2uE1eB32F4MbzVVhWLA=="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q - SA1010" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;SA1010&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT SA1010.A1_FILIAL,&#xA;&#x9;&#x9;SA1010.A1_COD,&#xA;&#x9;&#x9;SA1010.A1_LOJA,&#xA;&#x9;&#x9;SA1010.A1_TIPO,&#xA;&#x9;&#x9;SA1010.A1_PESSOA,&#xA;&#x9;&#x9;SA1010.A1_NATUREZ,&#xA;&#x9;&#x9;SA1010.A1_CGC,&#xA;&#x9;&#x9;SA1010.A1_NOME,&#xA;&#x9;&#x9;SA1010.A1_NREDUZ,&#xA;&#x9;&#x9;SA1010.A1_END,&#xA;&#x9;&#x9;SA1010.A1_COMPLEM,&#xA;&#x9;&#x9;SA1010.A1_BAIRRO,&#xA;&#x9;&#x9;SA1010.A1_CEP,&#xA;&#x9;&#x9;SA1010.A1_EST,&#xA;&#x9;&#x9;SA1010.A1_REGIAO,&#xA;&#x9;&#x9;SA1010.A1_DSCREG,&#xA;&#x9;&#x9;SA1010.A1_COD_MUN,&#xA;&#x9;&#x9;SA1010.A1_MUN,&#xA;&#x9;&#x9;SA1010.A1_CODPAIS,&#xA;&#x9;&#x9;SA1010.A1_ESTADO,&#xA;&#x9;&#x9;SA1010.A1_DDD,&#xA;&#x9;&#x9;SA1010.A1_TRIBFAV,&#xA;&#x9;&#x9;SA1010.A1_DDI,&#xA;&#x9;&#x9;SA1010.A1_IBGE,&#xA;&#x9;&#x9;SA1010.A1_UCODMUC,&#xA;&#x9;&#x9;SA1010.A1_ENDREC,&#xA;&#x9;&#x9;SA1010.A1_TEL,&#xA;&#x9;&#x9;SA1010.A1_FAX,&#xA;&#x9;&#x9;SA1010.A1_FONECP,&#xA;&#x9;&#x9;SA1010.A1_CONTATO,&#xA;&#x9;&#x9;SA1010.A1_PFISICA,&#xA;&#x9;&#x9;SA1010.A1_PAIS,&#xA;&#x9;&#x9;SA1010.A1_INSCR,&#xA;&#x9;&#x9;SA1010.A1_INSCRM,&#xA;&#x9;&#x9;SA1010.A1_VEND,&#xA;&#x9;&#x9;SA1010.A1_COMIS,&#xA;&#x9;&#x9;SA1010.A1_CONTA,&#xA;&#x9;&#x9;SA1010.A1_BCO1,&#xA;&#x9;&#x9;SA1010.A1_BCO2,&#xA;&#x9;&#x9;SA1010.A1_BCO3,&#xA;&#x9;&#x9;SA1010.A1_BCO4,&#xA;&#x9;&#x9;SA1010.A1_BCO5,&#xA;&#x9;&#x9;SA1010.A1_TRANSP,&#xA;&#x9;&#x9;SA1010.A1_TPFRET,&#xA;&#x9;&#x9;SA1010.A1_ENDCOB,&#xA;&#x9;&#x9;SA1010.A1_COND,&#xA;&#x9;&#x9;SA1010.A1_BAIRROC,&#xA;&#x9;&#x9;SA1010.A1_DESC,&#xA;&#x9;&#x9;SA1010.A1_CEPC,&#xA;&#x9;&#x9;SA1010.A1_ESTC,&#xA;&#x9;&#x9;SA1010.A1_UCODMCO,&#xA;&#x9;&#x9;SA1010.A1_MUNC,&#xA;&#x9;&#x9;SA1010.A1_PRIOR,&#xA;&#x9;&#x9;SA1010.A1_RISCO,&#xA;&#x9;&#x9;SA1010.A1_LC,&#xA;&#x9;&#x9;SA1010.A1_VENCLC,&#xA;&#x9;&#x9;SA1010.A1_CLASSE,&#xA;&#x9;&#x9;SA1010.A1_LCFIN,&#xA;&#x9;&#x9;SA1010.A1_MOEDALC,&#xA;&#x9;&#x9;SA1010.A1_MSALDO,&#xA;&#x9;&#x9;SA1010.A1_MCOMPRA,&#xA;&#x9;&#x9;SA1010.A1_METR,&#xA;&#x9;&#x9;SA1010.A1_PRICOM,&#xA;&#x9;&#x9;SA1010.A1_ULTCOM,&#xA;&#x9;&#x9;SA1010.A1_NROCOM,&#xA;&#x9;&#x9;SA1010.A1_FORMVIS,&#xA;&#x9;&#x9;SA1010.A1_TEMVIS,&#xA;&#x9;&#x9;SA1010.A1_ULTVIS,&#xA;&#x9;&#x9;SA1010.A1_TMPVIS,&#xA;&#x9;&#x9;SA1010.A1_TMPSTD,&#xA;&#x9;&#x9;SA1010.A1_CLASVEN,&#xA;&#x9;&#x9;SA1010.A1_MENSAGE,&#xA;&#x9;&#x9;SA1010.A1_SALDUP,&#xA;&#x9;&#x9;SA1010.A1_RECISS,&#xA;&#x9;&#x9;SA1010.A1_SALPEDL,&#xA;&#x9;&#x9;SA1010.A1_NROPAG,&#xA;&#x9;&#x9;SA1010.A1_TRANSF,&#xA;&#x9;&#x9;SA1010.A1_SUFRAMA,&#xA;&#x9;&#x9;SA1010.A1_ATR,&#xA;&#x9;&#x9;SA1010.A1_VACUM,&#xA;&#x9;&#x9;SA1010.A1_SALPED,&#xA;&#x9;&#x9;SA1010.A1_TITPROT,&#xA;&#x9;&#x9;SA1010.A1_DTULTIT,&#xA;&#x9;&#x9;SA1010.A1_CHQDEVO,&#xA;&#x9;&#x9;SA1010.A1_CXPOSTA,&#xA;&#x9;&#x9;SA1010.A1_MATR,&#xA;&#x9;&#x9;SA1010.A1_DTULCHQ,&#xA;&#x9;&#x9;SA1010.A1_MAIDUPL,&#xA;&#x9;&#x9;SA1010.A1_TABELA,&#xA;&#x9;&#x9;SA1010.A1_INCISS,&#xA;&#x9;&#x9;SA1010.A1_SALDUPM,&#xA;&#x9;&#x9;SA1010.A1_PAGATR,&#xA;&#x9;&#x9;SA1010.A1_ATIVIDA,&#xA;&#x9;&#x9;SA1010.A1_CARGO1,&#xA;&#x9;&#x9;SA1010.A1_CARGO2,&#xA;&#x9;&#x9;SA1010.A1_CARGO3,&#xA;&#x9;&#x9;SA1010.A1_RTEC,&#xA;&#x9;&#x9;SA1010.A1_SUPER,&#xA;&#x9;&#x9;SA1010.A1_ALIQIR,&#xA;&#x9;&#x9;SA1010.A1_OBSERV,&#xA;&#x9;&#x9;SA1010.A1_RG,&#xA;&#x9;&#x9;SA1010.A1_CALCSUF,&#xA;&#x9;&#x9;SA1010.A1_DTNASC,&#xA;&#x9;&#x9;SA1010.A1_SALPEDB,&#xA;&#x9;&#x9;SA1010.A1_GRPTRIB,&#xA;&#x9;&#x9;SA1010.A1_SATIV1,&#xA;&#x9;&#x9;SA1010.A1_CLIFAT,&#xA;&#x9;&#x9;SA1010.A1_ENDENT,&#xA;&#x9;&#x9;SA1010.A1_UCOMPLE,&#xA;&#x9;&#x9;SA1010.A1_BAIRROE,&#xA;&#x9;&#x9;SA1010.A1_CEPE,&#xA;&#x9;&#x9;SA1010.A1_ESTE,&#xA;&#x9;&#x9;SA1010.A1_CODLOC,&#xA;&#x9;&#x9;SA1010.A1_SATIV2,&#xA;&#x9;&#x9;SA1010.A1_TPESSOA,&#xA;&#x9;&#x9;SA1010.A1_TPISSRS,&#xA;&#x9;&#x9;SA1010.A1_SATIV3,&#xA;&#x9;&#x9;SA1010.A1_SATIV4,&#xA;&#x9;&#x9;SA1010.A1_SATIV5,&#xA;&#x9;&#x9;SA1010.A1_SATIV6,&#xA;&#x9;&#x9;SA1010.A1_SATIV7,&#xA;&#x9;&#x9;SA1010.A1_CODAGE,&#xA;&#x9;&#x9;SA1010.A1_SATIV8,&#xA;&#x9;&#x9;SA1010.A1_CODMARC,&#xA;&#x9;&#x9;SA1010.A1_COMAGE,&#xA;&#x9;&#x9;SA1010.A1_HPAGE,&#xA;&#x9;&#x9;SA1010.A1_CODMUN,&#xA;&#x9;&#x9;SA1010.A1_TIPCLI,&#xA;&#x9;&#x9;SA1010.A1_EMAIL,&#xA;&#x9;&#x9;SA1010.A1_DEST_1,&#xA;&#x9;&#x9;SA1010.A1_DEST_2,&#xA;&#x9;&#x9;SA1010.A1_DEST_3,&#xA;&#x9;&#x9;SA1010.A1_CBO,&#xA;&#x9;&#x9;SA1010.A1_OBS,&#xA;&#x9;&#x9;SA1010.A1_CNAE,&#xA;&#x9;&#x9;SA1010.A1_CODHIST,&#xA;&#x9;&#x9;SA1010.A1_CONDPAG,&#xA;&#x9;&#x9;SA1010.A1_DIASPAG,&#xA;&#x9;&#x9;SA1010.A1_AGREG,&#xA;&#x9;&#x9;SA1010.A1_RECINSS,&#xA;&#x9;&#x9;SA1010.A1_RECCOFI,&#xA;&#x9;&#x9;SA1010.A1_RECCSLL,&#xA;&#x9;&#x9;SA1010.A1_RECPIS,&#xA;&#x9;&#x9;SA1010.A1_TIPPER,&#xA;&#x9;&#x9;SA1010.A1_SALFIN,&#xA;&#x9;&#x9;SA1010.A1_SALFINM,&#xA;&#x9;&#x9;SA1010.A1_CONTAB,&#xA;&#x9;&#x9;SA1010.A1_CLICNV,&#xA;&#x9;&#x9;SA1010.A1_B2B,&#xA;&#x9;&#x9;SA1010.A1_GRPVEN,&#xA;&#x9;&#x9;SA1010.A1_MSBLQL,&#xA;&#x9;&#x9;SA1010.A1_INSCRUR,&#xA;&#x9;&#x9;SA1010.A1_CLIPRI,&#xA;&#x9;&#x9;SA1010.A1_LOJPRI,&#xA;&#x9;&#x9;SA1010.A1_DTCAD,&#xA;&#x9;&#x9;SA1010.A1_HRCAD,&#xA;&#x9;&#x9;SA1010.A1_SITUA,&#xA;&#x9;&#x9;SA1010.A1_CODSEG,&#xA;&#x9;&#x9;SA1010.A1_NUMRA,&#xA;&#x9;&#x9;SA1010.A1_SUBCOD,&#xA;&#x9;&#x9;SA1010.A1_CDRDES,&#xA;&#x9;&#x9;SA1010.A1_FILDEB,&#xA;&#x9;&#x9;SA1010.A1_BLEMAIL,&#xA;&#x9;&#x9;SA1010.A1_CODFOR,&#xA;&#x9;&#x9;SA1010.A1_ABICS,&#xA;&#x9;&#x9;SA1010.A1_TIPOCLI,&#xA;&#x9;&#x9;SA1010.A1_VINCULO,&#xA;&#x9;&#x9;SA1010.A1_LOCCONS,&#xA;&#x9;&#x9;SA1010.A1_CODMUNE,&#xA;&#x9;&#x9;SA1010.A1_PERFIL,&#xA;&#x9;&#x9;SA1010.A1_DTINIV,&#xA;&#x9;&#x9;SA1010.A1_MUNE,&#xA;&#x9;&#x9;SA1010.A1_DTFIMV,&#xA;&#x9;&#x9;SA1010.A1_HRTRANS,&#xA;&#x9;&#x9;SA1010.A1_PRF_COD,&#xA;&#x9;&#x9;SA1010.A1_PRF_OBS,&#xA;&#x9;&#x9;SA1010.A1_UNIDVEN,&#xA;&#x9;&#x9;SA1010.A1_TPREG,&#xA;&#x9;&#x9;SA1010.A1_TIPPRFL,&#xA;&#x9;&#x9;SA1010.A1_SIMPLES,&#xA;&#x9;&#x9;SA1010.A1_PRF_VLD,&#xA;&#x9;&#x9;SA1010.A1_REGPB,&#xA;&#x9;&#x9;SA1010.A1_USADDA,&#xA;&#x9;&#x9;SA1010.A1_IPWEB,&#xA;&#x9;&#x9;SA1010.A1_CODSIAF,&#xA;&#x9;&#x9;SA1010.A1_IRBAX,&#xA;&#x9;&#x9;SA1010.A1_IDHIST,&#xA;&#x9;&#x9;SA1010.A1_RESERVE,&#xA;&#x9;&#x9;SA1010.A1_MSEXP,&#xA;&#x9;&#x9;SA1010.A1_CEINSS,&#xA;&#x9;&#x9;SA1010.A1_ORIGEM,&#xA;&#x9;&#x9;SA1010.A1_REGESIM,&#xA;&#x9;&#x9;SA1010.A1_PERCATM,&#xA;&#x9;&#x9;SA1010.A1_ENDNOT,&#xA;&#x9;&#x9;SA1010.A1_NIF,&#xA;&#x9;&#x9;SA1010.A1_INDRET,&#xA;&#x9;&#x9;SA1010.A1_RFABOV,&#xA;&#x9;&#x9;SA1010.A1_TPDP,&#xA;&#x9;&#x9;SA1010.A1_PERFECP,&#xA;&#x9;&#x9;SA1010.A1_RFACS,&#xA;&#x9;&#x9;SA1010.A1_ALIFIXA,&#xA;&#x9;&#x9;SA1010.A1_MATFUN,&#xA;&#x9;&#x9;SA1010.A1_FRETISS,&#xA;&#x9;&#x9;SA1010.A1_CRDMA,&#xA;&#x9;&#x9;SA1010.A1_PRSTSER,&#xA;&#x9;&#x9;SA1010.A1_CTARE,&#xA;&#x9;&#x9;SA1010.A1_IENCONT,&#xA;&#x9;&#x9;SA1010.A1_CODFID,&#xA;&#x9;&#x9;SA1010.A1_SIMPNAC,&#xA;&#x9;&#x9;SA1010.A1_INCULT,&#xA;&#x9;&#x9;SA1010.A1_ENTID,&#xA;&#x9;&#x9;SA1010.A1_ABATIMP,&#xA;&#x9;&#x9;SA1010.A1_FOMEZER,&#xA;&#x9;&#x9;SA1010.A1_IMGUMOV,&#xA;&#x9;&#x9;SA1010.A1_RESFAT,&#xA;&#x9;&#x9;SA1010.A1_RECFET,&#xA;&#x9;&#x9;SA1010.A1_MINIRF,&#xA;&#x9;&#x9;SA1010.A1_FILTRF,&#xA;&#x9;&#x9;SA1010.A1_IDESTN,&#xA;&#x9;&#x9;SA1010.A1_TPCAMP,&#xA;&#x9;&#x9;SA1010.A1_CHVCAM,&#xA;&#x9;&#x9;SA1010.A1_INOVAUT,&#xA;&#x9;&#x9;SA1010.A1_TPNFSE,&#xA;&#x9;&#x9;SA1010.A1_NVESTN,&#xA;&#x9;&#x9;SA1010.A1_ORIGCT,&#xA;&#x9;&#x9;SA1010.A1_HREXPO,&#xA;&#x9;&#x9;SA1010.A1_TPJ,&#xA;&#x9;&#x9;SA1010.A1_ENTORI,&#xA;&#x9;&#x9;SA1010.A1_OUTRMUN,&#xA;&#x9;&#x9;SA1010.A1_USERLGA,&#xA;&#x9;&#x9;SA1010.A1_USERLGI,&#xA;&#x9;&#x9;SA1010.A1_RECFMD,&#xA;&#x9;&#x9;SA1010.A1_RFASEMT,&#xA;&#x9;&#x9;SA1010.A1_RIMAMT,&#xA;&#x9;&#x9;SA1010.A1_INCLTMG,&#xA;&#x9;&#x9;SA1010.A1_CODTER,&#xA;&#x9;&#x9;SA1010.A1_ISSRSLC,&#xA;&#x9;&#x9;SA1010.A1_CODMEMB,&#xA;&#x9;&#x9;SA1010.A1_TPMEMB,&#xA;&#x9;&#x9;SA1010.A1_CONTRIB,&#xA;&#x9;&#x9;SA1010.A1_TDA,&#xA;&#x9;&#x9;SA1010.A1_RECIRRF,&#xA;&#x9;&#x9;SA1010.A1_TIMEKEE,&#xA;&#x9;&#x9;SA1010.A1_UEXCEPT,&#xA;&#x9;&#x9;SA1010.A1_UAGENTE,&#xA;&#x9;&#x9;SA1010.A1_UMATRIZ,&#xA;&#x9;&#x9;SA1010.A1_UCODMAT,&#xA;&#x9;&#x9;SA1010.A1_COMPENT,&#xA;&#x9;&#x9;SA1010.A1_UCODANT,&#xA;&#x9;&#x9;SA1010.A1_UCODLOJ,&#xA;&#x9;&#x9;SA1010.A1_UCODCAN,&#xA;&#x9;&#x9;SA1010.A1_UCODSEG,&#xA;&#x9;&#x9;SA1010.A1_UTIPOCO,&#xA;&#x9;&#x9;SA1010.A1_UVISEXT,&#xA;&#x9;&#x9;SA1010.A1_UVLRMIN,&#xA;&#x9;&#x9;SA1010.A1_UEMAIL,&#xA;&#x9;&#x9;SA1010.A1_UDTALT,&#xA;&#x9;&#x9;SA1010.A1_UDTDESA,&#xA;&#x9;&#x9;SA1010.A1_UDTRECA,&#xA;&#x9;&#x9;SA1010.A1_UPZMPRA,&#xA;&#x9;&#x9;SA1010.A1_UENVBOL,&#xA;&#x9;&#x9;SA1010.A1_UEMAILP,&#xA;&#x9;&#x9;SA1010.A1_UVLCAP,&#xA;&#x9;&#x9;SA1010.A1_UINSTA,&#xA;&#x9;&#x9;SA1010.A1_UFACE,&#xA;&#x9;&#x9;SA1010.A1_ULINKE,&#xA;&#x9;&#x9;SA1010.A1_UDDDWZ,&#xA;&#x9;&#x9;SA1010.A1_UNRWZ,&#xA;&#x9;&#x9;SA1010.A1_UCODREG,&#xA;&#x9;&#x9;SA1010.A1_UVLLSUG,&#xA;&#x9;&#x9;SA1010.A1_UTOP100,&#xA;&#x9;&#x9;SA1010.A1_UENDDIF,&#xA;&#x9;&#x9;SA1010.A1_UABA1,&#xA;&#x9;&#x9;SA1010.A1_UABA2,&#xA;&#x9;&#x9;SA1010.A1_UABA3,&#xA;&#x9;&#x9;SA1010.A1_UABA4,&#xA;&#x9;&#x9;SA1010.A1_UNECAGE,&#xA;&#x9;&#x9;SA1010.A1_UDTSUFR,&#xA;&#x9;&#x9;SA1010.A1_UGERETQ,&#xA;&#x9;&#x9;SA1010.A1_UOBSLOG,&#xA;&#x9;&#x9;SA1010.A1_UDTCND,&#xA;&#x9;&#x9;SA1010.A1_UDTREES,&#xA;&#x9;&#x9;SA1010.A1_UGRPFEN,&#xA;&#x9;&#x9;SA1010.A1_TELEX,&#xA;&#x9;&#x9;SA1010.A1_UABC,&#xA;&#x9;&#x9;SA1010.A1_UCDMATF,&#xA;&#x9;&#x9;SA1010.A1_CODMER,&#xA;&#x9;&#x9;SA1010.A1_UNDEB,&#xA;&#x9;&#x9;SA1010.A1_UCHD,&#xA;&#x9;&#x9;SA1010.A1_UATRASO,&#xA;&#x9;&#x9;SA1010.A1_UVOL30,&#xA;&#x9;&#x9;SA1010.A1_URESPV,&#xA;&#x9;&#x9;SA1010.A1_UCNDV,&#xA;&#x9;&#x9;SA1010.A1_USUFRAM,&#xA;&#x9;&#x9;SA1010.A1_URECAD,&#xA;&#x9;&#x9;SA1010.A1_UCODBLQ,&#xA;&#x9;&#x9;SA1010.D_E_L_E_T_,&#xA;&#x9;&#x9;SA1010.R_E_C_N_O_,&#xA;&#x9;&#x9;SA1010.R_E_C_D_E_L_,&#xA;&#x9;&#x9;SA1010.A1_UMENNF,&#xA;&#x9;&#x9;SA1010.A1_UMENPAD,&#xA;&#x9;&#x9;SA1010.A1_UCLITMK,&#xA;&#x9;&#x9;SA1010.A1_UCAMPAN,&#xA;&#x9;&#x9;SA1010.A1_UDTFICA,&#xA;&#x9;&#x9;SA1010.A1_UDTALC,&#xA;&#x9;&#x9;SA1010.A1_URAMOAT,&#xA;&#x9;&#x9;SA1010.A1_UCC,&#xA;&#x9;&#x9;SA1010.A1_UTPDESC,&#xA;&#x9;&#x9;SA1010.A1_UUSUALT,&#xA;&#x9;&#x9;SA1010.A1_UBXDCT,&#xA;&#x9;&#x9;SA1010.A1_UULTCHY,&#xA;&#x9;&#x9;SA1010.A1_UCLINOV,&#xA;&#x9;&#x9;SA1010.A1_UHCNAC,&#xA;&#x9;&#x9;SA1010.A1_UHCREG,&#xA;&#x9;&#x9;SA1010.S_T_A_M_P_,&#xA;&#x9;&#x9;SA1010.I_N_S_D_T_,&#xA;&#x9;&#x9;SA1010.A1_UDDDSE,&#xA;&#x9;&#x9;SA1010.A1_UFONESE,&#xA;&#x9;&#x9;SA1010.A1_UDTSANE,&#xA;&#x9;&#x9;SA1010.A1_URESLOG&#xA;FROM&#x9;SA1010&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_ALWAYS_ENCRYPTED" value="false"/>
+    <elementParameter field="TEXT" name="KEYSTORE_PRINCIPAL_ID" value="" show="false"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_SECRET" value="" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FILIAL" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COD" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_LOJA" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIPO" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PESSOA" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NATUREZ" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CGC" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NOME" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NREDUZ" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_END" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COMPLEM" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BAIRRO" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CEP" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_EST" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_REGIAO" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DSCREG" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COD_MUN" id="32"/>
+      <elementValue elementRef="TRIM" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MUN" id="34"/>
+      <elementValue elementRef="TRIM" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODPAIS" id="36"/>
+      <elementValue elementRef="TRIM" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ESTADO" id="38"/>
+      <elementValue elementRef="TRIM" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DDD" id="40"/>
+      <elementValue elementRef="TRIM" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TRIBFAV" id="42"/>
+      <elementValue elementRef="TRIM" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DDI" id="44"/>
+      <elementValue elementRef="TRIM" value="false" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IBGE" id="46"/>
+      <elementValue elementRef="TRIM" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODMUC" id="48"/>
+      <elementValue elementRef="TRIM" value="false" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENDREC" id="50"/>
+      <elementValue elementRef="TRIM" value="false" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TEL" id="52"/>
+      <elementValue elementRef="TRIM" value="false" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FAX" id="54"/>
+      <elementValue elementRef="TRIM" value="false" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FONECP" id="56"/>
+      <elementValue elementRef="TRIM" value="false" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CONTATO" id="58"/>
+      <elementValue elementRef="TRIM" value="false" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PFISICA" id="60"/>
+      <elementValue elementRef="TRIM" value="false" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PAIS" id="62"/>
+      <elementValue elementRef="TRIM" value="false" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INSCR" id="64"/>
+      <elementValue elementRef="TRIM" value="false" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INSCRM" id="66"/>
+      <elementValue elementRef="TRIM" value="false" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_VEND" id="68"/>
+      <elementValue elementRef="TRIM" value="false" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COMIS" id="70"/>
+      <elementValue elementRef="TRIM" value="false" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CONTA" id="72"/>
+      <elementValue elementRef="TRIM" value="false" id="73"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BCO1" id="74"/>
+      <elementValue elementRef="TRIM" value="false" id="75"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BCO2" id="76"/>
+      <elementValue elementRef="TRIM" value="false" id="77"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BCO3" id="78"/>
+      <elementValue elementRef="TRIM" value="false" id="79"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BCO4" id="80"/>
+      <elementValue elementRef="TRIM" value="false" id="81"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BCO5" id="82"/>
+      <elementValue elementRef="TRIM" value="false" id="83"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TRANSP" id="84"/>
+      <elementValue elementRef="TRIM" value="false" id="85"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPFRET" id="86"/>
+      <elementValue elementRef="TRIM" value="false" id="87"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENDCOB" id="88"/>
+      <elementValue elementRef="TRIM" value="false" id="89"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COND" id="90"/>
+      <elementValue elementRef="TRIM" value="false" id="91"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BAIRROC" id="92"/>
+      <elementValue elementRef="TRIM" value="false" id="93"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DESC" id="94"/>
+      <elementValue elementRef="TRIM" value="false" id="95"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CEPC" id="96"/>
+      <elementValue elementRef="TRIM" value="false" id="97"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ESTC" id="98"/>
+      <elementValue elementRef="TRIM" value="false" id="99"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODMCO" id="100"/>
+      <elementValue elementRef="TRIM" value="false" id="101"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MUNC" id="102"/>
+      <elementValue elementRef="TRIM" value="false" id="103"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRIOR" id="104"/>
+      <elementValue elementRef="TRIM" value="false" id="105"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RISCO" id="106"/>
+      <elementValue elementRef="TRIM" value="false" id="107"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_LC" id="108"/>
+      <elementValue elementRef="TRIM" value="false" id="109"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_VENCLC" id="110"/>
+      <elementValue elementRef="TRIM" value="false" id="111"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CLASSE" id="112"/>
+      <elementValue elementRef="TRIM" value="false" id="113"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_LCFIN" id="114"/>
+      <elementValue elementRef="TRIM" value="false" id="115"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MOEDALC" id="116"/>
+      <elementValue elementRef="TRIM" value="false" id="117"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MSALDO" id="118"/>
+      <elementValue elementRef="TRIM" value="false" id="119"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MCOMPRA" id="120"/>
+      <elementValue elementRef="TRIM" value="false" id="121"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_METR" id="122"/>
+      <elementValue elementRef="TRIM" value="false" id="123"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRICOM" id="124"/>
+      <elementValue elementRef="TRIM" value="false" id="125"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ULTCOM" id="126"/>
+      <elementValue elementRef="TRIM" value="false" id="127"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NROCOM" id="128"/>
+      <elementValue elementRef="TRIM" value="false" id="129"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FORMVIS" id="130"/>
+      <elementValue elementRef="TRIM" value="false" id="131"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TEMVIS" id="132"/>
+      <elementValue elementRef="TRIM" value="false" id="133"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ULTVIS" id="134"/>
+      <elementValue elementRef="TRIM" value="false" id="135"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TMPVIS" id="136"/>
+      <elementValue elementRef="TRIM" value="false" id="137"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TMPSTD" id="138"/>
+      <elementValue elementRef="TRIM" value="false" id="139"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CLASVEN" id="140"/>
+      <elementValue elementRef="TRIM" value="false" id="141"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MENSAGE" id="142"/>
+      <elementValue elementRef="TRIM" value="false" id="143"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALDUP" id="144"/>
+      <elementValue elementRef="TRIM" value="false" id="145"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECISS" id="146"/>
+      <elementValue elementRef="TRIM" value="false" id="147"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALPEDL" id="148"/>
+      <elementValue elementRef="TRIM" value="false" id="149"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NROPAG" id="150"/>
+      <elementValue elementRef="TRIM" value="false" id="151"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TRANSF" id="152"/>
+      <elementValue elementRef="TRIM" value="false" id="153"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SUFRAMA" id="154"/>
+      <elementValue elementRef="TRIM" value="false" id="155"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ATR" id="156"/>
+      <elementValue elementRef="TRIM" value="false" id="157"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_VACUM" id="158"/>
+      <elementValue elementRef="TRIM" value="false" id="159"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALPED" id="160"/>
+      <elementValue elementRef="TRIM" value="false" id="161"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TITPROT" id="162"/>
+      <elementValue elementRef="TRIM" value="false" id="163"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTULTIT" id="164"/>
+      <elementValue elementRef="TRIM" value="false" id="165"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CHQDEVO" id="166"/>
+      <elementValue elementRef="TRIM" value="false" id="167"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CXPOSTA" id="168"/>
+      <elementValue elementRef="TRIM" value="false" id="169"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MATR" id="170"/>
+      <elementValue elementRef="TRIM" value="false" id="171"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTULCHQ" id="172"/>
+      <elementValue elementRef="TRIM" value="false" id="173"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MAIDUPL" id="174"/>
+      <elementValue elementRef="TRIM" value="false" id="175"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TABELA" id="176"/>
+      <elementValue elementRef="TRIM" value="false" id="177"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INCISS" id="178"/>
+      <elementValue elementRef="TRIM" value="false" id="179"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALDUPM" id="180"/>
+      <elementValue elementRef="TRIM" value="false" id="181"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PAGATR" id="182"/>
+      <elementValue elementRef="TRIM" value="false" id="183"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ATIVIDA" id="184"/>
+      <elementValue elementRef="TRIM" value="false" id="185"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CARGO1" id="186"/>
+      <elementValue elementRef="TRIM" value="false" id="187"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CARGO2" id="188"/>
+      <elementValue elementRef="TRIM" value="false" id="189"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CARGO3" id="190"/>
+      <elementValue elementRef="TRIM" value="false" id="191"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RTEC" id="192"/>
+      <elementValue elementRef="TRIM" value="false" id="193"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SUPER" id="194"/>
+      <elementValue elementRef="TRIM" value="false" id="195"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ALIQIR" id="196"/>
+      <elementValue elementRef="TRIM" value="false" id="197"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_OBSERV" id="198"/>
+      <elementValue elementRef="TRIM" value="false" id="199"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RG" id="200"/>
+      <elementValue elementRef="TRIM" value="false" id="201"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CALCSUF" id="202"/>
+      <elementValue elementRef="TRIM" value="false" id="203"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTNASC" id="204"/>
+      <elementValue elementRef="TRIM" value="false" id="205"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALPEDB" id="206"/>
+      <elementValue elementRef="TRIM" value="false" id="207"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_GRPTRIB" id="208"/>
+      <elementValue elementRef="TRIM" value="false" id="209"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV1" id="210"/>
+      <elementValue elementRef="TRIM" value="false" id="211"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CLIFAT" id="212"/>
+      <elementValue elementRef="TRIM" value="false" id="213"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENDENT" id="214"/>
+      <elementValue elementRef="TRIM" value="false" id="215"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCOMPLE" id="216"/>
+      <elementValue elementRef="TRIM" value="false" id="217"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BAIRROE" id="218"/>
+      <elementValue elementRef="TRIM" value="false" id="219"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CEPE" id="220"/>
+      <elementValue elementRef="TRIM" value="false" id="221"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ESTE" id="222"/>
+      <elementValue elementRef="TRIM" value="false" id="223"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODLOC" id="224"/>
+      <elementValue elementRef="TRIM" value="false" id="225"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV2" id="226"/>
+      <elementValue elementRef="TRIM" value="false" id="227"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPESSOA" id="228"/>
+      <elementValue elementRef="TRIM" value="false" id="229"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPISSRS" id="230"/>
+      <elementValue elementRef="TRIM" value="false" id="231"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV3" id="232"/>
+      <elementValue elementRef="TRIM" value="false" id="233"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV4" id="234"/>
+      <elementValue elementRef="TRIM" value="false" id="235"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV5" id="236"/>
+      <elementValue elementRef="TRIM" value="false" id="237"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV6" id="238"/>
+      <elementValue elementRef="TRIM" value="false" id="239"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV7" id="240"/>
+      <elementValue elementRef="TRIM" value="false" id="241"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODAGE" id="242"/>
+      <elementValue elementRef="TRIM" value="false" id="243"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SATIV8" id="244"/>
+      <elementValue elementRef="TRIM" value="false" id="245"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODMARC" id="246"/>
+      <elementValue elementRef="TRIM" value="false" id="247"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COMAGE" id="248"/>
+      <elementValue elementRef="TRIM" value="false" id="249"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_HPAGE" id="250"/>
+      <elementValue elementRef="TRIM" value="false" id="251"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODMUN" id="252"/>
+      <elementValue elementRef="TRIM" value="false" id="253"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIPCLI" id="254"/>
+      <elementValue elementRef="TRIM" value="false" id="255"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_EMAIL" id="256"/>
+      <elementValue elementRef="TRIM" value="false" id="257"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DEST_1" id="258"/>
+      <elementValue elementRef="TRIM" value="false" id="259"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DEST_2" id="260"/>
+      <elementValue elementRef="TRIM" value="false" id="261"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DEST_3" id="262"/>
+      <elementValue elementRef="TRIM" value="false" id="263"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CBO" id="264"/>
+      <elementValue elementRef="TRIM" value="false" id="265"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_OBS" id="266"/>
+      <elementValue elementRef="TRIM" value="false" id="267"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CNAE" id="268"/>
+      <elementValue elementRef="TRIM" value="false" id="269"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODHIST" id="270"/>
+      <elementValue elementRef="TRIM" value="false" id="271"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CONDPAG" id="272"/>
+      <elementValue elementRef="TRIM" value="false" id="273"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DIASPAG" id="274"/>
+      <elementValue elementRef="TRIM" value="false" id="275"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_AGREG" id="276"/>
+      <elementValue elementRef="TRIM" value="false" id="277"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECINSS" id="278"/>
+      <elementValue elementRef="TRIM" value="false" id="279"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECCOFI" id="280"/>
+      <elementValue elementRef="TRIM" value="false" id="281"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECCSLL" id="282"/>
+      <elementValue elementRef="TRIM" value="false" id="283"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECPIS" id="284"/>
+      <elementValue elementRef="TRIM" value="false" id="285"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIPPER" id="286"/>
+      <elementValue elementRef="TRIM" value="false" id="287"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALFIN" id="288"/>
+      <elementValue elementRef="TRIM" value="false" id="289"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SALFINM" id="290"/>
+      <elementValue elementRef="TRIM" value="false" id="291"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CONTAB" id="292"/>
+      <elementValue elementRef="TRIM" value="false" id="293"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CLICNV" id="294"/>
+      <elementValue elementRef="TRIM" value="false" id="295"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_B2B" id="296"/>
+      <elementValue elementRef="TRIM" value="false" id="297"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_GRPVEN" id="298"/>
+      <elementValue elementRef="TRIM" value="false" id="299"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MSBLQL" id="300"/>
+      <elementValue elementRef="TRIM" value="false" id="301"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INSCRUR" id="302"/>
+      <elementValue elementRef="TRIM" value="false" id="303"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CLIPRI" id="304"/>
+      <elementValue elementRef="TRIM" value="false" id="305"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_LOJPRI" id="306"/>
+      <elementValue elementRef="TRIM" value="false" id="307"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTCAD" id="308"/>
+      <elementValue elementRef="TRIM" value="false" id="309"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_HRCAD" id="310"/>
+      <elementValue elementRef="TRIM" value="false" id="311"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SITUA" id="312"/>
+      <elementValue elementRef="TRIM" value="false" id="313"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODSEG" id="314"/>
+      <elementValue elementRef="TRIM" value="false" id="315"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NUMRA" id="316"/>
+      <elementValue elementRef="TRIM" value="false" id="317"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SUBCOD" id="318"/>
+      <elementValue elementRef="TRIM" value="false" id="319"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CDRDES" id="320"/>
+      <elementValue elementRef="TRIM" value="false" id="321"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FILDEB" id="322"/>
+      <elementValue elementRef="TRIM" value="false" id="323"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_BLEMAIL" id="324"/>
+      <elementValue elementRef="TRIM" value="false" id="325"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODFOR" id="326"/>
+      <elementValue elementRef="TRIM" value="false" id="327"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ABICS" id="328"/>
+      <elementValue elementRef="TRIM" value="false" id="329"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIPOCLI" id="330"/>
+      <elementValue elementRef="TRIM" value="false" id="331"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_VINCULO" id="332"/>
+      <elementValue elementRef="TRIM" value="false" id="333"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_LOCCONS" id="334"/>
+      <elementValue elementRef="TRIM" value="false" id="335"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODMUNE" id="336"/>
+      <elementValue elementRef="TRIM" value="false" id="337"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PERFIL" id="338"/>
+      <elementValue elementRef="TRIM" value="false" id="339"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTINIV" id="340"/>
+      <elementValue elementRef="TRIM" value="false" id="341"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MUNE" id="342"/>
+      <elementValue elementRef="TRIM" value="false" id="343"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_DTFIMV" id="344"/>
+      <elementValue elementRef="TRIM" value="false" id="345"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_HRTRANS" id="346"/>
+      <elementValue elementRef="TRIM" value="false" id="347"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRF_COD" id="348"/>
+      <elementValue elementRef="TRIM" value="false" id="349"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRF_OBS" id="350"/>
+      <elementValue elementRef="TRIM" value="false" id="351"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UNIDVEN" id="352"/>
+      <elementValue elementRef="TRIM" value="false" id="353"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPREG" id="354"/>
+      <elementValue elementRef="TRIM" value="false" id="355"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIPPRFL" id="356"/>
+      <elementValue elementRef="TRIM" value="false" id="357"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SIMPLES" id="358"/>
+      <elementValue elementRef="TRIM" value="false" id="359"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRF_VLD" id="360"/>
+      <elementValue elementRef="TRIM" value="false" id="361"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_REGPB" id="362"/>
+      <elementValue elementRef="TRIM" value="false" id="363"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_USADDA" id="364"/>
+      <elementValue elementRef="TRIM" value="false" id="365"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IPWEB" id="366"/>
+      <elementValue elementRef="TRIM" value="false" id="367"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODSIAF" id="368"/>
+      <elementValue elementRef="TRIM" value="false" id="369"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IRBAX" id="370"/>
+      <elementValue elementRef="TRIM" value="false" id="371"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IDHIST" id="372"/>
+      <elementValue elementRef="TRIM" value="false" id="373"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RESERVE" id="374"/>
+      <elementValue elementRef="TRIM" value="false" id="375"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MSEXP" id="376"/>
+      <elementValue elementRef="TRIM" value="false" id="377"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CEINSS" id="378"/>
+      <elementValue elementRef="TRIM" value="false" id="379"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ORIGEM" id="380"/>
+      <elementValue elementRef="TRIM" value="false" id="381"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_REGESIM" id="382"/>
+      <elementValue elementRef="TRIM" value="false" id="383"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PERCATM" id="384"/>
+      <elementValue elementRef="TRIM" value="false" id="385"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENDNOT" id="386"/>
+      <elementValue elementRef="TRIM" value="false" id="387"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NIF" id="388"/>
+      <elementValue elementRef="TRIM" value="false" id="389"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INDRET" id="390"/>
+      <elementValue elementRef="TRIM" value="false" id="391"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RFABOV" id="392"/>
+      <elementValue elementRef="TRIM" value="false" id="393"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPDP" id="394"/>
+      <elementValue elementRef="TRIM" value="false" id="395"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PERFECP" id="396"/>
+      <elementValue elementRef="TRIM" value="false" id="397"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RFACS" id="398"/>
+      <elementValue elementRef="TRIM" value="false" id="399"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ALIFIXA" id="400"/>
+      <elementValue elementRef="TRIM" value="false" id="401"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MATFUN" id="402"/>
+      <elementValue elementRef="TRIM" value="false" id="403"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FRETISS" id="404"/>
+      <elementValue elementRef="TRIM" value="false" id="405"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CRDMA" id="406"/>
+      <elementValue elementRef="TRIM" value="false" id="407"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_PRSTSER" id="408"/>
+      <elementValue elementRef="TRIM" value="false" id="409"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CTARE" id="410"/>
+      <elementValue elementRef="TRIM" value="false" id="411"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IENCONT" id="412"/>
+      <elementValue elementRef="TRIM" value="false" id="413"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODFID" id="414"/>
+      <elementValue elementRef="TRIM" value="false" id="415"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_SIMPNAC" id="416"/>
+      <elementValue elementRef="TRIM" value="false" id="417"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INCULT" id="418"/>
+      <elementValue elementRef="TRIM" value="false" id="419"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENTID" id="420"/>
+      <elementValue elementRef="TRIM" value="false" id="421"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ABATIMP" id="422"/>
+      <elementValue elementRef="TRIM" value="false" id="423"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FOMEZER" id="424"/>
+      <elementValue elementRef="TRIM" value="false" id="425"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IMGUMOV" id="426"/>
+      <elementValue elementRef="TRIM" value="false" id="427"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RESFAT" id="428"/>
+      <elementValue elementRef="TRIM" value="false" id="429"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECFET" id="430"/>
+      <elementValue elementRef="TRIM" value="false" id="431"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_MINIRF" id="432"/>
+      <elementValue elementRef="TRIM" value="false" id="433"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_FILTRF" id="434"/>
+      <elementValue elementRef="TRIM" value="false" id="435"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_IDESTN" id="436"/>
+      <elementValue elementRef="TRIM" value="false" id="437"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPCAMP" id="438"/>
+      <elementValue elementRef="TRIM" value="false" id="439"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CHVCAM" id="440"/>
+      <elementValue elementRef="TRIM" value="false" id="441"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INOVAUT" id="442"/>
+      <elementValue elementRef="TRIM" value="false" id="443"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPNFSE" id="444"/>
+      <elementValue elementRef="TRIM" value="false" id="445"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_NVESTN" id="446"/>
+      <elementValue elementRef="TRIM" value="false" id="447"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ORIGCT" id="448"/>
+      <elementValue elementRef="TRIM" value="false" id="449"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_HREXPO" id="450"/>
+      <elementValue elementRef="TRIM" value="false" id="451"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPJ" id="452"/>
+      <elementValue elementRef="TRIM" value="false" id="453"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ENTORI" id="454"/>
+      <elementValue elementRef="TRIM" value="false" id="455"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_OUTRMUN" id="456"/>
+      <elementValue elementRef="TRIM" value="false" id="457"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_USERLGA" id="458"/>
+      <elementValue elementRef="TRIM" value="false" id="459"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_USERLGI" id="460"/>
+      <elementValue elementRef="TRIM" value="false" id="461"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECFMD" id="462"/>
+      <elementValue elementRef="TRIM" value="false" id="463"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RFASEMT" id="464"/>
+      <elementValue elementRef="TRIM" value="false" id="465"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RIMAMT" id="466"/>
+      <elementValue elementRef="TRIM" value="false" id="467"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_INCLTMG" id="468"/>
+      <elementValue elementRef="TRIM" value="false" id="469"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODTER" id="470"/>
+      <elementValue elementRef="TRIM" value="false" id="471"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ISSRSLC" id="472"/>
+      <elementValue elementRef="TRIM" value="false" id="473"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODMEMB" id="474"/>
+      <elementValue elementRef="TRIM" value="false" id="475"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TPMEMB" id="476"/>
+      <elementValue elementRef="TRIM" value="false" id="477"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CONTRIB" id="478"/>
+      <elementValue elementRef="TRIM" value="false" id="479"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TDA" id="480"/>
+      <elementValue elementRef="TRIM" value="false" id="481"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_RECIRRF" id="482"/>
+      <elementValue elementRef="TRIM" value="false" id="483"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TIMEKEE" id="484"/>
+      <elementValue elementRef="TRIM" value="false" id="485"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UEXCEPT" id="486"/>
+      <elementValue elementRef="TRIM" value="false" id="487"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UAGENTE" id="488"/>
+      <elementValue elementRef="TRIM" value="false" id="489"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UMATRIZ" id="490"/>
+      <elementValue elementRef="TRIM" value="false" id="491"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODMAT" id="492"/>
+      <elementValue elementRef="TRIM" value="false" id="493"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_COMPENT" id="494"/>
+      <elementValue elementRef="TRIM" value="false" id="495"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODANT" id="496"/>
+      <elementValue elementRef="TRIM" value="false" id="497"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODLOJ" id="498"/>
+      <elementValue elementRef="TRIM" value="false" id="499"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODCAN" id="500"/>
+      <elementValue elementRef="TRIM" value="false" id="501"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODSEG" id="502"/>
+      <elementValue elementRef="TRIM" value="false" id="503"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UTIPOCO" id="504"/>
+      <elementValue elementRef="TRIM" value="false" id="505"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UVISEXT" id="506"/>
+      <elementValue elementRef="TRIM" value="false" id="507"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UVLRMIN" id="508"/>
+      <elementValue elementRef="TRIM" value="false" id="509"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UEMAIL" id="510"/>
+      <elementValue elementRef="TRIM" value="false" id="511"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTALT" id="512"/>
+      <elementValue elementRef="TRIM" value="false" id="513"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTDESA" id="514"/>
+      <elementValue elementRef="TRIM" value="false" id="515"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTRECA" id="516"/>
+      <elementValue elementRef="TRIM" value="false" id="517"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UPZMPRA" id="518"/>
+      <elementValue elementRef="TRIM" value="false" id="519"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UENVBOL" id="520"/>
+      <elementValue elementRef="TRIM" value="false" id="521"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UEMAILP" id="522"/>
+      <elementValue elementRef="TRIM" value="false" id="523"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UVLCAP" id="524"/>
+      <elementValue elementRef="TRIM" value="false" id="525"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UINSTA" id="526"/>
+      <elementValue elementRef="TRIM" value="false" id="527"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UFACE" id="528"/>
+      <elementValue elementRef="TRIM" value="false" id="529"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_ULINKE" id="530"/>
+      <elementValue elementRef="TRIM" value="false" id="531"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDDDWZ" id="532"/>
+      <elementValue elementRef="TRIM" value="false" id="533"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UNRWZ" id="534"/>
+      <elementValue elementRef="TRIM" value="false" id="535"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODREG" id="536"/>
+      <elementValue elementRef="TRIM" value="false" id="537"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UVLLSUG" id="538"/>
+      <elementValue elementRef="TRIM" value="false" id="539"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UTOP100" id="540"/>
+      <elementValue elementRef="TRIM" value="false" id="541"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UENDDIF" id="542"/>
+      <elementValue elementRef="TRIM" value="false" id="543"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UABA1" id="544"/>
+      <elementValue elementRef="TRIM" value="false" id="545"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UABA2" id="546"/>
+      <elementValue elementRef="TRIM" value="false" id="547"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UABA3" id="548"/>
+      <elementValue elementRef="TRIM" value="false" id="549"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UABA4" id="550"/>
+      <elementValue elementRef="TRIM" value="false" id="551"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UNECAGE" id="552"/>
+      <elementValue elementRef="TRIM" value="false" id="553"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTSUFR" id="554"/>
+      <elementValue elementRef="TRIM" value="false" id="555"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UGERETQ" id="556"/>
+      <elementValue elementRef="TRIM" value="false" id="557"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UOBSLOG" id="558"/>
+      <elementValue elementRef="TRIM" value="false" id="559"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTCND" id="560"/>
+      <elementValue elementRef="TRIM" value="false" id="561"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTREES" id="562"/>
+      <elementValue elementRef="TRIM" value="false" id="563"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UGRPFEN" id="564"/>
+      <elementValue elementRef="TRIM" value="false" id="565"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_TELEX" id="566"/>
+      <elementValue elementRef="TRIM" value="false" id="567"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UABC" id="568"/>
+      <elementValue elementRef="TRIM" value="false" id="569"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCDMATF" id="570"/>
+      <elementValue elementRef="TRIM" value="false" id="571"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_CODMER" id="572"/>
+      <elementValue elementRef="TRIM" value="false" id="573"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UNDEB" id="574"/>
+      <elementValue elementRef="TRIM" value="false" id="575"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCHD" id="576"/>
+      <elementValue elementRef="TRIM" value="false" id="577"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UATRASO" id="578"/>
+      <elementValue elementRef="TRIM" value="false" id="579"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UVOL30" id="580"/>
+      <elementValue elementRef="TRIM" value="false" id="581"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_URESPV" id="582"/>
+      <elementValue elementRef="TRIM" value="false" id="583"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCNDV" id="584"/>
+      <elementValue elementRef="TRIM" value="false" id="585"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_USUFRAM" id="586"/>
+      <elementValue elementRef="TRIM" value="false" id="587"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_URECAD" id="588"/>
+      <elementValue elementRef="TRIM" value="false" id="589"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCODBLQ" id="590"/>
+      <elementValue elementRef="TRIM" value="false" id="591"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="D_E_L_E_T_" id="592"/>
+      <elementValue elementRef="TRIM" value="false" id="593"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="R_E_C_N_O_" id="594"/>
+      <elementValue elementRef="TRIM" value="false" id="595"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="R_E_C_D_E_L_" id="596"/>
+      <elementValue elementRef="TRIM" value="false" id="597"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UMENNF" id="598"/>
+      <elementValue elementRef="TRIM" value="false" id="599"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UMENPAD" id="600"/>
+      <elementValue elementRef="TRIM" value="false" id="601"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCLITMK" id="602"/>
+      <elementValue elementRef="TRIM" value="false" id="603"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCAMPAN" id="604"/>
+      <elementValue elementRef="TRIM" value="false" id="605"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTFICA" id="606"/>
+      <elementValue elementRef="TRIM" value="false" id="607"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTALC" id="608"/>
+      <elementValue elementRef="TRIM" value="false" id="609"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_URAMOAT" id="610"/>
+      <elementValue elementRef="TRIM" value="false" id="611"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCC" id="612"/>
+      <elementValue elementRef="TRIM" value="false" id="613"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UTPDESC" id="614"/>
+      <elementValue elementRef="TRIM" value="false" id="615"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UUSUALT" id="616"/>
+      <elementValue elementRef="TRIM" value="false" id="617"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UBXDCT" id="618"/>
+      <elementValue elementRef="TRIM" value="false" id="619"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UULTCHY" id="620"/>
+      <elementValue elementRef="TRIM" value="false" id="621"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UCLINOV" id="622"/>
+      <elementValue elementRef="TRIM" value="false" id="623"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UHCNAC" id="624"/>
+      <elementValue elementRef="TRIM" value="false" id="625"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UHCREG" id="626"/>
+      <elementValue elementRef="TRIM" value="false" id="627"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="S_T_A_M_P_" id="628"/>
+      <elementValue elementRef="TRIM" value="false" id="629"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="I_N_S_D_T_" id="630"/>
+      <elementValue elementRef="TRIM" value="false" id="631"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDDDSE" id="632"/>
+      <elementValue elementRef="TRIM" value="false" id="633"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UFONESE" id="634"/>
+      <elementValue elementRef="TRIM" value="false" id="635"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_UDTSANE" id="636"/>
+      <elementValue elementRef="TRIM" value="false" id="637"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A1_URESLOG" id="638"/>
+      <elementValue elementRef="TRIM" value="false" id="639"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" value="30" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="SA1010" name="tDBInput_2">
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_FILIAL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_LOJA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TIPO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_PESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'          '" key="false" length="10" name="A1_NATUREZ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="A1_CGC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_NOME" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_NREDUZ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                '" key="false" length="80" name="A1_END" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                  '" key="false" length="50" name="A1_COMPLEM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_BAIRRO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_CEP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_EST" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_REGIAO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_DSCREG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_COD_MUN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                            '" key="false" length="60" name="A1_MUN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_CODPAIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_ESTADO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_DDD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TRIBFAV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_DDI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'           '" key="false" length="11" name="A1_IBGE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_UCODMUC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_ENDREC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_TEL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_FAX" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_FONECP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                '" key="false" length="80" name="A1_CONTATO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                  '" key="false" length="18" name="A1_PFISICA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_PAIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                  '" key="false" length="18" name="A1_INSCR" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                  '" key="false" length="18" name="A1_INSCRM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_VEND" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_COMIS" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_CONTA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_BCO1" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_BCO2" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_BCO3" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_BCO4" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_BCO5" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_TRANSP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPFRET" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_ENDCOB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_COND" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                              '" key="false" length="30" name="A1_BAIRROC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_DESC" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_CEPC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_ESTC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_UCODMCO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                            '" key="false" length="60" name="A1_MUNC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_PRIOR" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RISCO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_LC" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_VENCLC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CLASSE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_LCFIN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_MOEDALC" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_MSALDO" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_MCOMPRA" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_METR" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_PRICOM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_ULTCOM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_NROCOM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_FORMVIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_TEMVIS" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_ULTVIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_TMPVIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_TMPSTD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CLASVEN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_MENSAGE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALDUP" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECISS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALPEDL" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_NROPAG" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TRANSF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'            '" key="false" length="12" name="A1_SUFRAMA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_ATR" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_VACUM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALPED" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_TITPROT" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTULTIT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_CHQDEVO" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_CXPOSTA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_MATR" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTULCHQ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_MAIDUPL" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_TABELA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_INCISS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALDUPM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_PAGATR" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'       '" key="false" length="7" name="A1_ATIVIDA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_CARGO1" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_CARGO2" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_CARGO3" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_RTEC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SUPER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_ALIQIR" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_OBSERV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_RG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CALCSUF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTNASC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALPEDB" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_GRPTRIB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV1" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_CLIFAT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                '" key="false" length="80" name="A1_ENDENT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                  '" key="false" length="50" name="A1_UCOMPLE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_BAIRROE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_CEPE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_ESTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_CODLOC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV2" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_TPESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_TPISSRS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV3" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV4" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV5" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV6" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV7" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_CODAGE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_SATIV8" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_CODMARC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_COMAGE" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                              '" key="false" length="30" name="A1_HPAGE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_CODMUN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TIPCLI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_EMAIL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_DEST_1" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_DEST_2" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_DEST_3" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'       '" key="false" length="7" name="A1_CBO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_OBS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_CNAE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_CODHIST" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_CONDPAG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_DIASPAG" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'    '" key="false" length="4" name="A1_AGREG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECINSS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECCOFI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECCSLL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECPIS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_TIPPER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALFIN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_SALFINM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_CONTAB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CLICNV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_B2B" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_GRPVEN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_MSBLQL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                  '" key="false" length="18" name="A1_INSCRUR" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_CLIPRI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_LOJPRI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTCAD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_HRCAD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_SITUA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_CODSEG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_NUMRA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_SUBCOD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_CDRDES" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_FILDEB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_BLEMAIL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_CODFOR" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'    '" key="false" length="4" name="A1_ABICS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_TIPOCLI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_VINCULO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_LOCCONS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_CODMUNE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_PERFIL" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTINIV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                            '" key="false" length="60" name="A1_MUNE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_DTFIMV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_HRTRANS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_PRF_COD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="2147483647" name="A1_PRF_OBS" nullable="true" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_UNIDVEN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPREG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TIPPRFL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_SIMPLES" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_PRF_VLD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_REGPB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_USADDA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_IPWEB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'    '" key="false" length="4" name="A1_CODSIAF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_IRBAX" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_IDHIST" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RESERVE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_MSEXP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="A1_CEINSS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_ORIGEM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_REGESIM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_PERCATM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_ENDNOT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_NIF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_INDRET" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RFABOV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPDP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_PERFECP" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RFACS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_ALIFIXA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_MATFUN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_FRETISS" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CRDMA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_PRSTSER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CTARE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_IENCONT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                        '" key="false" length="40" name="A1_CODFID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_SIMPNAC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_INCULT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_ENTID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_ABATIMP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_FOMEZER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                    '" key="false" length="100" name="A1_IMGUMOV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RESFAT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECFET" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_MINIRF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_FILTRF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                              '" key="false" length="30" name="A1_IDESTN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPCAMP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="A1_CHVCAM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_INOVAUT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_TPNFSE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_NVESTN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_ORIGCT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_HREXPO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPJ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_ENTORI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'          '" key="false" length="10" name="A1_OUTRMUN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                 '" key="false" length="17" name="A1_USERLGA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                 '" key="false" length="17" name="A1_USERLGI" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECFMD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RFASEMT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RIMAMT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_INCLTMG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_CODTER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_ISSRSLC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="A1_CODMEMB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TPMEMB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_CONTRIB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_TDA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_RECIRRF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_TIMEKEE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                              '" key="false" length="254" name="A1_UEXCEPT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UAGENTE" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UMATRIZ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UCODMAT" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                  '" key="false" length="50" name="A1_COMPENT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'       '" key="false" length="7" name="A1_UCODANT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_UCODLOJ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_UCODCAN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_UCODSEG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UTIPOCO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UVISEXT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UVLRMIN" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_UEMAIL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTALT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTDESA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTRECA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_UPZMPRA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UENVBOL" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_UEMAILP" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UVLCAP" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_UINSTA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_UFACE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_ULINKE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_UDDDWZ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_UNRWZ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_UCODREG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UVLLSUG" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UTOP100" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UENDDIF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UABA1" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UABA2" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UABA3" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UABA4" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UNECAGE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTSUFR" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UGERETQ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                                                                                                                                          '" key="false" length="250" name="A1_UOBSLOG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTCND" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTREES" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_UGRPFEN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'          '" key="false" length="10" name="A1_TELEX" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'  '" key="false" length="2" name="A1_UABC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="53" name="A1_UCDMATF" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                    '" key="false" length="20" name="A1_CODMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UNDEB" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UCHD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UATRASO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UVOL30" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_URESPV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UCNDV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_USUFRAM" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_URECAD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'     '" key="false" length="5" name="A1_UCODBLQ" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="D_E_L_E_T_" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="true" length="10" name="R_E_C_N_O_" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="((0))" key="false" length="10" name="R_E_C_D_E_L_" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                                                '" key="false" length="128" name="A1_UMENNF" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_UMENPAD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UCLITMK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'      '" key="false" length="6" name="A1_UCAMPAN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTFICA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTALC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'    '" key="false" length="4" name="A1_URAMOAT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'         '" key="false" length="9" name="A1_UCC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UTPDESC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                              '" key="false" length="30" name="A1_UUSUALT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UBXDCT" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UULTCHY" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UCLINOV" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UHCNAC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_UHCREG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'getutcdate()'" key="false" length="23" name="S_T_A_M_P_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'getutcdate()'" key="false" length="23" name="I_N_S_D_T_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="A1_UDDDSE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'               '" key="false" length="15" name="A1_UFONESE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'        '" key="false" length="8" name="A1_UDTSANE" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="A1_URESLOG" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_jzM_gD-sEe-YS8RQVZZjcw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="Columns">
+      <column comment="" defaultValue="'         '" key="false" length="9" name="CODIGO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="LOJA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="PESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="CGC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="Columns">
+        <mapperTableEntries name="CODIGO" expression="row1.A1_COD " type="id_String"/>
+        <mapperTableEntries name="LOJA" expression="row1.A1_LOJA " type="id_String"/>
+        <mapperTableEntries name="PESSOA" expression="row1.A1_PESSOA " type="id_String"/>
+        <mapperTableEntries name="CGC" expression="row1.A1_CGC " type="id_String"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="A1_FILIAL" type="id_String"/>
+        <mapperTableEntries name="A1_COD" type="id_String"/>
+        <mapperTableEntries name="A1_LOJA" type="id_String"/>
+        <mapperTableEntries name="A1_TIPO" type="id_String"/>
+        <mapperTableEntries name="A1_PESSOA" type="id_String"/>
+        <mapperTableEntries name="A1_NATUREZ" type="id_String"/>
+        <mapperTableEntries name="A1_CGC" type="id_String"/>
+        <mapperTableEntries name="A1_NOME" type="id_String"/>
+        <mapperTableEntries name="A1_NREDUZ" type="id_String"/>
+        <mapperTableEntries name="A1_END" type="id_String"/>
+        <mapperTableEntries name="A1_COMPLEM" type="id_String"/>
+        <mapperTableEntries name="A1_BAIRRO" type="id_String"/>
+        <mapperTableEntries name="A1_CEP" type="id_String"/>
+        <mapperTableEntries name="A1_EST" type="id_String"/>
+        <mapperTableEntries name="A1_REGIAO" type="id_String"/>
+        <mapperTableEntries name="A1_DSCREG" type="id_String"/>
+        <mapperTableEntries name="A1_COD_MUN" type="id_String"/>
+        <mapperTableEntries name="A1_MUN" type="id_String"/>
+        <mapperTableEntries name="A1_CODPAIS" type="id_String"/>
+        <mapperTableEntries name="A1_ESTADO" type="id_String"/>
+        <mapperTableEntries name="A1_DDD" type="id_String"/>
+        <mapperTableEntries name="A1_TRIBFAV" type="id_String"/>
+        <mapperTableEntries name="A1_DDI" type="id_String"/>
+        <mapperTableEntries name="A1_IBGE" type="id_String"/>
+        <mapperTableEntries name="A1_UCODMUC" type="id_String"/>
+        <mapperTableEntries name="A1_ENDREC" type="id_String"/>
+        <mapperTableEntries name="A1_TEL" type="id_String"/>
+        <mapperTableEntries name="A1_FAX" type="id_String"/>
+        <mapperTableEntries name="A1_FONECP" type="id_String"/>
+        <mapperTableEntries name="A1_CONTATO" type="id_String"/>
+        <mapperTableEntries name="A1_PFISICA" type="id_String"/>
+        <mapperTableEntries name="A1_PAIS" type="id_String"/>
+        <mapperTableEntries name="A1_INSCR" type="id_String"/>
+        <mapperTableEntries name="A1_INSCRM" type="id_String"/>
+        <mapperTableEntries name="A1_VEND" type="id_String"/>
+        <mapperTableEntries name="A1_COMIS" type="id_Double"/>
+        <mapperTableEntries name="A1_CONTA" type="id_String"/>
+        <mapperTableEntries name="A1_BCO1" type="id_String"/>
+        <mapperTableEntries name="A1_BCO2" type="id_String"/>
+        <mapperTableEntries name="A1_BCO3" type="id_String"/>
+        <mapperTableEntries name="A1_BCO4" type="id_String"/>
+        <mapperTableEntries name="A1_BCO5" type="id_String"/>
+        <mapperTableEntries name="A1_TRANSP" type="id_String"/>
+        <mapperTableEntries name="A1_TPFRET" type="id_String"/>
+        <mapperTableEntries name="A1_ENDCOB" type="id_String"/>
+        <mapperTableEntries name="A1_COND" type="id_String"/>
+        <mapperTableEntries name="A1_BAIRROC" type="id_String"/>
+        <mapperTableEntries name="A1_DESC" type="id_Double"/>
+        <mapperTableEntries name="A1_CEPC" type="id_String"/>
+        <mapperTableEntries name="A1_ESTC" type="id_String"/>
+        <mapperTableEntries name="A1_UCODMCO" type="id_String"/>
+        <mapperTableEntries name="A1_MUNC" type="id_String"/>
+        <mapperTableEntries name="A1_PRIOR" type="id_String"/>
+        <mapperTableEntries name="A1_RISCO" type="id_String"/>
+        <mapperTableEntries name="A1_LC" type="id_Double"/>
+        <mapperTableEntries name="A1_VENCLC" type="id_String"/>
+        <mapperTableEntries name="A1_CLASSE" type="id_String"/>
+        <mapperTableEntries name="A1_LCFIN" type="id_Double"/>
+        <mapperTableEntries name="A1_MOEDALC" type="id_Double"/>
+        <mapperTableEntries name="A1_MSALDO" type="id_Double"/>
+        <mapperTableEntries name="A1_MCOMPRA" type="id_Double"/>
+        <mapperTableEntries name="A1_METR" type="id_Double"/>
+        <mapperTableEntries name="A1_PRICOM" type="id_String"/>
+        <mapperTableEntries name="A1_ULTCOM" type="id_String"/>
+        <mapperTableEntries name="A1_NROCOM" type="id_Double"/>
+        <mapperTableEntries name="A1_FORMVIS" type="id_String"/>
+        <mapperTableEntries name="A1_TEMVIS" type="id_Double"/>
+        <mapperTableEntries name="A1_ULTVIS" type="id_String"/>
+        <mapperTableEntries name="A1_TMPVIS" type="id_String"/>
+        <mapperTableEntries name="A1_TMPSTD" type="id_String"/>
+        <mapperTableEntries name="A1_CLASVEN" type="id_String"/>
+        <mapperTableEntries name="A1_MENSAGE" type="id_String"/>
+        <mapperTableEntries name="A1_SALDUP" type="id_Double"/>
+        <mapperTableEntries name="A1_RECISS" type="id_String"/>
+        <mapperTableEntries name="A1_SALPEDL" type="id_Double"/>
+        <mapperTableEntries name="A1_NROPAG" type="id_Double"/>
+        <mapperTableEntries name="A1_TRANSF" type="id_String"/>
+        <mapperTableEntries name="A1_SUFRAMA" type="id_String"/>
+        <mapperTableEntries name="A1_ATR" type="id_Double"/>
+        <mapperTableEntries name="A1_VACUM" type="id_Double"/>
+        <mapperTableEntries name="A1_SALPED" type="id_Double"/>
+        <mapperTableEntries name="A1_TITPROT" type="id_Double"/>
+        <mapperTableEntries name="A1_DTULTIT" type="id_String"/>
+        <mapperTableEntries name="A1_CHQDEVO" type="id_Double"/>
+        <mapperTableEntries name="A1_CXPOSTA" type="id_String"/>
+        <mapperTableEntries name="A1_MATR" type="id_Double"/>
+        <mapperTableEntries name="A1_DTULCHQ" type="id_String"/>
+        <mapperTableEntries name="A1_MAIDUPL" type="id_Double"/>
+        <mapperTableEntries name="A1_TABELA" type="id_String"/>
+        <mapperTableEntries name="A1_INCISS" type="id_String"/>
+        <mapperTableEntries name="A1_SALDUPM" type="id_Double"/>
+        <mapperTableEntries name="A1_PAGATR" type="id_Double"/>
+        <mapperTableEntries name="A1_ATIVIDA" type="id_String"/>
+        <mapperTableEntries name="A1_CARGO1" type="id_String"/>
+        <mapperTableEntries name="A1_CARGO2" type="id_String"/>
+        <mapperTableEntries name="A1_CARGO3" type="id_String"/>
+        <mapperTableEntries name="A1_RTEC" type="id_String"/>
+        <mapperTableEntries name="A1_SUPER" type="id_String"/>
+        <mapperTableEntries name="A1_ALIQIR" type="id_Double"/>
+        <mapperTableEntries name="A1_OBSERV" type="id_String"/>
+        <mapperTableEntries name="A1_RG" type="id_String"/>
+        <mapperTableEntries name="A1_CALCSUF" type="id_String"/>
+        <mapperTableEntries name="A1_DTNASC" type="id_String"/>
+        <mapperTableEntries name="A1_SALPEDB" type="id_Double"/>
+        <mapperTableEntries name="A1_GRPTRIB" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV1" type="id_String"/>
+        <mapperTableEntries name="A1_CLIFAT" type="id_String"/>
+        <mapperTableEntries name="A1_ENDENT" type="id_String"/>
+        <mapperTableEntries name="A1_UCOMPLE" type="id_String"/>
+        <mapperTableEntries name="A1_BAIRROE" type="id_String"/>
+        <mapperTableEntries name="A1_CEPE" type="id_String"/>
+        <mapperTableEntries name="A1_ESTE" type="id_String"/>
+        <mapperTableEntries name="A1_CODLOC" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV2" type="id_String"/>
+        <mapperTableEntries name="A1_TPESSOA" type="id_String"/>
+        <mapperTableEntries name="A1_TPISSRS" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV3" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV4" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV5" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV6" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV7" type="id_String"/>
+        <mapperTableEntries name="A1_CODAGE" type="id_String"/>
+        <mapperTableEntries name="A1_SATIV8" type="id_String"/>
+        <mapperTableEntries name="A1_CODMARC" type="id_String"/>
+        <mapperTableEntries name="A1_COMAGE" type="id_Double"/>
+        <mapperTableEntries name="A1_HPAGE" type="id_String"/>
+        <mapperTableEntries name="A1_CODMUN" type="id_String"/>
+        <mapperTableEntries name="A1_TIPCLI" type="id_String"/>
+        <mapperTableEntries name="A1_EMAIL" type="id_String"/>
+        <mapperTableEntries name="A1_DEST_1" type="id_String"/>
+        <mapperTableEntries name="A1_DEST_2" type="id_String"/>
+        <mapperTableEntries name="A1_DEST_3" type="id_String"/>
+        <mapperTableEntries name="A1_CBO" type="id_String"/>
+        <mapperTableEntries name="A1_OBS" type="id_String"/>
+        <mapperTableEntries name="A1_CNAE" type="id_String"/>
+        <mapperTableEntries name="A1_CODHIST" type="id_String"/>
+        <mapperTableEntries name="A1_CONDPAG" type="id_String"/>
+        <mapperTableEntries name="A1_DIASPAG" type="id_Double"/>
+        <mapperTableEntries name="A1_AGREG" type="id_String"/>
+        <mapperTableEntries name="A1_RECINSS" type="id_String"/>
+        <mapperTableEntries name="A1_RECCOFI" type="id_String"/>
+        <mapperTableEntries name="A1_RECCSLL" type="id_String"/>
+        <mapperTableEntries name="A1_RECPIS" type="id_String"/>
+        <mapperTableEntries name="A1_TIPPER" type="id_String"/>
+        <mapperTableEntries name="A1_SALFIN" type="id_Double"/>
+        <mapperTableEntries name="A1_SALFINM" type="id_Double"/>
+        <mapperTableEntries name="A1_CONTAB" type="id_String"/>
+        <mapperTableEntries name="A1_CLICNV" type="id_String"/>
+        <mapperTableEntries name="A1_B2B" type="id_String"/>
+        <mapperTableEntries name="A1_GRPVEN" type="id_String"/>
+        <mapperTableEntries name="A1_MSBLQL" type="id_String"/>
+        <mapperTableEntries name="A1_INSCRUR" type="id_String"/>
+        <mapperTableEntries name="A1_CLIPRI" type="id_String"/>
+        <mapperTableEntries name="A1_LOJPRI" type="id_String"/>
+        <mapperTableEntries name="A1_DTCAD" type="id_String"/>
+        <mapperTableEntries name="A1_HRCAD" type="id_String"/>
+        <mapperTableEntries name="A1_SITUA" type="id_String"/>
+        <mapperTableEntries name="A1_CODSEG" type="id_String"/>
+        <mapperTableEntries name="A1_NUMRA" type="id_String"/>
+        <mapperTableEntries name="A1_SUBCOD" type="id_String"/>
+        <mapperTableEntries name="A1_CDRDES" type="id_String"/>
+        <mapperTableEntries name="A1_FILDEB" type="id_String"/>
+        <mapperTableEntries name="A1_BLEMAIL" type="id_String"/>
+        <mapperTableEntries name="A1_CODFOR" type="id_String"/>
+        <mapperTableEntries name="A1_ABICS" type="id_String"/>
+        <mapperTableEntries name="A1_TIPOCLI" type="id_String"/>
+        <mapperTableEntries name="A1_VINCULO" type="id_String"/>
+        <mapperTableEntries name="A1_LOCCONS" type="id_String"/>
+        <mapperTableEntries name="A1_CODMUNE" type="id_String"/>
+        <mapperTableEntries name="A1_PERFIL" type="id_Double"/>
+        <mapperTableEntries name="A1_DTINIV" type="id_String"/>
+        <mapperTableEntries name="A1_MUNE" type="id_String"/>
+        <mapperTableEntries name="A1_DTFIMV" type="id_String"/>
+        <mapperTableEntries name="A1_HRTRANS" type="id_String"/>
+        <mapperTableEntries name="A1_PRF_COD" type="id_String"/>
+        <mapperTableEntries name="A1_PRF_OBS" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="A1_UNIDVEN" type="id_String"/>
+        <mapperTableEntries name="A1_TPREG" type="id_String"/>
+        <mapperTableEntries name="A1_TIPPRFL" type="id_String"/>
+        <mapperTableEntries name="A1_SIMPLES" type="id_String"/>
+        <mapperTableEntries name="A1_PRF_VLD" type="id_String"/>
+        <mapperTableEntries name="A1_REGPB" type="id_String"/>
+        <mapperTableEntries name="A1_USADDA" type="id_String"/>
+        <mapperTableEntries name="A1_IPWEB" type="id_String"/>
+        <mapperTableEntries name="A1_CODSIAF" type="id_String"/>
+        <mapperTableEntries name="A1_IRBAX" type="id_String"/>
+        <mapperTableEntries name="A1_IDHIST" type="id_String"/>
+        <mapperTableEntries name="A1_RESERVE" type="id_String"/>
+        <mapperTableEntries name="A1_MSEXP" type="id_String"/>
+        <mapperTableEntries name="A1_CEINSS" type="id_String"/>
+        <mapperTableEntries name="A1_ORIGEM" type="id_String"/>
+        <mapperTableEntries name="A1_REGESIM" type="id_String"/>
+        <mapperTableEntries name="A1_PERCATM" type="id_Double"/>
+        <mapperTableEntries name="A1_ENDNOT" type="id_String"/>
+        <mapperTableEntries name="A1_NIF" type="id_String"/>
+        <mapperTableEntries name="A1_INDRET" type="id_String"/>
+        <mapperTableEntries name="A1_RFABOV" type="id_String"/>
+        <mapperTableEntries name="A1_TPDP" type="id_String"/>
+        <mapperTableEntries name="A1_PERFECP" type="id_Double"/>
+        <mapperTableEntries name="A1_RFACS" type="id_String"/>
+        <mapperTableEntries name="A1_ALIFIXA" type="id_String"/>
+        <mapperTableEntries name="A1_MATFUN" type="id_String"/>
+        <mapperTableEntries name="A1_FRETISS" type="id_String"/>
+        <mapperTableEntries name="A1_CRDMA" type="id_String"/>
+        <mapperTableEntries name="A1_PRSTSER" type="id_String"/>
+        <mapperTableEntries name="A1_CTARE" type="id_String"/>
+        <mapperTableEntries name="A1_IENCONT" type="id_String"/>
+        <mapperTableEntries name="A1_CODFID" type="id_String"/>
+        <mapperTableEntries name="A1_SIMPNAC" type="id_String"/>
+        <mapperTableEntries name="A1_INCULT" type="id_String"/>
+        <mapperTableEntries name="A1_ENTID" type="id_String"/>
+        <mapperTableEntries name="A1_ABATIMP" type="id_String"/>
+        <mapperTableEntries name="A1_FOMEZER" type="id_String"/>
+        <mapperTableEntries name="A1_IMGUMOV" type="id_String"/>
+        <mapperTableEntries name="A1_RESFAT" type="id_String"/>
+        <mapperTableEntries name="A1_RECFET" type="id_String"/>
+        <mapperTableEntries name="A1_MINIRF" type="id_String"/>
+        <mapperTableEntries name="A1_FILTRF" type="id_String"/>
+        <mapperTableEntries name="A1_IDESTN" type="id_String"/>
+        <mapperTableEntries name="A1_TPCAMP" type="id_String"/>
+        <mapperTableEntries name="A1_CHVCAM" type="id_String"/>
+        <mapperTableEntries name="A1_INOVAUT" type="id_String"/>
+        <mapperTableEntries name="A1_TPNFSE" type="id_String"/>
+        <mapperTableEntries name="A1_NVESTN" type="id_Double"/>
+        <mapperTableEntries name="A1_ORIGCT" type="id_String"/>
+        <mapperTableEntries name="A1_HREXPO" type="id_String"/>
+        <mapperTableEntries name="A1_TPJ" type="id_String"/>
+        <mapperTableEntries name="A1_ENTORI" type="id_String"/>
+        <mapperTableEntries name="A1_OUTRMUN" type="id_String"/>
+        <mapperTableEntries name="A1_USERLGA" type="id_String"/>
+        <mapperTableEntries name="A1_USERLGI" type="id_String"/>
+        <mapperTableEntries name="A1_RECFMD" type="id_String"/>
+        <mapperTableEntries name="A1_RFASEMT" type="id_String"/>
+        <mapperTableEntries name="A1_RIMAMT" type="id_String"/>
+        <mapperTableEntries name="A1_INCLTMG" type="id_String"/>
+        <mapperTableEntries name="A1_CODTER" type="id_String"/>
+        <mapperTableEntries name="A1_ISSRSLC" type="id_String"/>
+        <mapperTableEntries name="A1_CODMEMB" type="id_String"/>
+        <mapperTableEntries name="A1_TPMEMB" type="id_String"/>
+        <mapperTableEntries name="A1_CONTRIB" type="id_String"/>
+        <mapperTableEntries name="A1_TDA" type="id_String"/>
+        <mapperTableEntries name="A1_RECIRRF" type="id_String"/>
+        <mapperTableEntries name="A1_TIMEKEE" type="id_String"/>
+        <mapperTableEntries name="A1_UEXCEPT" type="id_String"/>
+        <mapperTableEntries name="A1_UAGENTE" type="id_Double"/>
+        <mapperTableEntries name="A1_UMATRIZ" type="id_String"/>
+        <mapperTableEntries name="A1_UCODMAT" type="id_Double"/>
+        <mapperTableEntries name="A1_COMPENT" type="id_String"/>
+        <mapperTableEntries name="A1_UCODANT" type="id_String"/>
+        <mapperTableEntries name="A1_UCODLOJ" type="id_String"/>
+        <mapperTableEntries name="A1_UCODCAN" type="id_String"/>
+        <mapperTableEntries name="A1_UCODSEG" type="id_String"/>
+        <mapperTableEntries name="A1_UTIPOCO" type="id_String"/>
+        <mapperTableEntries name="A1_UVISEXT" type="id_String"/>
+        <mapperTableEntries name="A1_UVLRMIN" type="id_Double"/>
+        <mapperTableEntries name="A1_UEMAIL" type="id_String"/>
+        <mapperTableEntries name="A1_UDTALT" type="id_String"/>
+        <mapperTableEntries name="A1_UDTDESA" type="id_String"/>
+        <mapperTableEntries name="A1_UDTRECA" type="id_String"/>
+        <mapperTableEntries name="A1_UPZMPRA" type="id_String"/>
+        <mapperTableEntries name="A1_UENVBOL" type="id_String"/>
+        <mapperTableEntries name="A1_UEMAILP" type="id_String"/>
+        <mapperTableEntries name="A1_UVLCAP" type="id_Double"/>
+        <mapperTableEntries name="A1_UINSTA" type="id_String"/>
+        <mapperTableEntries name="A1_UFACE" type="id_String"/>
+        <mapperTableEntries name="A1_ULINKE" type="id_String"/>
+        <mapperTableEntries name="A1_UDDDWZ" type="id_String"/>
+        <mapperTableEntries name="A1_UNRWZ" type="id_String"/>
+        <mapperTableEntries name="A1_UCODREG" type="id_String"/>
+        <mapperTableEntries name="A1_UVLLSUG" type="id_Double"/>
+        <mapperTableEntries name="A1_UTOP100" type="id_String"/>
+        <mapperTableEntries name="A1_UENDDIF" type="id_String"/>
+        <mapperTableEntries name="A1_UABA1" type="id_Double"/>
+        <mapperTableEntries name="A1_UABA2" type="id_Double"/>
+        <mapperTableEntries name="A1_UABA3" type="id_Double"/>
+        <mapperTableEntries name="A1_UABA4" type="id_Double"/>
+        <mapperTableEntries name="A1_UNECAGE" type="id_String"/>
+        <mapperTableEntries name="A1_UDTSUFR" type="id_String"/>
+        <mapperTableEntries name="A1_UGERETQ" type="id_String"/>
+        <mapperTableEntries name="A1_UOBSLOG" type="id_String"/>
+        <mapperTableEntries name="A1_UDTCND" type="id_String"/>
+        <mapperTableEntries name="A1_UDTREES" type="id_String"/>
+        <mapperTableEntries name="A1_UGRPFEN" type="id_String"/>
+        <mapperTableEntries name="A1_TELEX" type="id_String"/>
+        <mapperTableEntries name="A1_UABC" type="id_String"/>
+        <mapperTableEntries name="A1_UCDMATF" type="id_Double"/>
+        <mapperTableEntries name="A1_CODMER" type="id_String"/>
+        <mapperTableEntries name="A1_UNDEB" type="id_String"/>
+        <mapperTableEntries name="A1_UCHD" type="id_String"/>
+        <mapperTableEntries name="A1_UATRASO" type="id_String"/>
+        <mapperTableEntries name="A1_UVOL30" type="id_String"/>
+        <mapperTableEntries name="A1_URESPV" type="id_String"/>
+        <mapperTableEntries name="A1_UCNDV" type="id_String"/>
+        <mapperTableEntries name="A1_USUFRAM" type="id_String"/>
+        <mapperTableEntries name="A1_URECAD" type="id_String"/>
+        <mapperTableEntries name="A1_UCODBLQ" type="id_String"/>
+        <mapperTableEntries name="D_E_L_E_T_" type="id_String"/>
+        <mapperTableEntries name="R_E_C_N_O_" type="id_Integer"/>
+        <mapperTableEntries name="R_E_C_D_E_L_" type="id_Integer"/>
+        <mapperTableEntries name="A1_UMENNF" type="id_String"/>
+        <mapperTableEntries name="A1_UMENPAD" type="id_String"/>
+        <mapperTableEntries name="A1_UCLITMK" type="id_String"/>
+        <mapperTableEntries name="A1_UCAMPAN" type="id_String"/>
+        <mapperTableEntries name="A1_UDTFICA" type="id_String"/>
+        <mapperTableEntries name="A1_UDTALC" type="id_String"/>
+        <mapperTableEntries name="A1_URAMOAT" type="id_String"/>
+        <mapperTableEntries name="A1_UCC" type="id_String"/>
+        <mapperTableEntries name="A1_UTPDESC" type="id_String"/>
+        <mapperTableEntries name="A1_UUSUALT" type="id_String"/>
+        <mapperTableEntries name="A1_UBXDCT" type="id_String"/>
+        <mapperTableEntries name="A1_UULTCHY" type="id_String"/>
+        <mapperTableEntries name="A1_UCLINOV" type="id_String"/>
+        <mapperTableEntries name="A1_UHCNAC" type="id_String"/>
+        <mapperTableEntries name="A1_UHCREG" type="id_String"/>
+        <mapperTableEntries name="S_T_A_M_P_" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="I_N_S_D_T_" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="A1_UDDDSE" type="id_String"/>
+        <mapperTableEntries name="A1_UFONESE" type="id_String"/>
+        <mapperTableEntries name="A1_UDTSANE" type="id_String"/>
+        <mapperTableEntries name="A1_URESLOG" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSampleRow_1" show="false"/>
+    <elementParameter field="LABEL" name="INFO_RANGE" value="Range let you choose a list of line numbers and/or a list of ranges.&#xA;&#xA;- &quot;1,5&quot; : line 1 and 5&#xA;- &quot;10..20&quot; : lines 10 to 20&#xA;- &quot;23..45,48,50..54&quot; : lines 23 to 45, line 48 and lines 50 to 54&#xA;- &quot;1..10&quot; : 10 first lines&#xA;&#xA;&#x9;  "/>
+    <elementParameter field="MEMO_JAVA" name="RANGE" value="&quot;1..100&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSampleRow_1">
+      <column comment="" defaultValue="'         '" key="false" length="9" name="CODIGO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="LOJA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="PESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="CGC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO" id="0"/>
+      <elementValue elementRef="LENGTH" value="10" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOJA" id="2"/>
+      <elementValue elementRef="LENGTH" value="10" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PESSOA" id="4"/>
+      <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CGC" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" defaultValue="'         '" key="false" length="9" name="CODIGO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="LOJA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="PESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="CGC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="QVDOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="880" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tQVDOutput_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="cXZkLW91dHB1dCNRVkQjT3V0cHV0" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="FILE" name="configuration.dataset.datastore.localFilePath" value="&quot;C:/QVD_Directory/Teste_Cliente_Talend.qvd&quot;"/>
+    <elementParameter field="TEXT" name="configuration.$maxBatchSize" value="1000"/>
+    <elementParameter field="CHECK" name="configuration.createFolderIfNotExists" value="true"/>
+    <elementParameter field="CHECK" name="configuration.failIfAlreadyExists" value="true"/>
+    <elementParameter field="TEXT" name="configuration.qvdConfiguration.tableName" value="DataFromStudio"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.qvdConfiguration.mode" value="MEMORY"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.datastore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tQVDOutput_1">
+      <column comment="" defaultValue="'         '" key="false" length="9" name="CODIGO" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'   '" key="false" length="3" name="LOJA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="1" name="PESSOA" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'              '" key="false" length="14" name="CGC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/QVD_Directory/Teste_Cliente_Talend.qvd&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/delete_folder&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/delete_folder or delete_file&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tQlikOutput_2" offsetLabelX="0" offsetLabelY="0" source="tQlikOutput_2" target="tFileDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tQlikOutput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="Columns" lineStyle="0" metaname="Columns" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tSampleRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Columns" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSampleRow_1" offsetLabelX="0" offsetLabelY="0" source="tSampleRow_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tQVDOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tQlikOutput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
 </talendfile:ProcessType>
