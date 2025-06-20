@@ -16,15 +16,6 @@
     <parameters xmi:id="_8LafoNzgEe-0u9ZZWlXASA" key="CONN_PARA_KEY_USERNAME" value="integra"/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Catalog xmi:id="_-IPYsNzgEe-0u9ZZWlXASA" name="mercanet" dataManager="_5K_WwIyrEe-fbNpDU1iEJQ">
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYsdzgEe-0u9ZZWlXASA" name="db_accessadmin"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYstzgEe-0u9ZZWlXASA" name="db_backupoperator"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYs9zgEe-0u9ZZWlXASA" name="db_datareader"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYtNzgEe-0u9ZZWlXASA" name="db_datawriter"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYtdzgEe-0u9ZZWlXASA" name="db_ddladmin"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYttzgEe-0u9ZZWlXASA" name="db_denydatareader"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYt9zgEe-0u9ZZWlXASA" name="db_denydatawriter"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYuNzgEe-0u9ZZWlXASA" name="db_owner"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYudzgEe-0u9ZZWlXASA" name="db_securityadmin"/>
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYutzgEe-0u9ZZWlXASA" name="dbo">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_gth_ID_xEfCMVvV8MgnhOg" name="DB_ESTOQUE_INTEGRACAO" id="_gtdtsD_xEfCMVvV8MgnhOg" label="DB_ESTOQUE_INTEGRACAO" tableType="TABLE">
         <feature xsi:type="relational:TdColumn" xmi:id="_gth_IT_xEfCMVvV8MgnhOg" name="LinkProduto" label="LinkProduto" length="17" sourceType="VARCHAR" talendType="id_String" key="true" nullable="false">
@@ -54,9 +45,18 @@
         </feature>
       </ownedElement>
     </ownedElement>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYu9zgEe-0u9ZZWlXASA" name="guest"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYvNzgEe-0u9ZZWlXASA" name="INFORMATION_SCHEMA"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYvdzgEe-0u9ZZWlXASA" name="sys"/>
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_-IPYvtzgEe-0u9ZZWlXASA" name="pbi"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8icMcEqlEfC5wNuGS24LlA" name="db_accessadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8icMcUqlEfC5wNuGS24LlA" name="db_backupoperator"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8icMckqlEfC5wNuGS24LlA" name="db_datareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8icMc0qlEfC5wNuGS24LlA" name="db_datawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8icMdEqlEfC5wNuGS24LlA" name="db_ddladmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idakEqlEfC5wNuGS24LlA" name="db_denydatareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idakUqlEfC5wNuGS24LlA" name="db_denydatawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idakkqlEfC5wNuGS24LlA" name="db_owner"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idak0qlEfC5wNuGS24LlA" name="db_securityadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idalEqlEfC5wNuGS24LlA" name="guest"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idalUqlEfC5wNuGS24LlA" name="INFORMATION_SCHEMA"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idalkqlEfC5wNuGS24LlA" name="sys"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_8idal0qlEfC5wNuGS24LlA" name="pbi"/>
   </orgomg.cwm.resource.relational:Catalog>
 </xmi:XMI>
