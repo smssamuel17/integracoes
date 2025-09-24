@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="AIzaSyAQb_gd2pO_w59IJaLvnjRWkLgQudF03u8" internalId="_D51RMEe7EfC5wNuGS24LlA"/>
+    <contextParameter comment="" name="key" prompt="key?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:CKCU1opwqOpN8aC4LncRV9PAzDjJjaV7S5H9TGVVvRaQkJjbBN66YrouahorNNqu2hMue4y4uAl9SDnkvHTFJlRygQ==" internalId="_D51RMEe7EfC5wNuGS24LlA"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -334,7 +334,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="format">
         <mapperTableEntries name="address" expression="row3.A1_END + &quot;+&quot; + row3.A1_BAIRRO + &quot;+&quot; + row3.A1_CEP + &quot;+&quot; + row3.A1_EST + &quot;+&quot; + row3.A1_MUN " type="id_String"/>

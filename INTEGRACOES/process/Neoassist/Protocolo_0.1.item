@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="AppKey" prompt="AppKey?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:RYR/fYbgVK1i3SyPAktDXlI48Bshj9/5CurKxcX9UEb4txYR9zeeGW4DZloadZ/9sXPZPMnQWqdUdQ/c" internalId="_-DTpcH3CEfCufqO0UKzvyQ"/>
+    <contextParameter comment="" name="AppInstanceKey" prompt="AppInstanceKey?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:wKx293v4sOk3KWhfoScYWbkwP7aw5bJsM+SfhDPuMDE5I/5NQ5DmwOlPL5oGbHSLj1+QxhB3MJJyGs7+" internalId="_-DUQgH3CEfCufqO0UKzvyQ"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:6o2CT17SdF3EZcYMyvCAH4bkDcqR4AkC2N1G6wEm" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="JDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9SSDUJdNVZpuTnsQ9ClRwo4Sp7ix/r5DGbgMIFI1" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+  </parameters>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://hydronortha.neoassist.com/API/Integration/ProtocolExport/List.json&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
+    <elementParameter field="TABLE" name="QUERY">
+      <elementValue elementRef="NAME" value="&quot;AppKey&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="context.AppKey" id="1"/>
+      <elementValue elementRef="NAME" value="&quot;AppInstanceKey&quot;" id="2"/>
+      <elementValue elementRef="VALUE" value="context.AppInstanceKey" id="3"/>
+      <elementValue elementRef="NAME" value="&quot;DateStartPeriodUpdate&quot;" id="4"/>
+      <elementValue elementRef="VALUE" value="&quot;08/01/2025&quot;" id="5"/>
+      <elementValue elementRef="NAME" value="&quot;DateEndPeriodUpdate&quot;" id="6"/>
+      <elementValue elementRef="VALUE" value="&quot;08/04/2025&quot;" id="7"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="enc:system.encryption.key.v1:f93L2mGE6bS3Vlf/Zccy+MF+xU6j3M/1J9WtY64x449dZ4jC/iw=" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="REUSE_SSL_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="MAINTAIN_SESSION" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true" show="false"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(See tRESTClient doc. to configure timeouts for Talend Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:Tr0rCnctUWG9PmS4TiQxTfQWdU5fCQIPmZMBWwk0" show="false"/>
+    <elementParameter field="TEXT" name="ARRAY_KEYS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTClient_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/bills/bill/line&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.result.rows[*]&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Origem" id="0"/>
+      <elementValue elementRef="QUERY" value="" id="1"/>
+      <elementValue elementRef="NODECHECK" value="false" id="2"/>
+      <elementValue elementRef="ISARRAY" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubOrigem" id="4"/>
+      <elementValue elementRef="QUERY" value="" id="5"/>
+      <elementValue elementRef="NODECHECK" value="false" id="6"/>
+      <elementValue elementRef="ISARRAY" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Protocolo" id="8"/>
+      <elementValue elementRef="QUERY" value="" id="9"/>
+      <elementValue elementRef="NODECHECK" value="false" id="10"/>
+      <elementValue elementRef="ISARRAY" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Preview" id="12"/>
+      <elementValue elementRef="QUERY" value="" id="13"/>
+      <elementValue elementRef="NODECHECK" value="false" id="14"/>
+      <elementValue elementRef="ISARRAY" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryID" id="16"/>
+      <elementValue elementRef="QUERY" value="" id="17"/>
+      <elementValue elementRef="NODECHECK" value="false" id="18"/>
+      <elementValue elementRef="ISARRAY" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IDResolvedor" id="20"/>
+      <elementValue elementRef="QUERY" value="" id="21"/>
+      <elementValue elementRef="NODECHECK" value="false" id="22"/>
+      <elementValue elementRef="ISARRAY" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InstanceID" id="24"/>
+      <elementValue elementRef="QUERY" value="" id="25"/>
+      <elementValue elementRef="NODECHECK" value="false" id="26"/>
+      <elementValue elementRef="ISARRAY" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date" id="28"/>
+      <elementValue elementRef="QUERY" value="" id="29"/>
+      <elementValue elementRef="NODECHECK" value="false" id="30"/>
+      <elementValue elementRef="ISARRAY" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateUpdate" id="32"/>
+      <elementValue elementRef="QUERY" value="" id="33"/>
+      <elementValue elementRef="NODECHECK" value="false" id="34"/>
+      <elementValue elementRef="ISARRAY" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status" id="36"/>
+      <elementValue elementRef="QUERY" value="" id="37"/>
+      <elementValue elementRef="NODECHECK" value="false" id="38"/>
+      <elementValue elementRef="ISARRAY" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerID" id="40"/>
+      <elementValue elementRef="QUERY" value="" id="41"/>
+      <elementValue elementRef="NODECHECK" value="false" id="42"/>
+      <elementValue elementRef="ISARRAY" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoTempo" id="44"/>
+      <elementValue elementRef="QUERY" value="" id="45"/>
+      <elementValue elementRef="NODECHECK" value="false" id="46"/>
+      <elementValue elementRef="ISARRAY" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoComportamento" id="48"/>
+      <elementValue elementRef="QUERY" value="" id="49"/>
+      <elementValue elementRef="NODECHECK" value="false" id="50"/>
+      <elementValue elementRef="ISARRAY" value="false" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowStatus" id="52"/>
+      <elementValue elementRef="QUERY" value="" id="53"/>
+      <elementValue elementRef="NODECHECK" value="false" id="54"/>
+      <elementValue elementRef="ISARRAY" value="false" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockExpert" id="56"/>
+      <elementValue elementRef="QUERY" value="" id="57"/>
+      <elementValue elementRef="NODECHECK" value="false" id="58"/>
+      <elementValue elementRef="ISARRAY" value="false" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockTime" id="60"/>
+      <elementValue elementRef="QUERY" value="" id="61"/>
+      <elementValue elementRef="NODECHECK" value="false" id="62"/>
+      <elementValue elementRef="ISARRAY" value="false" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avaliacao" id="64"/>
+      <elementValue elementRef="QUERY" value="" id="65"/>
+      <elementValue elementRef="NODECHECK" value="false" id="66"/>
+      <elementValue elementRef="ISARRAY" value="false" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TempoRespostaTotal" id="68"/>
+      <elementValue elementRef="QUERY" value="" id="69"/>
+      <elementValue elementRef="NODECHECK" value="false" id="70"/>
+      <elementValue elementRef="ISARRAY" value="false" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoID" id="72"/>
+      <elementValue elementRef="QUERY" value="" id="73"/>
+      <elementValue elementRef="NODECHECK" value="false" id="74"/>
+      <elementValue elementRef="ISARRAY" value="false" id="75"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoIDTag" id="76"/>
+      <elementValue elementRef="QUERY" value="" id="77"/>
+      <elementValue elementRef="NODECHECK" value="false" id="78"/>
+      <elementValue elementRef="ISARRAY" value="false" id="79"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertID" id="80"/>
+      <elementValue elementRef="QUERY" value="" id="81"/>
+      <elementValue elementRef="NODECHECK" value="false" id="82"/>
+      <elementValue elementRef="ISARRAY" value="false" id="83"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Assunto" id="84"/>
+      <elementValue elementRef="QUERY" value="" id="85"/>
+      <elementValue elementRef="NODECHECK" value="false" id="86"/>
+      <elementValue elementRef="ISARRAY" value="false" id="87"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Subject" id="88"/>
+      <elementValue elementRef="QUERY" value="" id="89"/>
+      <elementValue elementRef="NODECHECK" value="false" id="90"/>
+      <elementValue elementRef="ISARRAY" value="false" id="91"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDate" id="92"/>
+      <elementValue elementRef="QUERY" value="" id="93"/>
+      <elementValue elementRef="NODECHECK" value="false" id="94"/>
+      <elementValue elementRef="ISARRAY" value="false" id="95"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDateTime" id="96"/>
+      <elementValue elementRef="QUERY" value="" id="97"/>
+      <elementValue elementRef="NODECHECK" value="false" id="98"/>
+      <elementValue elementRef="ISARRAY" value="false" id="99"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prazo" id="100"/>
+      <elementValue elementRef="QUERY" value="" id="101"/>
+      <elementValue elementRef="NODECHECK" value="false" id="102"/>
+      <elementValue elementRef="ISARRAY" value="false" id="103"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Interacoes" id="104"/>
+      <elementValue elementRef="QUERY" value="" id="105"/>
+      <elementValue elementRef="NODECHECK" value="false" id="106"/>
+      <elementValue elementRef="ISARRAY" value="false" id="107"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QtdAnexos" id="108"/>
+      <elementValue elementRef="QUERY" value="" id="109"/>
+      <elementValue elementRef="NODECHECK" value="false" id="110"/>
+      <elementValue elementRef="ISARRAY" value="false" id="111"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="112"/>
+      <elementValue elementRef="QUERY" value="" id="113"/>
+      <elementValue elementRef="NODECHECK" value="false" id="114"/>
+      <elementValue elementRef="ISARRAY" value="false" id="115"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMail" id="116"/>
+      <elementValue elementRef="QUERY" value="" id="117"/>
+      <elementValue elementRef="NODECHECK" value="false" id="118"/>
+      <elementValue elementRef="ISARRAY" value="false" id="119"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertFullName" id="120"/>
+      <elementValue elementRef="QUERY" value="" id="121"/>
+      <elementValue elementRef="NODECHECK" value="false" id="122"/>
+      <elementValue elementRef="ISARRAY" value="false" id="123"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryName" id="124"/>
+      <elementValue elementRef="QUERY" value="" id="125"/>
+      <elementValue elementRef="NODECHECK" value="false" id="126"/>
+      <elementValue elementRef="ISARRAY" value="false" id="127"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryBreadcrumb" id="128"/>
+      <elementValue elementRef="QUERY" value="" id="129"/>
+      <elementValue elementRef="NODECHECK" value="false" id="130"/>
+      <elementValue elementRef="ISARRAY" value="false" id="131"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocoloMestre" id="132"/>
+      <elementValue elementRef="QUERY" value="" id="133"/>
+      <elementValue elementRef="NODECHECK" value="false" id="134"/>
+      <elementValue elementRef="ISARRAY" value="false" id="135"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Resolution" id="136"/>
+      <elementValue elementRef="QUERY" value="" id="137"/>
+      <elementValue elementRef="NODECHECK" value="false" id="138"/>
+      <elementValue elementRef="ISARRAY" value="false" id="139"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocolSummary" id="140"/>
+      <elementValue elementRef="QUERY" value="" id="141"/>
+      <elementValue elementRef="NODECHECK" value="false" id="142"/>
+      <elementValue elementRef="ISARRAY" value="false" id="143"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowDueDate" id="144"/>
+      <elementValue elementRef="QUERY" value="" id="145"/>
+      <elementValue elementRef="NODECHECK" value="false" id="146"/>
+      <elementValue elementRef="ISARRAY" value="false" id="147"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Origem" id="0"/>
+      <elementValue elementRef="QUERY" value="&quot;Origem&quot;" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubOrigem" id="2"/>
+      <elementValue elementRef="QUERY" value="&quot;SubOrigem&quot;" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Protocolo" id="4"/>
+      <elementValue elementRef="QUERY" value="&quot;Protocolo&quot;" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Preview" id="6"/>
+      <elementValue elementRef="QUERY" value="&quot;Preview&quot;" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryID" id="8"/>
+      <elementValue elementRef="QUERY" value="&quot;CategoryID&quot;" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IDResolvedor" id="10"/>
+      <elementValue elementRef="QUERY" value="&quot;IDResolvedor&quot;" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InstanceID" id="12"/>
+      <elementValue elementRef="QUERY" value="&quot;InstanceID&quot;" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date" id="14"/>
+      <elementValue elementRef="QUERY" value="&quot;Date&quot;" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateUpdate" id="16"/>
+      <elementValue elementRef="QUERY" value="&quot;DateUpdate&quot;" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status" id="18"/>
+      <elementValue elementRef="QUERY" value="&quot;Status&quot;" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerID" id="20"/>
+      <elementValue elementRef="QUERY" value="&quot;CustomerID&quot;" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoTempo" id="22"/>
+      <elementValue elementRef="QUERY" value="&quot;PriorizacaoTempo&quot;" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoComportamento" id="24"/>
+      <elementValue elementRef="QUERY" value="&quot;PriorizacaoComportamento&quot;" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowStatus" id="26"/>
+      <elementValue elementRef="QUERY" value="&quot;WorkflowStatus&quot;" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockExpert" id="28"/>
+      <elementValue elementRef="QUERY" value="&quot;LockExpert&quot;" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockTime" id="30"/>
+      <elementValue elementRef="QUERY" value="&quot;LockTime&quot;" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avaliacao" id="32"/>
+      <elementValue elementRef="QUERY" value="&quot;Avaliacao&quot;" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TempoRespostaTotal" id="34"/>
+      <elementValue elementRef="QUERY" value="&quot;TempoRespostaTotal&quot;" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoID" id="36"/>
+      <elementValue elementRef="QUERY" value="&quot;ClassificacaoID&quot;" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoIDTag" id="38"/>
+      <elementValue elementRef="QUERY" value="&quot;ClassificacaoIDTag&quot;" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertID" id="40"/>
+      <elementValue elementRef="QUERY" value="&quot;ExpertID&quot;" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Assunto" id="42"/>
+      <elementValue elementRef="QUERY" value="&quot;Assunto&quot;" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Subject" id="44"/>
+      <elementValue elementRef="QUERY" value="&quot;Subject&quot;" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDate" id="46"/>
+      <elementValue elementRef="QUERY" value="&quot;DueDate&quot;" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDateTime" id="48"/>
+      <elementValue elementRef="QUERY" value="&quot;DueDateTime&quot;" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prazo" id="50"/>
+      <elementValue elementRef="QUERY" value="&quot;Prazo&quot;" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Interacoes" id="52"/>
+      <elementValue elementRef="QUERY" value="&quot;Interacoes&quot;" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QtdAnexos" id="54"/>
+      <elementValue elementRef="QUERY" value="&quot;QtdAnexos&quot;" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="56"/>
+      <elementValue elementRef="QUERY" value="&quot;Name&quot;" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMail" id="58"/>
+      <elementValue elementRef="QUERY" value="&quot;EMail&quot;" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertFullName" id="60"/>
+      <elementValue elementRef="QUERY" value="&quot;ExpertFullName&quot;" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryName" id="62"/>
+      <elementValue elementRef="QUERY" value="&quot;CategoryName&quot;" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryBreadcrumb" id="64"/>
+      <elementValue elementRef="QUERY" value="&quot;CategoryBreadcrumb&quot;" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocoloMestre" id="66"/>
+      <elementValue elementRef="QUERY" value="&quot;ProtocoloMestre&quot;" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Resolution" id="68"/>
+      <elementValue elementRef="QUERY" value="&quot;Resolution&quot;" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocolSummary" id="70"/>
+      <elementValue elementRef="QUERY" value="&quot;ProtocolSummary&quot;" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowDueDate" id="72"/>
+      <elementValue elementRef="QUERY" value="&quot;WorkflowDueDate&quot;" id="73"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="CHECK" name="USE_LOOP_AS_ROOT" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_1">
+      <column comment="" key="false" length="-1" name="Origem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SubOrigem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Protocolo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preview" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="IDResolvedor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InstanceID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateUpdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CustomerID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoTempo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoComportamento" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockExpert" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avaliacao" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TempoRespostaTotal" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoIDTag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assunto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Subject" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDateTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prazo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Interacoes" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QtdAnexos" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMail" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertFullName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryBreadcrumb" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocoloMestre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocolSummary" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowDueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="Origem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SubOrigem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Protocolo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preview" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="IDResolvedor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InstanceID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateUpdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CustomerID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoTempo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoComportamento" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockExpert" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avaliacao" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TempoRespostaTotal" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoIDTag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assunto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Subject" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDateTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prazo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Interacoes" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QtdAnexos" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMail" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertFullName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryBreadcrumb" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocoloMestre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocolSummary" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowDueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Origem" id="0"/>
+      <elementValue elementRef="LENGTH" value="10" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubOrigem" id="2"/>
+      <elementValue elementRef="LENGTH" value="10" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Protocolo" id="4"/>
+      <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Preview" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryID" id="8"/>
+      <elementValue elementRef="LENGTH" value="10" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IDResolvedor" id="10"/>
+      <elementValue elementRef="LENGTH" value="10" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InstanceID" id="12"/>
+      <elementValue elementRef="LENGTH" value="10" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date" id="14"/>
+      <elementValue elementRef="LENGTH" value="10" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateUpdate" id="16"/>
+      <elementValue elementRef="LENGTH" value="10" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status" id="18"/>
+      <elementValue elementRef="LENGTH" value="10" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerID" id="20"/>
+      <elementValue elementRef="LENGTH" value="10" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoTempo" id="22"/>
+      <elementValue elementRef="LENGTH" value="10" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoComportamento" id="24"/>
+      <elementValue elementRef="LENGTH" value="10" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowStatus" id="26"/>
+      <elementValue elementRef="LENGTH" value="10" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockExpert" id="28"/>
+      <elementValue elementRef="LENGTH" value="10" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockTime" id="30"/>
+      <elementValue elementRef="LENGTH" value="10" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avaliacao" id="32"/>
+      <elementValue elementRef="LENGTH" value="10" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TempoRespostaTotal" id="34"/>
+      <elementValue elementRef="LENGTH" value="10" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoID" id="36"/>
+      <elementValue elementRef="LENGTH" value="10" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoIDTag" id="38"/>
+      <elementValue elementRef="LENGTH" value="10" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertID" id="40"/>
+      <elementValue elementRef="LENGTH" value="10" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Assunto" id="42"/>
+      <elementValue elementRef="LENGTH" value="10" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Subject" id="44"/>
+      <elementValue elementRef="LENGTH" value="10" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDate" id="46"/>
+      <elementValue elementRef="LENGTH" value="10" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDateTime" id="48"/>
+      <elementValue elementRef="LENGTH" value="10" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prazo" id="50"/>
+      <elementValue elementRef="LENGTH" value="10" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Interacoes" id="52"/>
+      <elementValue elementRef="LENGTH" value="10" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QtdAnexos" id="54"/>
+      <elementValue elementRef="LENGTH" value="10" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="56"/>
+      <elementValue elementRef="LENGTH" value="10" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMail" id="58"/>
+      <elementValue elementRef="LENGTH" value="10" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertFullName" id="60"/>
+      <elementValue elementRef="LENGTH" value="10" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryName" id="62"/>
+      <elementValue elementRef="LENGTH" value="10" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryBreadcrumb" id="64"/>
+      <elementValue elementRef="LENGTH" value="10" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocoloMestre" id="66"/>
+      <elementValue elementRef="LENGTH" value="10" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Resolution" id="68"/>
+      <elementValue elementRef="LENGTH" value="10" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocolSummary" id="70"/>
+      <elementValue elementRef="LENGTH" value="10" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowDueDate" id="72"/>
+      <elementValue elementRef="LENGTH" value="10" id="73"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="Origem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SubOrigem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Protocolo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preview" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="IDResolvedor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InstanceID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateUpdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CustomerID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoTempo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoComportamento" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockExpert" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avaliacao" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TempoRespostaTotal" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoIDTag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assunto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Subject" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDateTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prazo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Interacoes" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QtdAnexos" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMail" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertFullName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryBreadcrumb" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocoloMestre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocolSummary" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowDueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_DT06IH2-EfCufqO0UKzvyQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="Adequacao">
+      <column comment="" key="false" length="20" name="Origem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="SubOrigem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="Protocolo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Preview" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="500" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="CategoryID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="6" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="IDResolvedor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="6" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="InstanceID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateUpdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CustomerID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoTempo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoComportamento" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockExpert" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avaliacao" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TempoRespostaTotal" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoIDTag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assunto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Subject" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDateTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prazo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Interacoes" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QtdAnexos" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMail" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertFullName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryBreadcrumb" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocoloMestre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocolSummary" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowDueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="Adequacao">
+        <mapperTableEntries name="Origem" expression="row3.Origem == null ? null :&#xD;&#xA;&#x9;row3.Origem.equals(&quot;1&quot;) ? &quot;Email&quot; :&#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;2&quot;) ? &quot;Facebook&quot; :&#xD;&#xA;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;4&quot;) ? &quot;Reclame Aqui&quot; :&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;7&quot;) ? &quot;Telefone&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;8&quot;) ? &quot;Registro&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;10&quot;) ? &quot;Mercado Livre&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;12&quot;) ? &quot;Chat&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;14&quot;) ? &quot;ChatBot&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;15&quot;) ? &quot;Instagram&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;16&quot;) ? &quot;Whatsapp&quot; :&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;17&quot;) ? &quot;SMS&quot; : row3.Origem " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubOrigem" expression="row3.Origem == null || row3.SubOrigem == null ? null :&#xD;&#xA;&#x9;row3.Origem.equals(&quot;1&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Email Receptivo&quot; :&#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;1&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Email Ativo&quot; :&#xD;&#xA;&#x9;&#x9;&#x9;row3.Origem.equals(&quot;1&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;3&quot;) ? &quot;Email Spam&quot; :&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;2&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Facebook Inbox&quot; :&#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;2&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Facebook Post&quot; :&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;4&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Reclame Aqui Ticket&quot; :&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;7&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Telefone Receptivo&quot; : &#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;7&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Telefone Ativo&quot; : &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;8&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Registro Manual Ativo&quot; : &#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;8&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Registro Manual Neoimport&quot; : &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;10&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Mercado Livre Question&quot; : &#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;10&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Mercado Livre Message&quot; : &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;12&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Chat Receptivo&quot; : &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;15&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Instagram Post&quot; : &#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;15&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Instagram Direct&quot; : &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;16&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;Whatsapp Receptivo&quot; :&#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;16&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;Whatsapp Ativo &quot; :&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;row3.Origem.equals(&quot;17&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;1&quot;) ? &quot;SMS Receptivo&quot; :&#xD;&#xA;&#x9;&#x9;row3.Origem.equals(&quot;17&quot;) &amp;&amp; row3.SubOrigem.equals(&quot;2&quot;) ? &quot;SMS Ativo&quot; : row3.Origem + &quot;|&quot; + row3.SubOrigem " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Protocolo" expression="row3.Protocolo " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Preview" expression="row3.Preview " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryID" expression="row3.CategoryID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="IDResolvedor" expression="row3.IDResolvedor " type="id_String" nullable="true"/>
+        <mapperTableEntries name="InstanceID" expression="row3.InstanceID == null ? null :&#xD;&#xA;&#x9;row3.InstanceID.equals(&quot;0&quot;) || row3.InstanceID.equals(&quot;1&quot;) ? &quot;Manual&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;row3.InstanceID.equals(&quot;504&quot;) ? &quot;App/Integracao&quot; : row3.InstanceID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Date" expression="row3.Date == null ? null :&#xD;&#xA;&#x9;TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,row3.Date) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="DateUpdate" expression="row3.DateUpdate " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Status" expression="row3.Status == null ? null :&#xD;&#xA;&#x9;row3.Status.equals(&quot;1&quot;) ? &quot;Novo&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;row3.Status.equals(&quot;2&quot;) ? &quot;Respondido&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;row3.Status.equals(&quot;3&quot;) ? &quot;Resposta recebida&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;row3.Status.equals(&quot;4&quot;) ? &quot;Aguardando Complemento&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Status.equals(&quot;5&quot;) ? &quot;Apagado&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Status.equals(&quot;6&quot;) ? &quot;Erro na entrega&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Status.equals(&quot;7&quot;) ? &quot;Histórico Importado&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Status.equals(&quot;8&quot;) ? &quot;Encerrado sem resposta&quot; : row3.Status " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustomerID" expression="row3.CustomerID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PriorizacaoTempo" expression="row3.PriorizacaoTempo == null ? null :&#xD;&#xA;&#x9;row3.PriorizacaoTempo.equals(&quot;0&quot;) ? &quot;Não&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;row3.PriorizacaoTempo.equals(&quot;1&quot;) ? &quot;Sim&quot; : row3.PriorizacaoTempo " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PriorizacaoComportamento" expression="row3.PriorizacaoComportamento " type="id_String" nullable="true"/>
+        <mapperTableEntries name="WorkflowStatus" expression="row3.WorkflowStatus == null ? null :&#xD;&#xA;&#x9;row3.WorkflowStatus.equals(&quot;0&quot;) ? &quot;Não está no workflow&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;row3.WorkflowStatus.equals(&quot;1&quot;) ? &quot;Pendente Workflow&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;row3.WorkflowStatus.equals(&quot;2&quot;) ? &quot;Workflow respondido&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;row3.WorkflowStatus.equals(&quot;3&quot;) ? &quot;Workflow Finalizado&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;row3.WorkflowStatus.equals(&quot;4&quot;) ? &quot;Workflow Aguardando Complemento&quot; : row3.WorkflowStatus " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LockExpert" expression="row3.LockExpert " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LockTime" expression="row3.LockTime " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Avaliacao" expression="row3.Avaliacao " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TempoRespostaTotal" expression="row3.TempoRespostaTotal " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ClassificacaoID" expression="row3.ClassificacaoID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ClassificacaoIDTag" expression="row3.ClassificacaoIDTag " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExpertID" expression="row3.ExpertID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Assunto" expression="row3.Assunto " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Subject" expression="row3.Subject " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DueDate" expression="row3.DueDate " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DueDateTime" expression="row3.DueDateTime " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prazo" expression="row3.Prazo " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Interacoes" expression="row3.Interacoes " type="id_String" nullable="true"/>
+        <mapperTableEntries name="QtdAnexos" expression="row3.QtdAnexos " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Name" expression="row3.Name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="EMail" expression="row3.EMail " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExpertFullName" expression="row3.ExpertFullName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryName" expression="row3.CategoryName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryBreadcrumb" expression="row3.CategoryBreadcrumb " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProtocoloMestre" expression="row3.ProtocoloMestre " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Resolution" expression="row3.Resolution == null ? null :&#xD;&#xA;&#x9;row3.Resolution.equals(&quot;1&quot;) ? &quot;Novo&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;row3.Resolution.equals(&quot;2&quot;) ? &quot;Em Atendimento&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;row3.Resolution.equals(&quot;3&quot;) ? &quot;Resolvido por operador&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;row3.Resolution.equals(&quot;4&quot;) ? &quot;Finalizado por tempo&quot; :&#xD;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;row3.Resolution.equals(&quot;5&quot;) ? &quot;Resolvido por regra&quot; : row3.Resolution " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProtocolSummary" expression="row3.ProtocolSummary " type="id_String" nullable="true"/>
+        <mapperTableEntries name="WorkflowDueDate" expression="row3.WorkflowDueDate " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Origem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubOrigem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Protocolo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Preview" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="IDResolvedor" type="id_String" nullable="true"/>
+        <mapperTableEntries name="InstanceID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DateUpdate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Status" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustomerID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PriorizacaoTempo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PriorizacaoComportamento" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WorkflowStatus" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LockExpert" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LockTime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Avaliacao" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TempoRespostaTotal" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ClassificacaoID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ClassificacaoIDTag" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExpertID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Assunto" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Subject" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DueDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DueDateTime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prazo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Interacoes" type="id_String" nullable="true"/>
+        <mapperTableEntries name="QtdAnexos" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EMail" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExpertFullName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CategoryBreadcrumb" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProtocoloMestre" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Resolution" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProtocolSummary" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WorkflowDueDate" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="880" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Origem" id="0"/>
+      <elementValue elementRef="LENGTH" value="10" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubOrigem" id="2"/>
+      <elementValue elementRef="LENGTH" value="10" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Protocolo" id="4"/>
+      <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Preview" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryID" id="8"/>
+      <elementValue elementRef="LENGTH" value="10" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IDResolvedor" id="10"/>
+      <elementValue elementRef="LENGTH" value="10" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InstanceID" id="12"/>
+      <elementValue elementRef="LENGTH" value="10" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date" id="14"/>
+      <elementValue elementRef="LENGTH" value="10" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateUpdate" id="16"/>
+      <elementValue elementRef="LENGTH" value="10" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status" id="18"/>
+      <elementValue elementRef="LENGTH" value="10" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerID" id="20"/>
+      <elementValue elementRef="LENGTH" value="10" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoTempo" id="22"/>
+      <elementValue elementRef="LENGTH" value="10" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriorizacaoComportamento" id="24"/>
+      <elementValue elementRef="LENGTH" value="10" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowStatus" id="26"/>
+      <elementValue elementRef="LENGTH" value="10" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockExpert" id="28"/>
+      <elementValue elementRef="LENGTH" value="10" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LockTime" id="30"/>
+      <elementValue elementRef="LENGTH" value="10" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avaliacao" id="32"/>
+      <elementValue elementRef="LENGTH" value="10" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TempoRespostaTotal" id="34"/>
+      <elementValue elementRef="LENGTH" value="10" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoID" id="36"/>
+      <elementValue elementRef="LENGTH" value="10" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ClassificacaoIDTag" id="38"/>
+      <elementValue elementRef="LENGTH" value="10" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertID" id="40"/>
+      <elementValue elementRef="LENGTH" value="10" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Assunto" id="42"/>
+      <elementValue elementRef="LENGTH" value="10" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Subject" id="44"/>
+      <elementValue elementRef="LENGTH" value="10" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDate" id="46"/>
+      <elementValue elementRef="LENGTH" value="10" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DueDateTime" id="48"/>
+      <elementValue elementRef="LENGTH" value="10" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prazo" id="50"/>
+      <elementValue elementRef="LENGTH" value="10" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Interacoes" id="52"/>
+      <elementValue elementRef="LENGTH" value="10" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QtdAnexos" id="54"/>
+      <elementValue elementRef="LENGTH" value="10" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name" id="56"/>
+      <elementValue elementRef="LENGTH" value="10" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMail" id="58"/>
+      <elementValue elementRef="LENGTH" value="10" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpertFullName" id="60"/>
+      <elementValue elementRef="LENGTH" value="10" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryName" id="62"/>
+      <elementValue elementRef="LENGTH" value="10" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CategoryBreadcrumb" id="64"/>
+      <elementValue elementRef="LENGTH" value="10" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocoloMestre" id="66"/>
+      <elementValue elementRef="LENGTH" value="10" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Resolution" id="68"/>
+      <elementValue elementRef="LENGTH" value="10" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProtocolSummary" id="70"/>
+      <elementValue elementRef="LENGTH" value="10" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WorkflowDueDate" id="72"/>
+      <elementValue elementRef="LENGTH" value="10" id="73"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_2">
+      <column comment="" key="false" length="20" name="Origem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="SubOrigem" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="Protocolo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Preview" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="500" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="CategoryID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="6" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="IDResolvedor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="6" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="InstanceID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateUpdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CustomerID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoTempo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PriorizacaoComportamento" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockExpert" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LockTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avaliacao" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TempoRespostaTotal" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ClassificacaoIDTag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assunto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Subject" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DueDateTime" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prazo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Interacoes" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QtdAnexos" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMail" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ExpertFullName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CategoryBreadcrumb" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocoloMestre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProtocolSummary" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WorkflowDueDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tExtractJSONFields_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Origem" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriorizacaoTempo" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="LockExpert" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="InstanceID" id="9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateUpdate" id="12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="13"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="14"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Assunto" id="15"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="16"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="17"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DueDateTime" id="18"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="19"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="20"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerID" id="21"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="22"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="23"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Protocolo" id="24"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="25"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="26"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name" id="27"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="28"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="29"/>
+      <elementValue elementRef="TRACE_COLUMN" value="LockTime" id="30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="31"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="32"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProtocolSummary" id="33"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="34"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="35"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ClassificacaoIDTag" id="36"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="37"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="38"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DueDate" id="39"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="40"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="41"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Avaliacao" id="42"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="43"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="44"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProtocoloMestre" id="45"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="46"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="47"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryID" id="48"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="49"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="50"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Status" id="51"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="52"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="53"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ClassificacaoID" id="54"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="55"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="56"/>
+      <elementValue elementRef="TRACE_COLUMN" value="QtdAnexos" id="57"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="58"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="59"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpertID" id="60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="61"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="62"/>
+      <elementValue elementRef="TRACE_COLUMN" value="WorkflowDueDate" id="63"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="64"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="65"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Prazo" id="66"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="67"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="68"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Preview" id="69"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="70"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="71"/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubOrigem" id="72"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="73"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="74"/>
+      <elementValue elementRef="TRACE_COLUMN" value="EMail" id="75"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="76"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="77"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpertFullName" id="78"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="79"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="80"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Date" id="81"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="82"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="83"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Subject" id="84"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="85"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="86"/>
+      <elementValue elementRef="TRACE_COLUMN" value="WorkflowStatus" id="87"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="88"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="89"/>
+      <elementValue elementRef="TRACE_COLUMN" value="IDResolvedor" id="90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="91"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="92"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryName" id="93"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="94"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="95"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TempoRespostaTotal" id="96"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="97"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="98"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Interacoes" id="99"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="100"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="101"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryBreadcrumb" id="102"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="103"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="104"/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriorizacaoComportamento" id="105"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="106"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="107"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Resolution" id="108"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="109"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="110"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="Adequacao" lineStyle="0" metaname="Adequacao" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryID" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="IDResolvedor" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="InstanceID" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Preview" id="9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubOrigem" id="12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="13"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="14"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Protocolo" id="15"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="16"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="17"/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriorizacaoTempo" id="18"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="19"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="20"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateUpdate" id="21"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="22"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="23"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Assunto" id="24"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="25"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="26"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DueDateTime" id="27"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="28"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="29"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerID" id="30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="31"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="32"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name" id="33"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="34"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="35"/>
+      <elementValue elementRef="TRACE_COLUMN" value="LockTime" id="36"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="37"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="38"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProtocolSummary" id="39"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="40"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="41"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ClassificacaoIDTag" id="42"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="43"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="44"/>
+      <elementValue elementRef="TRACE_COLUMN" value="DueDate" id="45"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="46"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="47"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Avaliacao" id="48"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="49"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="50"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProtocoloMestre" id="51"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="52"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="53"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Status" id="54"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="55"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="56"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ClassificacaoID" id="57"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="58"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="59"/>
+      <elementValue elementRef="TRACE_COLUMN" value="QtdAnexos" id="60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="61"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="62"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpertID" id="63"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="64"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="65"/>
+      <elementValue elementRef="TRACE_COLUMN" value="WorkflowDueDate" id="66"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="67"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="68"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Prazo" id="69"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="70"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="71"/>
+      <elementValue elementRef="TRACE_COLUMN" value="EMail" id="72"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="73"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="74"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpertFullName" id="75"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="76"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="77"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Date" id="78"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="79"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="80"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Subject" id="81"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="82"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="83"/>
+      <elementValue elementRef="TRACE_COLUMN" value="WorkflowStatus" id="84"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="85"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="86"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryName" id="87"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="88"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="89"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TempoRespostaTotal" id="90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="91"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="92"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Interacoes" id="93"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="94"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="95"/>
+      <elementValue elementRef="TRACE_COLUMN" value="CategoryBreadcrumb" id="96"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="97"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="98"/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriorizacaoComportamento" id="99"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="100"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="101"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Resolution" id="102"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="103"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="104"/>
+      <elementValue elementRef="TRACE_COLUMN" value="LockExpert" id="105"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="106"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="107"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Adequacao" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+</talendfile:ProcessType>

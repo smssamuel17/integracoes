@@ -415,6 +415,22 @@
       <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="1400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_6" show="false"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_6"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;" show="false"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Estoque RS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_6">
+      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="1320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -731,22 +747,6 @@
       <column comment="" key="false" length="-1" name="DATA_EXECUCAO" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="1400">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_6" show="false"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_6"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;" show="false"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Estoque RS"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_6">
-      <column comment="" key="true" length="2" name="DB_ESTAL_EMPRESA" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="3" name="DB_ESTAL_ALMOXAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="true" length="15" name="DB_ESTAL_PRODUTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_EST" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="40">
@@ -1907,7 +1907,7 @@
       <column comment="" key="false" length="-1" name="DB_ESTAL_QTDE_VDA" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="EstoqueTotal">
         <mapperTableEntries name="DB_ESTAL_EMPRESA" expression="row34.B2_FILIAL " type="id_String" nullable="true"/>
@@ -2178,7 +2178,7 @@
       <column comment="" defaultValue="" key="false" length="15" name="ZC6_QTDVEN" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfOUT">
         <mapperTableEntries name="ZC6_PRODUT" expression="row33.ZC6_PRODUT " type="id_String" nullable="true"/>
@@ -2452,6 +2452,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row39" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row37" lineStyle="10" mergeOrder="2" metaname="tHashInput_6" offsetLabelX="0" offsetLabelY="0" source="tHashInput_6" target="tUnite_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row37" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="Json_Format" lineStyle="0" metaname="Json_Format" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_8" target="tLogRow_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ExternalId__c" id="0"/>
@@ -2488,10 +2492,6 @@
   <connection connectorName="FLOW" label="Controle" lineStyle="0" metaname="Controle" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Controle" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row37" lineStyle="10" mergeOrder="2" metaname="tHashInput_6" offsetLabelX="0" offsetLabelY="0" source="tHashInput_6" target="tUnite_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row37" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFilterRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
