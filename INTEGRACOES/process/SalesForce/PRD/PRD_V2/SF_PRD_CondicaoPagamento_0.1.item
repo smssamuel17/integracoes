@@ -521,6 +521,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>

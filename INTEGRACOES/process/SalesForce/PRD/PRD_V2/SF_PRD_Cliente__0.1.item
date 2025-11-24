@@ -5,7 +5,7 @@
     <contextParameter comment="" name="Document__c" prompt="Document__c?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_SQVG4CQzEfC9JNXwLyiq6g"/>
     <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:sQGkf3H5X7JcCxJda+GTqMeGspVhzd9iixR4nCBUI0O9mw0C+7DAFlStfOzcY7vc28UUd3mTWi0IS/LKtVnEvCsoZcgtiVmhqh4A0POAIeSNO4G12IiW9tPtEZzhLqF0lqSucfZwVoqiQ+cnrXsFFFQ=" internalId="_OfyGUH3sEfCufqO0UKzvyQ"/>
     <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:fyCbxF1Z9Q8vyF4CWy6zSZa4wLY8xd/IS8Dr4Itvsys+o4qJN5z5iiSv4e5Le71EnAJoAdABuxPhMaRWP+cCSJFFqh2tUOiMmaM+VCXDpk/I9beqOYZJbKTwoVE=" internalId="_OfyGUX3sEfCufqO0UKzvyQ"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:b0Vz/lb4tzRcfGVcc8TlG33rqPbLoCvxPIgwknNLBrxv+lmySvYm9Ah97rOUDWucaQVYTVanFwayHiJlFHCUJyGfvDpMWqpC8plv" internalId="_Otk2wI27EfCTX9n_56_Wkw"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:EEeeaLYq5bnBfrhu+g3QtClkD5essyW8ZR6bHYJjA4tp/CkEKEw6wl8Niq9W0cjVlIblNZcAXACrQBMY4PM7su98" internalId="_Otk2wI27EfCTX9n_56_Wkw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -124,7 +124,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT A1_COD,&#xD;&#xA;&#x9;&#x9;A1_LOJA,&#xD;&#xA;&#x9;&#x9;A1_CGC,&#xD;&#xA;&#x9;&#x9;A1_MUN,&#xD;&#xA;&#x9;&#x9;A1_PAIS,&#xD;&#xA;&#x9;&#x9;A1_CEP,&#xD;&#xA;&#x9;&#x9;A1_EST,&#xD;&#xA;&#x9;&#x9;A1_END,&#xD;&#xA;&#x9;&#x9;A1_MSBLQL,&#xD;&#xA;&#x9;&#x9;A1_NOME,&#xD;&#xA;&#x9;&#x9;A1_DDI,&#xD;&#xA;&#x9;&#x9;A1_DDD,&#xD;&#xA;&#x9;&#x9;A1_TEL,&#xD;&#xA;&#x9;&#x9;A1_TIPO,&#xD;&#xA;&#x9;&#x9;A1_PESSOA,&#xD;&#xA;&#x9;&#x9;A1_LC,&#xD;&#xA;&#x9;&#x9;A1_SALDUP,&#xD;&#xA;&#x9;&#x9;A1_SALPEDL,&#xD;&#xA;&#x9;&#x9;A1_UCODCAN,&#xD;&#xA;&#x9;&#x9;A1_UFXCOM,&#xD;&#xA;&#x9;&#x9;A1_UPZMPRA,&#xD;&#xA;&#x9;&#x9;A1_UAPVAUT&#xD;&#xA;  FROM SA1010 WITH(NOLOCK)&#xD;&#xA;WHERE D_E_L_E_T_ &lt;> '*'&#xD;&#xA;&#x9;&#x9;--AND A1_UDTALT >= GETDATE() - 1&#xD;&#xA;&#x9;&#x9;AND A1_UAPVAUT = 'S'&#xD;&#xA;ORDER BY A1_UDTALT DESC&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT A1_COD,&#xD;&#xA;&#x9;&#x9;A1_LOJA,&#xD;&#xA;&#x9;&#x9;A1_CGC,&#xD;&#xA;&#x9;&#x9;A1_MUN,&#xD;&#xA;&#x9;&#x9;A1_PAIS,&#xD;&#xA;&#x9;&#x9;A1_CEP,&#xD;&#xA;&#x9;&#x9;A1_EST,&#xD;&#xA;&#x9;&#x9;A1_END,&#xD;&#xA;&#x9;&#x9;A1_MSBLQL,&#xD;&#xA;&#x9;&#x9;A1_NOME,&#xD;&#xA;&#x9;&#x9;A1_DDI,&#xD;&#xA;&#x9;&#x9;A1_DDD,&#xD;&#xA;&#x9;&#x9;A1_TEL,&#xD;&#xA;&#x9;&#x9;A1_TIPO,&#xD;&#xA;&#x9;&#x9;A1_PESSOA,&#xD;&#xA;&#x9;&#x9;A1_LC,&#xD;&#xA;&#x9;&#x9;A1_SALDUP,&#xD;&#xA;&#x9;&#x9;A1_SALPEDL,&#xD;&#xA;&#x9;&#x9;A1_UCODCAN,&#xD;&#xA;&#x9;&#x9;A1_UFXCOM,&#xD;&#xA;&#x9;&#x9;A1_UPZMPRA,&#xD;&#xA;&#x9;&#x9;A1_UAPVAUT&#xD;&#xA;  FROM SA1010 WITH(NOLOCK)&#xD;&#xA;WHERE D_E_L_E_T_ &lt;> '*'&#xD;&#xA;&#x9;&#x9;--AND A1_UDTALT >= GETDATE() - 1&#xD;&#xA;&#x9;&#x9;AND A1_CGC = '23400694000150'&#xD;&#xA;ORDER BY A1_UDTALT DESC&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -253,7 +253,7 @@
       <column comment="" key="true" length="14" name="Document__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Ajuste">
         <mapperTableEntries name="Document__c" expression="row2.A1_CGC " type="id_String"/>
@@ -441,7 +441,7 @@
       <column comment="" key="true" length="14" name="Document__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Json_Format">
         <mapperTableEntries name="body" expression="" type="id_String" nullable="true"/>
@@ -536,6 +536,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>

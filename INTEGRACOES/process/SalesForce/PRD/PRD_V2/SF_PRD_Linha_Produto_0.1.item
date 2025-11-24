@@ -5,7 +5,7 @@
     <contextParameter comment="" name="FamilyCode__c" prompt="FamilyCode__c?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_yPx1UE3QEfC5wNuGS24LlA"/>
     <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:gbeFTHIji0XlZz4v8B9p/7kGFJ/a6y2xDiDnLCmYxZQt336CWSUuKUbzeow0L4nIAdfIx84GzSe2NFPEwnNLAFIPD6ibtE+SlbeEc3pcp+Y3B0UX4JQXIUKd8ChBfLO+InRqPjaKQqmQvrzbGL+jyrY=" internalId="_irxScIj4EfCTX9n_56_Wkw"/>
     <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:1+FZd1Yhsa9yfeSVOouqDXA6v9hBfHiFuELi8Pn48jkOUEbXwI9Ixq3azrwud3wMiEORBG/kXvXBY8Lfa4inbmIgYhBWn59yS1S/LfxGCzO+LSoBDx+3i0st1kQ=" internalId="_irx5gIj4EfCTX9n_56_Wkw"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:HcBiSkLmMV9oky+dPDMc4NbmFL69fTgtRpcMBUbatylQvehWc2vtAPhXjYWuDm+aohLebMwjQED+wMAfMsn3VtNw30CHi94vZ6yK" internalId="_WdU7QI28EfCTX9n_56_Wkw"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:Lktc4AABwKcZTSIlz0OYP5KJMs33+8PM9gEoKig6ydvSJtjVzSX3yMd+NLd0kf3lZtQxknhOD+zyXSfXimUopY12" internalId="_WdU7QI28EfCTX9n_56_Wkw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -184,7 +184,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT Z02010.Z02_FILIAL,&#xA;&#x9;&#x9;Z02010.Z02_CODPB,&#xA;&#x9;&#x9;Z02010.Z02_CODIGO,&#xA;&#x9;&#x9;Z02010.Z02_DESCRI,&#xA;&#x9;&#x9;Z02010.Z02_DIVISA,&#xA;&#x9;&#x9;Z02010.Z02_CATEG,&#xA;&#x9;&#x9;Z02010.Z02_MPE,&#xA;&#x9;&#x9;Z02010.Z02_TPLIN,&#xA;&#x9;&#x9;Z02010.Z02_LEADTI,&#xA;&#x9;&#x9;Z02010.Z02_MSBLQL,&#xA;&#x9;&#x9;Z02010.Z02_USERGI,&#xA;&#x9;&#x9;Z02010.Z02_USERGA,&#xA;&#x9;&#x9;Z02010.Z02_EXCEPT,&#xA;&#x9;&#x9;Z02010.Z02_CDFORD,&#xA;&#x9;&#x9;Z02010.Z02_CDFORS,&#xA;&#x9;&#x9;Z02010.Z02_VALID,&#xA;&#x9;&#x9;Z02010.Z02_PCPROT,&#xA;&#x9;&#x9;Z02010.Z02_DBLOQ,&#xA;&#x9;&#x9;Z02010.Z02_DENSID,&#xA;&#x9;&#x9;Z02010.Z02_DSREDU,&#xA;&#x9;&#x9;Z02010.Z02_ONU,&#xA;&#x9;&#x9;Z02010.D_E_L_E_T_,&#xA;&#x9;&#x9;Z02010.R_E_C_N_O_,&#xA;&#x9;&#x9;Z02010.R_E_C_D_E_L_,&#xA;&#x9;&#x9;Z02010.Z02_CODFAM,&#xA;&#x9;&#x9;Z02010.Z02_DESFAM,&#xA;&#x9;&#x9;Z02010.Z02_DSETIQ,&#xA;&#x9;&#x9;Z02010.Z02_CORETI,&#xA;&#x9;&#x9;Z02010.Z02_USUBIN&#xA;FROM&#x9;Z02010 WITH(NOLOCK)&#xD;&#xA;&#x9;WHERE D_E_L_E_T_ &lt;> '*'&#xD;&#xA;AND Z02_CODIGO = '000236'&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT Z02010.Z02_FILIAL,&#xA;&#x9;&#x9;Z02010.Z02_CODPB,&#xA;&#x9;&#x9;Z02010.Z02_CODIGO,&#xA;&#x9;&#x9;Z02010.Z02_DESCRI,&#xA;&#x9;&#x9;Z02010.Z02_DIVISA,&#xA;&#x9;&#x9;Z02010.Z02_CATEG,&#xA;&#x9;&#x9;Z02010.Z02_MPE,&#xA;&#x9;&#x9;Z02010.Z02_TPLIN,&#xA;&#x9;&#x9;Z02010.Z02_LEADTI,&#xA;&#x9;&#x9;Z02010.Z02_MSBLQL,&#xA;&#x9;&#x9;Z02010.Z02_USERGI,&#xA;&#x9;&#x9;Z02010.Z02_USERGA,&#xA;&#x9;&#x9;Z02010.Z02_EXCEPT,&#xA;&#x9;&#x9;Z02010.Z02_CDFORD,&#xA;&#x9;&#x9;Z02010.Z02_CDFORS,&#xA;&#x9;&#x9;Z02010.Z02_VALID,&#xA;&#x9;&#x9;Z02010.Z02_PCPROT,&#xA;&#x9;&#x9;Z02010.Z02_DBLOQ,&#xA;&#x9;&#x9;Z02010.Z02_DENSID,&#xA;&#x9;&#x9;Z02010.Z02_DSREDU,&#xA;&#x9;&#x9;Z02010.Z02_ONU,&#xA;&#x9;&#x9;Z02010.D_E_L_E_T_,&#xA;&#x9;&#x9;Z02010.R_E_C_N_O_,&#xA;&#x9;&#x9;Z02010.R_E_C_D_E_L_,&#xA;&#x9;&#x9;Z02010.Z02_CODFAM,&#xA;&#x9;&#x9;Z02010.Z02_DESFAM,&#xA;&#x9;&#x9;Z02010.Z02_DSETIQ,&#xA;&#x9;&#x9;Z02010.Z02_CORETI,&#xA;&#x9;&#x9;Z02010.Z02_USUBIN&#xA;FROM&#x9;Z02010 WITH(NOLOCK)&#xD;&#xA;&#x9;WHERE D_E_L_E_T_ &lt;> '*'&#xD;&#xA;AND Z02_CODIGO = '000237'&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -372,13 +372,15 @@
       <column comment="" defaultValue="'                                                                                                    '" key="false" length="80" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="23" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Format">
         <mapperTableEntries name="FamilyCode__c" expression="row2.Z02_CODIGO " type="id_String"/>
         <mapperTableEntries name="Name" expression="row2.Z02_CODIGO +&quot; - &quot; + row2.Z02_DESCRI " type="id_String"/>
+        <mapperTableEntries name="Data" expression="row9.Data " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Z02_FILIAL" type="id_String"/>
@@ -413,7 +415,48 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="160">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_13" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="FamilyCode__c" id="0"/>
+      <elementValue elementRef="FUNCTION" value="" id="1"/>
+      <elementValue elementRef="OPERATOR" value="==" id="2"/>
+      <elementValue elementRef="RVALUE" value="" id="3"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_13">
+      <column comment="" defaultValue="'               '" key="false" length="15" name="FamilyCode__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                    '" key="false" length="80" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="23" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" defaultValue="'               '" key="false" length="15" name="FamilyCode__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                    '" key="false" length="80" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="23" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="'               '" key="false" length="15" name="FamilyCode__c" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'                                                                                                    '" key="false" length="80" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="23" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
     <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="string"/>
     <elementParameter field="TABLE" name="ROOT" show="false">
@@ -454,7 +497,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -483,7 +526,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="160" sizeX="40" sizeY="41">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="160" sizeX="40" sizeY="41">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://hydronorth.my.salesforce.com/services/data/v62.0/sobjects/ProductFamily__c/FamilyCode__c/&quot; + row5.FamilyCode__c"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -516,6 +559,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -552,7 +596,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="160">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -582,7 +626,7 @@
       <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="320">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -609,7 +653,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
+  <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSampleRow_1" show="false"/>
     <elementParameter field="LABEL" name="INFO_RANGE" value="Range let you choose a list of line numbers and/or a list of ranges.&#xA;&#xA;- &quot;1,5&quot; : line 1 and 5&#xA;- &quot;10..20&quot; : lines 10 to 20&#xA;- &quot;23..45,48,50..54&quot; : lines 23 to 45, line 48 and lines 50 to 54&#xA;- &quot;1..10&quot; : 10 first lines&#xA;&#xA;&#x9;  "/>
     <elementParameter field="MEMO_JAVA" name="RANGE" value="&quot;1&quot;"/>
@@ -620,7 +664,7 @@
       <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1480" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1680" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -652,7 +696,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1680" posY="160">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1880" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q" show="false"/>
@@ -724,6 +768,50 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FKz8IDoVEe-t8sXaePUN3Q" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.4.66&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;TOTVS&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;integra&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iEzbTCguiAtSZfumBd7kLM+OmhPlH6X+lU+ie12bM4KSLIEK6g=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CONTROLE_INTEGRACAO&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT MAX(DATA_EXECUCAO) as Data&#xD;&#xA;  FROM CONTROLE_INTEGRACAO&#xD;&#xA; WHERE NOME_FLUXO = 'Linha_Produto'&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_ALWAYS_ENCRYPTED" value="false"/>
+    <elementParameter field="TEXT" name="KEYSTORE_PRINCIPAL_ID" value="" show="false"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_SECRET" value="" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Data" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" value="30" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Protheus_Producao"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="23" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
@@ -739,7 +827,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="Format" lineStyle="0" metaname="Format" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tWriteJSONField_1">
+  <connection connectorName="FLOW" label="Format" lineStyle="0" metaname="Format" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFilterRow_13">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Data" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Format" show="false"/>
   </connection>
@@ -783,6 +876,16 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>

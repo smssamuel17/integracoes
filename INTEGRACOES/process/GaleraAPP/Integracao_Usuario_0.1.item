@@ -253,6 +253,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -527,7 +528,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcpf as CPF,&#xD;&#xA;&#x9;   max(datadm) as DataAdmissao,&#xD;&#xA;&#x9;&#x9;count(*) as QuantCad,&#xD;&#xA;&#x9;&#x9;sum(case when (caudem > 0) then 1 else 0 end) as Valid&#xD;&#xA;  FROM r034fun&#xD;&#xA;WHERE numcad >= '20106'&#xD;&#xA;  AND nomfun != 'AMADO GOIS'&#xD;&#xA;GROUP BY numcpf&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcpf as CPF,&#xD;&#xA;&#x9;   max(datadm) as DataAdmissao,&#xD;&#xA;&#x9;&#x9;count(*) as QuantCad,&#xD;&#xA;&#x9;&#x9;sum(case when (caudem > 0) then 1 else 0 end) as Valid&#xD;&#xA;  FROM r034fun&#xD;&#xA;WHERE numcad >= '20106'&#xD;&#xA;  AND nomfun != 'AMADO GOIS'&#xD;&#xA;  and numcad = '20191'&#xD;&#xA;GROUP BY numcpf&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -656,7 +657,7 @@
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Codigo" expression="" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Nome" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CPF" expression="row50.CPF " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="CPF" expression="row50.CPF" type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="Sexo" type="id_String" nullable="true"/>
         <mapperTableEntries name="DataNascimento" type="id_Date" nullable="true"/>
         <mapperTableEntries name="DataAdmissao" expression="row50.DataAdmissao " type="id_Date" nullable="true" operator="="/>
@@ -701,16 +702,16 @@
         <mapperTableEntries name="titred" type="id_String" nullable="true"/>
         <mapperTableEntries name="titcar" expression="" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row13" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="Usuario" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="Nome" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CPF" expression="org.apache.commons.lang3.StringUtils.leftPad(row7.CPF, 11, '0')" type="id_String" nullable="true"/>
-        <mapperTableEntries name="active" expression="" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="registration" expression="" type="id_Integer" nullable="true"/>
-      </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row32" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="codccu" expression="row7.codccu " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="nomccu" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row13" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Usuario" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Nome" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CPF" expression="row50.CPF.trim()" type="id_String" nullable="true"/>
+        <mapperTableEntries name="active" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="registration" expression="" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -945,22 +946,6 @@
       <column comment="" key="true" length="24" name="codcar" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="titred" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="60" name="titcar" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="840">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_1" show="false"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;" show="false"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Usuarios Galera"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_1">
-      <column comment="" key="false" length="-1" name="Usuario" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Nome" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CPF" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="active" nullable="true" pattern="" precision="-1" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="registration" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1400">
@@ -1310,7 +1295,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcad as Codigo,&#xD;&#xA;&#x9;   nomfun as Nome,&#xD;&#xA;&#x9;   numcpf as CPF,&#xD;&#xA;&#x9;   tipsex as Sexo,&#xD;&#xA;&#x9;   datnas as DataNascimento,&#xD;&#xA;&#x9;   datadm as DataAdmissao,&#xD;&#xA;&#x9;   datafa as DataDemissao,&#xD;&#xA;&#x9;   valsal as Salario,&#xD;&#xA;&#x9;  codpes,&#xD;&#xA;&#x9;&#x9;codcar,&#xD;&#xA;&#x9;&#x9;estciv,&#xD;&#xA;&#x9;&#x9;grains,&#xD;&#xA;&#x9;&#x9;codccu,&#xD;&#xA;&#x9;&#x9;caudem,&#xD;&#xA;&#x9;&#x9;postra&#xD;&#xA;  FROM r034fun&#xD;&#xA;WHERE numcad >= '20106'&#xD;&#xA;  --AND caudem = 0 &#xD;&#xA;  --AND postra != '1'&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT numcad as Codigo,&#xD;&#xA;&#x9;   nomfun as Nome,&#xD;&#xA;&#x9;   numcpf as CPF,&#xD;&#xA;&#x9;   tipsex as Sexo,&#xD;&#xA;&#x9;   datnas as DataNascimento,&#xD;&#xA;&#x9;   datadm as DataAdmissao,&#xD;&#xA;&#x9;   datafa as DataDemissao,&#xD;&#xA;&#x9;   valsal as Salario,&#xD;&#xA;&#x9;  codpes,&#xD;&#xA;&#x9;&#x9;codcar,&#xD;&#xA;&#x9;&#x9;estciv,&#xD;&#xA;&#x9;&#x9;grains,&#xD;&#xA;&#x9;&#x9;codccu,&#xD;&#xA;&#x9;&#x9;caudem,&#xD;&#xA;&#x9;&#x9;postra&#xD;&#xA;  FROM r034fun&#xD;&#xA;WHERE numcad >= '20106'&#xD;&#xA; and numcad = '20191'&#xD;&#xA;  --AND caudem = 0 &#xD;&#xA;  --AND postra != '1'&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2810,6 +2795,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -2932,6 +2918,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -3055,6 +3042,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -3147,6 +3135,22 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="840">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_1" show="false"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace Producao/in.hash&quot;" show="false"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Usuarios Galera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_1">
+      <column comment="" key="false" length="-1" name="Usuario" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nome" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CPF" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="active" nullable="true" pattern="" precision="-1" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="registration" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_7" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://hydronorth.galera.app/api/v1/users/departments/&quot;"/>
@@ -3180,6 +3184,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -3335,6 +3340,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -3519,6 +3525,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_HTTP_VERSION_TO_1_1" value="false"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;" id="0"/>
       <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.Token" id="1"/>
@@ -3691,6 +3698,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="string" id="0"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="string" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="response" show="false"/>
@@ -3845,18 +3855,6 @@
   <connection connectorName="FLOW" label="row11" lineStyle="8" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="8" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="active" id="0"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
-      <elementValue elementRef="TRACE_COLUMN" value="registration" id="3"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row32" lineStyle="8" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -4043,6 +4041,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row25" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row13" lineStyle="8" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="active" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="registration" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
+  </connection>
   <connection connectorName="RESPONSE" label="row43" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_7" target="tMap_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row43" show="false"/>
@@ -4074,6 +4084,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="Cargo" lineStyle="0" metaname="Cargo" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tExtractJSONFields_7">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="string" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Cargo" show="false"/>
   </connection>
