@@ -6,7 +6,7 @@
     <contextParameter comment="" name="SFID" prompt="SFID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_x_7X8F3VEfCzh6jIovSQ5Q"/>
     <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:C6nbmDCuqrZZBK/2OtUlxLKxm9Nbxfb239C/U44FZeeCjjit2FnWLyUwSIs9ZUrLA8W/aoKJJQsxGoBqjJR+BNQYKyci5k7aLRSFlmvfG8/LjDWr7WWTy3vVuMmt7x8cVbTMtHGlZ0sFEtMnBcbqqro=" internalId="_0TD04I28EfCTX9n_56_Wkw"/>
     <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:KhTXViDkNlj5zdOiLQb+KJqw0IieRNrJUnKTBSYALG5U5qIFCULfiq/+48va6XjKNKCBWCEmnyw5c6evGUPHg6wJNVPUUU2GN9g86gCKFTfhgUBdj4aXIV0FCeI=" internalId="_0TD04Y28EfCTX9n_56_Wkw"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:Y6BGokvg9sLyMIcKQHiMxe0Ef/Go6dcbVa8sEeUEDrthO7fFA6Z15lvXj+s7xH6HLJ/mohTrPdqyLU1F4GZqvN6d" internalId="_0TD04o28EfCTX9n_56_Wkw"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:9FoC2EK7MK2CHodd40CF38Ki0wv/1hj5Xgt1+22i7C0VtAmPvxPS7CwgVDdxYkqPe/o/caz4lNhji9aSum5HR9hc" internalId="_0TD04o28EfCTX9n_56_Wkw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -257,6 +257,7 @@
       <column comment="" key="false" length="-1" name="Country" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="PostalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Street" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BillingNeighborhood__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="OpeningBirthDate__c" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="StateRegistration__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CnaeCode__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -270,7 +271,7 @@
       <column comment="" key="false" length="-1" name="SalesForceId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfout3">
         <mapperTableEntries name="Status" expression="&quot;RegistrationAnalysis&quot; " type="id_String" nullable="true"/>
@@ -280,11 +281,12 @@
         <mapperTableEntries name="City" expression="row2.ZLE_MUN " type="id_String" nullable="true"/>
         <mapperTableEntries name="Country" expression="&quot;BR&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="PostalCode" expression="row2.ZLE_CEP " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Street" expression="StringHandling.UPCASE(TalendString.removeAccents(row2.ZLE_END)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Street" expression="StringHandling.UPCASE(TalendString.removeAccents(row2.ZLE_END)) + ', ' row2.ZLE_NUM " type="id_String" nullable="true"/>
+        <mapperTableEntries name="BillingNeighborhood__c" expression="row2.ZLE_BAIRRO " type="id_String" nullable="true"/>
         <mapperTableEntries name="OpeningBirthDate__c" expression="(row2.ZLE_DTINI != null &amp;&amp; !row2.ZLE_DTINI.trim().isEmpty()) &#xD;&#xA;? TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.parseDate(&quot;yyyyMMdd&quot;, row2.ZLE_DTINI.trim())) &#xD;&#xA;: null " type="id_String" nullable="true"/>
         <mapperTableEntries name="StateRegistration__c" expression="row2.ZLE_INSEST " type="id_String" nullable="true"/>
         <mapperTableEntries name="CnaeCode__c" expression="row2.ZLE_ATIVID.replaceAll(&quot;[^0-9]&quot;, &quot;&quot;).trim() " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Suframa__c" expression="&quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Suframa__c" expression="&quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="BusinessSector__c" expression="(row2.ZLE_ATIVID != null) &#xD;&#xA;? row2.ZLE_ATIVID.replaceAll(&quot;[^a-zA-Z\\s]&quot;, &quot;&quot;).replaceAll(&quot;\\s+&quot;, &quot; &quot;).trim()&#xD;&#xA;    .substring(0, Math.min(255, row2.ZLE_ATIVID.replaceAll(&quot;[^a-zA-Z\\s]&quot;, &quot;&quot;).replaceAll(&quot;\\s+&quot;, &quot; &quot;).trim().length()))&#xD;&#xA;: &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="Email" expression="(row2.ZLE_EMAIL  != null &amp;&amp; !row2.ZLE_EMAIL .trim().isEmpty()) &#xD;&#xA;? row2.ZLE_EMAIL .trim().toLowerCase() &#xD;&#xA;: &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="DataSearchCompleted__c" expression="true " type="id_Boolean" nullable="true"/>
@@ -356,28 +358,30 @@
       <elementValue elementRef="LENGTH" value="10" id="13"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Street" id="14"/>
       <elementValue elementRef="LENGTH" value="10" id="15"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OpeningBirthDate__c" id="16"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BillingNeighborhood__c" id="16"/>
       <elementValue elementRef="LENGTH" value="10" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="StateRegistration__c" id="18"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OpeningBirthDate__c" id="18"/>
       <elementValue elementRef="LENGTH" value="10" id="19"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CnaeCode__c" id="20"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StateRegistration__c" id="20"/>
       <elementValue elementRef="LENGTH" value="10" id="21"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Suframa__c" id="22"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CnaeCode__c" id="22"/>
       <elementValue elementRef="LENGTH" value="10" id="23"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BusinessSector__c" id="24"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Suframa__c" id="24"/>
       <elementValue elementRef="LENGTH" value="10" id="25"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Email" id="26"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BusinessSector__c" id="26"/>
       <elementValue elementRef="LENGTH" value="10" id="27"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchCompleted__c" id="28"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Email" id="28"/>
       <elementValue elementRef="LENGTH" value="10" id="29"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchStatus__c" id="30"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchCompleted__c" id="30"/>
       <elementValue elementRef="LENGTH" value="10" id="31"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchStatusMessage__c" id="32"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchStatus__c" id="32"/>
       <elementValue elementRef="LENGTH" value="10" id="33"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RECNO" id="34"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataSearchStatusMessage__c" id="34"/>
       <elementValue elementRef="LENGTH" value="10" id="35"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SalesForceId" id="36"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RECNO" id="36"/>
       <elementValue elementRef="LENGTH" value="10" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesForceId" id="38"/>
+      <elementValue elementRef="LENGTH" value="10" id="39"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -391,6 +395,7 @@
       <column comment="" key="false" length="-1" name="Country" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="PostalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Street" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BillingNeighborhood__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="OpeningBirthDate__c" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="StateRegistration__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CnaeCode__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -425,10 +430,10 @@
       <column comment="" key="false" length="-1" name="SalesForceId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outStringJsonTest">
-        <mapperTableEntries name="string" expression="&quot;{&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;  &quot;\&quot;compositeRequest\&quot;: [&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;    &quot;{&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;method\&quot;: \&quot;PATCH\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;url\&quot;: \&quot;/services/data/v62.0/sobjects/Lead/&quot;+row7.SalesForceId+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;referenceId\&quot;: \&quot;refLead&quot;+String.valueOf(row7.RECNO)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;body\&quot;: {&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Status\&quot;: \&quot;RegistrationAnalysis\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Document__c\&quot;: \&quot;&quot;+(row7.Document__c != null ? row7.Document__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;State\&quot;: \&quot;&quot;+(row7.State != null ? row7.State : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        //&quot;\&quot;Phone\&quot;: \&quot;&quot;+(row7.Phone != null ? row7.Phone : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;City\&quot;: \&quot;&quot;+(row7.City != null ? row7.City : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Country\&quot;: \&quot;&quot;+(row7.Country != null ? row7.Country : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;PostalCode\&quot;: \&quot;&quot;+(row7.PostalCode != null ? row7.PostalCode : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Street\&quot;: \&quot;&quot;+(row7.Street != null ? row7.Street : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;OpeningBirthDate__c\&quot;:&quot; +(row7.OpeningBirthDate__c == null ? &quot;null,&quot; : &quot;\&quot;&quot;+ row7.OpeningBirthDate__c +&quot;\&quot;,&quot;)+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;StateRegistration__c\&quot;: \&quot;&quot;+(row7.StateRegistration__c != null ? row7.StateRegistration__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;CnaeCode__c\&quot;: \&quot;&quot;+(row7.CnaeCode__c != null ? row7.CnaeCode__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Suframa__c\&quot;: \&quot;&quot;+(row7.Suframa__c != null ? row7.Suframa__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;BusinessSector__c\&quot;: \&quot;&quot;+(row7.BusinessSector__c != null ? row7.BusinessSector__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        //&quot;\&quot;Email\&quot;: \&quot;&quot;+(row7.Email != null ? row7.Email.toUpperCase() : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchCompleted__c\&quot;: &quot;+(row7.DataSearchCompleted__c != null ? row7.DataSearchCompleted__c : &quot;false&quot;)+&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchStatus__c\&quot;: \&quot;&quot;+(row7.DataSearchStatus__c != null ? row7.DataSearchStatus__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchStatusMessage__c\&quot;: \&quot;Pesquisa realizada com sucesso\&quot;&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;}&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;    &quot;}&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;  &quot;]&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&quot;}&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="string" expression="&quot;{&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;  &quot;\&quot;compositeRequest\&quot;: [&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;    &quot;{&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;method\&quot;: \&quot;PATCH\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;url\&quot;: \&quot;/services/data/v62.0/sobjects/Lead/&quot;+row7.SalesForceId+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;referenceId\&quot;: \&quot;refLead&quot;+String.valueOf(row7.RECNO)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;\&quot;body\&quot;: {&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Status\&quot;: \&quot;RegistrationAnalysis\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Document__c\&quot;: \&quot;&quot;+(row7.Document__c != null ? row7.Document__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;State\&quot;: \&quot;&quot;+(row7.State != null ? row7.State : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        //&quot;\&quot;Phone\&quot;: \&quot;&quot;+(row7.Phone != null ? row7.Phone : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;City\&quot;: \&quot;&quot;+(row7.City != null ? row7.City : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Country\&quot;: \&quot;&quot;+(row7.Country != null ? row7.Country : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;PostalCode\&quot;: \&quot;&quot;+(row7.PostalCode != null ? row7.PostalCode : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Street\&quot;: \&quot;&quot;+(row7.Street != null ? row7.Street : &quot;&quot;)+&quot;\&quot;,&quot;+&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Street\&quot;: \&quot;&quot;+(row7.BillingNeighborhood__c != null ? row7.BillingNeighborhood__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;OpeningBirthDate__c\&quot;:&quot; +(row7.OpeningBirthDate__c == null ? &quot;null,&quot; : &quot;\&quot;&quot;+ row7.OpeningBirthDate__c +&quot;\&quot;,&quot;)+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;StateRegistration__c\&quot;: \&quot;&quot;+(row7.StateRegistration__c != null ? row7.StateRegistration__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;CnaeCode__c\&quot;: \&quot;&quot;+(row7.CnaeCode__c != null ? row7.CnaeCode__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;Suframa__c\&quot;: \&quot;&quot;+(row7.Suframa__c != null ? row7.Suframa__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;BusinessSector__c\&quot;: \&quot;&quot;+(row7.BusinessSector__c != null ? row7.BusinessSector__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        //&quot;\&quot;Email\&quot;: \&quot;&quot;+(row7.Email != null ? row7.Email.toUpperCase() : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchCompleted__c\&quot;: &quot;+(row7.DataSearchCompleted__c != null ? row7.DataSearchCompleted__c : &quot;false&quot;)+&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchStatus__c\&quot;: \&quot;&quot;+(row7.DataSearchStatus__c != null ? row7.DataSearchStatus__c : &quot;&quot;)+&quot;\&quot;,&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;        &quot;\&quot;DataSearchStatusMessage__c\&quot;: \&quot;Pesquisa realizada com sucesso\&quot;&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;      &quot;}&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;    &quot;}&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;  &quot;]&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&quot;}&quot; " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="outSalesID">
         <mapperTableEntries name="SalesForceId" expression="row7.SalesForceId " type="id_String" nullable="true"/>
@@ -442,6 +447,7 @@
         <mapperTableEntries name="Country" type="id_String" nullable="true"/>
         <mapperTableEntries name="PostalCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="Street" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BillingNeighborhood__c" type="id_String" nullable="true"/>
         <mapperTableEntries name="OpeningBirthDate__c" type="id_String" nullable="true"/>
         <mapperTableEntries name="StateRegistration__c" type="id_String" nullable="true"/>
         <mapperTableEntries name="CnaeCode__c" type="id_String" nullable="true"/>
@@ -778,6 +784,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="SalesForceId" id="0"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="BillingNeighborhood__c" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Street" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfout3" show="false"/>
